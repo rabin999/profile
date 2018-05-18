@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,900");
 /* Font Awesome */
 /*!
@@ -2331,14 +2332,38 @@
 * 	Rabin Bhandari
 * -----------------------
  */
-a, p, ul, li, table, th, td, h1, h2, h3, h4, h5, main, footer {
-  font-family: 'Poppins', sans-serif;
+/* 
+  * --------------------------
+  *	Variables
+  * --------------------------
+  */
+a,
+p,
+ul,
+li,
+table,
+th,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+main,
+footer,
+form,
+span {
+  font-family: "Quicksand", sans-serif;
   font-size: 14px;
-  font-weight: 300;
-  color: #ffffff;
+  font-weight: 400;
   box-sizing: border-box; }
 
-body, p, ul, h1, h2, h3 {
+body,
+p,
+ul,
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0; }
 
@@ -2348,23 +2373,130 @@ a {
 /* --------------------------- 
 * 	Profile Framework 
 ----------------------------- */
-.row, .rb-theme1 aside.page-slider ul li {
+.row {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
-  .row.space-between, .rb-theme1 aside.page-slider ul li.space-between {
+  .row.space-between {
     justify-content: space-between; }
-  .row.align-center, .rb-theme1 aside.page-slider ul li.align-center {
+  .row.align-center {
     -webkit-box-align: center;
     -moz-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
+  .row.flex-end {
+    justify-content: flex-end; }
+
+body .hidden {
+  display: none !important; }
 
 /* --------------------------- 
 * 	Profile Framework : END
+----------------------------- */
+/* --------------------------- 
+* 	Animation
+----------------------------- */
+.open-page,
+.close-page {
+  margin: auto; }
+
+.close-page {
+  -webkit-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.7s;
+  -moz-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.7s;
+  -ms-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.7s;
+  -o-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.7s;
+  transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.7s;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -o-transform: scale(0.1);
+  transform: scale(0.1);
+  background-color: transparent !important; }
+
+.open-page {
+  -webkit-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.2s;
+  -moz-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.2s;
+  -ms-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.2s;
+  -o-transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.2s;
+  transition: height 0.7s, width 0.7s, background-color 0.7s, margin 0.7s, transform 0.7s, border-radius 0.2s;
+  height: 100% !important;
+  width: 100% !important;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
+
+/* --------------------------- 
+* 	Animation : END
+----------------------------- */
+/* --------------------------- 
+* 	Form
+----------------------------- */
+.rb-form {
+  font-family: "Quicksand", sans-serif;
+  /* With Label Effect */ }
+  .rb-form input,
+  .rb-form textarea,
+  .rb-form button {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 13px;
+    border: none;
+    font-weight: 400; }
+    .rb-form input:focus,
+    .rb-form textarea:focus,
+    .rb-form button:focus {
+      outline: none; }
+  .rb-form input, .rb-form textarea, .rb-form .input {
+    margin-bottom: 20px; }
+  .rb-form input, .rb-form textarea {
+    padding: 15px;
+    border: 1px solid #dcdcdb;
+    width: 100%;
+    max-width: 100%; }
+    .rb-form input:focus, .rb-form textarea:focus {
+      outline: none;
+      border-color: #03A9F4; }
+  .rb-form button {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #2196F3; }
+    .rb-form button i {
+      margin-right: 5px; }
+  .rb-form *:last-child {
+    margin-bottom: 0px; }
+  .rb-form .input {
+    position: relative; }
+    .rb-form .input label {
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    .rb-form .input:active > label, .rb-form .input:hover > label, .rb-form .input label.top {
+      top: -9px;
+      background-color: #fff;
+      padding: 0px 5px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #2296f3; }
+
+/* --------------------------- 
+* 	Form :END 
 ----------------------------- */
 /**
  * ----------------
@@ -2374,25 +2506,21 @@ a {
  **/
 .rb-theme1 {
   margin: 0;
-  background-color: #222f3e;
   overflow: hidden;
   position: relative;
+  background-color: #F2F2F0;
   /* Profile Image */
   /* Utility */
   /* Hover Effect */
-  /* Typing Effect */
   /* Scroll Bar */
   /* Utility:END */
   /* Header */
-  /* Aside */
-  /* Aside:END */
   /* Container */
   /* Container:END */
-  /* Bottom Mouse Scroller */
-  /* Mouse Scroller:END; */
   /* Page Switch */
-  /* Left */
   /* Page Switch:END */
+  /* Message Box */
+  /* Message Box:END; */
   /* Footer */
   /* Footer:END */ }
   .rb-theme1 .profile-image {
@@ -2424,11 +2552,11 @@ a {
     width: 90%; } }
   .rb-theme1 .hover {
     position: relative;
-    -webkit-transition: color 0.2s;
-    -moz-transition: color 0.2s;
-    -ms-transition: color 0.2s;
-    -o-transition: color 0.2s;
-    transition: color 0.2s; }
+    -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -ms-transition: color 0.4s;
+    -o-transition: color 0.4s;
+    transition: color 0.4s; }
     .rb-theme1 .hover:hover {
       color: #ff6348; }
       .rb-theme1 .hover:hover:after {
@@ -2440,25 +2568,8 @@ a {
         height: 1px;
         width: 0%;
         left: 5%;
-        -webkit-animation: hoverBorder 0.3s linear;
-        animation: hoverBorder 0.3s linear; }
-@keyframes typing {
-  from {
-    width: 0; }
-  to {
-    width: 100%; } }
-@-webkit-keyframes typing {
-  from {
-    width: 0; }
-  to {
-    width: 100%; } }
-  .rb-theme1 .typing {
-    color: #fff;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    -webkit-animation: typing 2s steps(30, end);
-    animation: typing 2s steps(30, end); }
+        -webkit-animation: hoverBorder 0.4s linear;
+        animation: hoverBorder 0.4s linear; }
   .rb-theme1 ::-webkit-scrollbar {
     width: 6px; }
   .rb-theme1 ::-webkit-scrollbar-thumb {
@@ -2467,149 +2578,61 @@ a {
     background-color: rgba(255, 85, 73, 0.51); }
   .rb-theme1 header {
     position: relative;
+    padding: 10px;
     /* Navigation */ }
     .rb-theme1 header .progress-bar {
       position: absolute;
       width: 0%;
-      border-bottom: 1px solid red;
+      border-bottom: 2px solid #544d55;
       height: auto;
       bottom: 0;
+      left: 0;
       -webkit-transition: width 0.2s;
       -moz-transition: width 0.2s;
       -ms-transition: width 0.2s;
       -o-transition: width 0.2s;
       transition: width 0.2s; }
+      .rb-theme1 header .progress-bar.page-process {
+        border-color: #03A9F4; }
     .rb-theme1 header .logo h1 {
       margin: 0;
-      margin-left: 15px;
+      margin-left: 20px;
       margin-top: 15px;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 600;
       letter-spacing: 0.8px;
-      color: #e8e8e8; }
+      color: #404040; }
     .rb-theme1 header nav.top ul li {
       display: inline-block; }
       .rb-theme1 header nav.top ul li a {
         display: block;
         text-decoration: none;
         padding: 15px;
-        color: #e8e8e8; }
-  .rb-theme1 aside.page-slider {
-    position: fixed;
-    right: 15px;
-    height: calc(100% - 90px);
-    margin-right: 8px;
-    border-right: 1px solid #fff;
-    z-index: 2; }
-    .rb-theme1 aside.page-slider ul {
-      background-color: #fff;
-      -webkit-border-radius: 20px;
-      border-radius: 20px;
-      padding: 5px;
-      position: relative;
-      left: 50%; }
-      .rb-theme1 aside.page-slider ul li {
-        list-style-type: none; }
-        .rb-theme1 aside.page-slider ul li:last-child a {
-          margin-bottom: 0; }
-        .rb-theme1 aside.page-slider ul li a {
-          height: 15px;
-          width: 15px;
-          border: 0px solid red;
-          background-color: red;
-          -webkit-border-radius: 50%;
-          border-radius: 50%;
-          -webkit-transition: border-width 0.4s, background-color 0.4s;
-          -moz-transition: border-width 0.4s, background-color 0.4s;
-          -ms-transition: border-width 0.4s, background-color 0.4s;
-          -o-transition: border-width 0.4s, background-color 0.4s;
-          transition: border-width 0.4s, background-color 0.4s;
-          margin-bottom: 10px; }
-          .rb-theme1 aside.page-slider ul li a:hover, .rb-theme1 aside.page-slider ul li a.active {
-            background-color: transparent;
-            border-width: 4px; }
+        color: #404040;
+        letter-spacing: 0.1px;
+        font-size: 13px;
+        font-weight: 450; }
+      .rb-theme1 header nav.top ul li:last-child a {
+        margin-right: 5px; }
   .rb-theme1 .container {
-    padding: 20px 50px 20px 20px;
+    margin: 20px;
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
+    box-sizing: border-box;
     /* Intro Text */ }
     .rb-theme1 .container .intro-text {
-      height: 100%;
+      position: relative;
       text-align: center; }
-      .rb-theme1 .container .intro-text h1 {
-        color: #FFC107;
-        font-size: 100px;
-        font-weight: 700;
-        text-transform: uppercase;
-        width: 100% !important;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        background-color: #0f0f0f54;
-        position: relative;
-        top: 30%; }
-      .rb-theme1 .container .intro-text h2 {
-        color: white;
-        font-size: 76px;
-        text-transform: uppercase;
-        font-weight: 700;
-        position: relative;
-        top: 40%; }
-  .rb-theme1 .mouse-scroller {
-    position: fixed;
-    bottom: 50px;
-    height: 40px;
-    width: 20px;
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
-    border: 1px solid #cacaca;
-    left: 50%;
-    color: #fff;
-    text-align: center;
-    cursor: pointer; }
-    .rb-theme1 .mouse-scroller i {
-      display: block;
-      padding-top: 12px; }
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px); } }
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px); } }
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px); } }
-  .rb-theme1 .bounce {
-    -moz-animation: bounce 2s linear 2s 3;
-    -webkit-animation: bounce 2s linear 2s 3;
-    animation: bounce 2s linear 2s 3; }
+      .rb-theme1 .container .intro-text .pp img {
+        -webkit-border-radius: 3px;
+        border-radius: 3px; }
+      .rb-theme1 .container .intro-text .texts {
+        height: 100%;
+        background-color: #fff;
+        padding: 20px;
+        text-align: left;
+        margin-left: 20px; }
   .rb-theme1 .pages {
     display: none; }
     .rb-theme1 .pages h2.page-header {
@@ -2618,268 +2641,80 @@ a {
       margin: 50px 0;
       display: inline-block; }
     .rb-theme1 .pages.active {
+      height: 100%;
+      width: 100%;
       display: block; }
-    .rb-theme1 .pages.right {
-      -webkit-animation: movePageToRight 0.5s linear;
-      animation: movePageToRight 0.5s linear; }
-    .rb-theme1 .pages.left {
-      -webkit-animation: movePageToLeft 0.5s linear;
-      animation: movePageToLeft 0.5s linear; }
-@keyframes movePageToRight {
-  10% {
-    -webkit-transform: translateX(10%);
-    -moz-transform: translateX(10%);
-    -ms-transform: translateX(10%);
-    -o-transform: translateX(10%);
-    transform: translateX(10%); }
-  20% {
-    -webkit-transform: translateX(20%);
-    -moz-transform: translateX(20%);
-    -ms-transform: translateX(20%);
-    -o-transform: translateX(20%);
-    transform: translateX(20%); }
-  30% {
-    -webkit-transform: translateX(30%);
-    -moz-transform: translateX(30%);
-    -ms-transform: translateX(30%);
-    -o-transform: translateX(30%);
-    transform: translateX(30%); }
-  40% {
-    -webkit-transform: translateX(40%);
-    -moz-transform: translateX(40%);
-    -ms-transform: translateX(40%);
-    -o-transform: translateX(40%);
-    transform: translateX(40%); }
-  50% {
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
-    transform: translateX(50%); }
-  60% {
-    -webkit-transform: translateX(60%);
-    -moz-transform: translateX(60%);
-    -ms-transform: translateX(60%);
-    -o-transform: translateX(60%);
-    transform: translateX(60%); }
-  70% {
-    -webkit-transform: translateX(70%);
-    -moz-transform: translateX(70%);
-    -ms-transform: translateX(70%);
-    -o-transform: translateX(70%);
-    transform: translateX(70%); }
-  80% {
-    -webkit-transform: translateX(80%);
-    -moz-transform: translateX(80%);
-    -ms-transform: translateX(80%);
-    -o-transform: translateX(80%);
-    transform: translateX(80%); }
-  90% {
-    -webkit-transform: translateX(90%);
-    -moz-transform: translateX(90%);
-    -ms-transform: translateX(90%);
-    -o-transform: translateX(90%);
-    transform: translateX(90%);
-    opacity: 0.1; }
-  100% {
-    -webkit-transform: translateX(110%);
-    -moz-transform: translateX(110%);
-    -ms-transform: translateX(110%);
-    -o-transform: translateX(110%);
-    transform: translateX(110%);
-    opacity: 0; } }
-@-webkit-keyframes movePageToRight {
-  10% {
-    -webkit-transform: translateX(10%);
-    -moz-transform: translateX(10%);
-    -ms-transform: translateX(10%);
-    -o-transform: translateX(10%);
-    transform: translateX(10%); }
-  20% {
-    -webkit-transform: translateX(20%);
-    -moz-transform: translateX(20%);
-    -ms-transform: translateX(20%);
-    -o-transform: translateX(20%);
-    transform: translateX(20%); }
-  30% {
-    -webkit-transform: translateX(30%);
-    -moz-transform: translateX(30%);
-    -ms-transform: translateX(30%);
-    -o-transform: translateX(30%);
-    transform: translateX(30%); }
-  40% {
-    -webkit-transform: translateX(40%);
-    -moz-transform: translateX(40%);
-    -ms-transform: translateX(40%);
-    -o-transform: translateX(40%);
-    transform: translateX(40%); }
-  50% {
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
-    transform: translateX(50%); }
-  60% {
-    -webkit-transform: translateX(60%);
-    -moz-transform: translateX(60%);
-    -ms-transform: translateX(60%);
-    -o-transform: translateX(60%);
-    transform: translateX(60%); }
-  70% {
-    -webkit-transform: translateX(70%);
-    -moz-transform: translateX(70%);
-    -ms-transform: translateX(70%);
-    -o-transform: translateX(70%);
-    transform: translateX(70%); }
-  80% {
-    -webkit-transform: translateX(80%);
-    -moz-transform: translateX(80%);
-    -ms-transform: translateX(80%);
-    -o-transform: translateX(80%);
-    transform: translateX(80%); }
-  90% {
-    -webkit-transform: translateX(90%);
-    -moz-transform: translateX(90%);
-    -ms-transform: translateX(90%);
-    -o-transform: translateX(90%);
-    transform: translateX(90%);
-    opacity: 0.1; }
-  100% {
-    -webkit-transform: translateX(110%);
-    -moz-transform: translateX(110%);
-    -ms-transform: translateX(110%);
-    -o-transform: translateX(110%);
-    transform: translateX(110%);
-    opacity: 0; } }
-@keyframes movePageToLeft {
-  10% {
-    -webkit-transform: translateX(120%);
-    -moz-transform: translateX(120%);
-    -ms-transform: translateX(120%);
-    -o-transform: translateX(120%);
-    transform: translateX(120%);
-    opacity: 0.1; }
-  20% {
-    -webkit-transform: translateX(90%);
-    -moz-transform: translateX(90%);
-    -ms-transform: translateX(90%);
-    -o-transform: translateX(90%);
-    transform: translateX(90%);
-    opacity: 1; }
-  30% {
-    -webkit-transform: translateX(80%);
-    -moz-transform: translateX(80%);
-    -ms-transform: translateX(80%);
-    -o-transform: translateX(80%);
-    transform: translateX(80%); }
-  40% {
-    -webkit-transform: translateX(70%);
-    -moz-transform: translateX(70%);
-    -ms-transform: translateX(70%);
-    -o-transform: translateX(70%);
-    transform: translateX(70%); }
-  50% {
-    -webkit-transform: translateX(60%);
-    -moz-transform: translateX(60%);
-    -ms-transform: translateX(60%);
-    -o-transform: translateX(60%);
-    transform: translateX(60%); }
-  60% {
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
-    transform: translateX(50%); }
-  70% {
-    -webkit-transform: translateX(40%);
-    -moz-transform: translateX(40%);
-    -ms-transform: translateX(40%);
-    -o-transform: translateX(40%);
-    transform: translateX(40%); }
-  80% {
-    -webkit-transform: translateX(30%);
-    -moz-transform: translateX(30%);
-    -ms-transform: translateX(30%);
-    -o-transform: translateX(30%);
-    transform: translateX(30%); }
-  90% {
-    -webkit-transform: translateX(20%);
-    -moz-transform: translateX(20%);
-    -ms-transform: translateX(20%);
-    -o-transform: translateX(20%);
-    transform: translateX(20%); }
-  100% {
-    -webkit-transform: translateX(10%);
-    -moz-transform: translateX(10%);
-    -ms-transform: translateX(10%);
-    -o-transform: translateX(10%);
-    transform: translateX(10%); } }
-@-webkit-keyframes movePageToLeft {
-  10% {
-    -webkit-transform: translateX(120%);
-    -moz-transform: translateX(120%);
-    -ms-transform: translateX(120%);
-    -o-transform: translateX(120%);
-    transform: translateX(120%); }
-  20% {
-    -webkit-transform: translateX(90%);
-    -moz-transform: translateX(90%);
-    -ms-transform: translateX(90%);
-    -o-transform: translateX(90%);
-    transform: translateX(90%); }
-  30% {
-    -webkit-transform: translateX(80%);
-    -moz-transform: translateX(80%);
-    -ms-transform: translateX(80%);
-    -o-transform: translateX(80%);
-    transform: translateX(80%); }
-  40% {
-    -webkit-transform: translateX(70%);
-    -moz-transform: translateX(70%);
-    -ms-transform: translateX(70%);
-    -o-transform: translateX(70%);
-    transform: translateX(70%); }
-  50% {
-    -webkit-transform: translateX(60%);
-    -moz-transform: translateX(60%);
-    -ms-transform: translateX(60%);
-    -o-transform: translateX(60%);
-    transform: translateX(60%); }
-  60% {
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
-    transform: translateX(50%); }
-  70% {
-    -webkit-transform: translateX(40%);
-    -moz-transform: translateX(40%);
-    -ms-transform: translateX(40%);
-    -o-transform: translateX(40%);
-    transform: translateX(40%); }
-  80% {
-    -webkit-transform: translateX(30%);
-    -moz-transform: translateX(30%);
-    -ms-transform: translateX(30%);
-    -o-transform: translateX(30%);
-    transform: translateX(30%); }
-  90% {
-    -webkit-transform: translateX(20%);
-    -moz-transform: translateX(20%);
-    -ms-transform: translateX(20%);
-    -o-transform: translateX(20%);
-    transform: translateX(20%); }
-  100% {
-    -webkit-transform: translateX(10%);
-    -moz-transform: translateX(10%);
-    -ms-transform: translateX(10%);
-    -o-transform: translateX(10%);
-    transform: translateX(10%); } }
+  .rb-theme1 .quickChat {
+    position: fixed;
+    bottom: 56px;
+    right: 26px; }
+    .rb-theme1 .quickChat .chatBox {
+      width: 350px;
+      -webkit-box-shadow: 0 0 6px #242932;
+      box-shadow: 0 0 6px #242932;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -webkit-transition: transform 0.4s;
+      -moz-transition: transform 0.4s;
+      -ms-transition: transform 0.4s;
+      -o-transition: transform 0.4s;
+      transition: transform 0.4s; }
+      .rb-theme1 .quickChat .chatBox .header {
+        background-color: #232931;
+        color: #fff;
+        padding: 20px;
+        clear: left;
+        border-top-left-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        -webkit-border-top-right-radius: 8px; }
+        .rb-theme1 .quickChat .chatBox .header span:first-child {
+          font-size: 16px;
+          font-weight: 500; }
+        .rb-theme1 .quickChat .chatBox .header .close {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 17px;
+          float: right;
+          cursor: pointer;
+          color: inherit;
+          -webkit-transition: color 0.4s;
+          -moz-transition: color 0.4s;
+          -ms-transition: color 0.4s;
+          -o-transition: color 0.4s;
+          transition: color 0.4s; }
+          .rb-theme1 .quickChat .chatBox .header .close:hover {
+            color: #FF5722; }
+      .rb-theme1 .quickChat .chatBox .body {
+        background-color: #fff;
+        padding: 20px;
+        border-bottom-left-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px; }
+    .rb-theme1 .quickChat .startChat {
+      text-align: right; }
+      .rb-theme1 .quickChat .startChat button {
+        display: inline-block;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: #232931;
+        margin-top: 20px;
+        -webkit-transition: display 0.4s;
+        -moz-transition: display 0.4s;
+        -ms-transition: display 0.4s;
+        -o-transition: display 0.4s;
+        transition: display 0.4s; }
+        .rb-theme1 .quickChat .startChat button i {
+          margin: 0; }
   .rb-theme1 footer {
     width: 100%;
     padding: 8px;
     text-align: center;
     font-weight: 400;
-    font-size: 12px; }
+    font-size: 12px;
+    background-color: #dcdcda; }
 
 /*# sourceMappingURL=app.css.map */
