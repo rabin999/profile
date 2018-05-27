@@ -1,158 +1,278 @@
-'use strict';
+"use strict";
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-/**
- *	Copyright
- *	Rabin Bhandari
- */
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-// ------------------------------------------------
-// Utility
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 (function () {
-    if (!window.rb) {
-        window.rb = function (selector) {
 
-            var element = null;
+    "use strict";
 
-            // Prepare Node || Nodes
-            if (typeof selector === 'string' && selector.length) {
-                element = document.querySelectorAll(selector);
-            } else if ((typeof selector === 'undefined' ? 'undefined' : _typeof(selector)) === 'object') {
-                element = selector;
-            } else {
-                error('Selector not defined');
+    /**
+     * 
+     * A small plugin written by Rabin Bhandari
+     * 
+     *	@copyright 2018
+     *	@author Rabin Bhandari <rabin.bhandari999@gmail.com>
+     *
+     */
+
+    // -------------------------------
+    //          Helpers
+    // --------------------------------
+
+    /**
+     * @param type: string types of errors
+     * @param message: string
+     */
+
+    function error() {
+        var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Error";
+        var message = arguments[1];
+
+        if (message) {
+            if (window[type]) {
+                throw new window[type](message);
+            } else if (window.console) {
+                console.error(message);
             }
+        }
+    }
 
-            // Check Node found or not 
-            if (element instanceof HTMLElement || element instanceof Node || element instanceof NodeList) {
-                if (element instanceof NodeList) {
-                    if (!element.length) return element = false;
+    // Helpers
+    function querySelectorAllExist() {
+        return document.querySelector || document.querySelectorAll ? true : false;
+    }
+
+    // Query Selector Support for IE 7
+    (function setUpQuerySelectorPolyfill() {
+        if (!querySelectorAllExist()) {
+            var d = document,
+                s = d.createStyleSheet();
+            d.querySelectorAll = function (r, c, i, j, a) {
+                a = d.all, c = [], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
+                for (i = r.length; i--;) {
+                    s.addRule(r[i], 'k:v');
+                    for (j = a.length; j--;) {
+                        a[j].currentStyle.k && c.push(a[j]);
+                    }s.removeRule(0);
                 }
-            }
+                return c;
+            };
+        }
+    })();
 
-            function error(message) {
-                if (message) {
-                    if (window.Error) {
-                        throw new Error(message);
-                    } else if (window.console) {
-                        console.error(message);
+    var RB = function () {
+        function RB(selector) {
+            _classCallCheck(this, RB);
+
+            this.selector = selector;
+            this.length = 0;
+            this.element = false;
+
+            this.__setUpPrivateMethods();
+            this.init();
+        }
+
+        // private helper
+
+
+        _createClass(RB, [{
+            key: "__setUpPrivateMethods",
+            value: function __setUpPrivateMethods() {
+                var _this = this;
+
+                this.__proto__.__proto__.__isWindowObj = function () {
+                    return _this.selector === _this.selector.window || _this.selector.NodeType === 9 ? true : false;
+                };
+                this.__proto__.__proto__.__isObj = function () {
+                    return _this.element && !_this.element.hasOwnProperty('lenght') ? true : false;
+                };
+
+                // Event
+                this.__proto__.__proto__.__hasEvent = function (event) {
+                    return typeof _this.element['on' + event] !== "undefined";
+                };
+
+                this.__proto__.__proto__.__manageEvent = function (event, operation, callback) {
+                    var _this2 = this;
+
+                    if (!(window[operation] || callback)) {
+                        error('ReferenceError', 'Event || Event Function reference not found');
                     }
-                }
-            }
 
-            /*
-            * ---------------
-            * Events
-            * ---------------
-            */
-            function on(event, callback) {
-                __manageEvent(event, 'addEventListener', callback);
-            }
+                    if (window[operation]) {
+                        if (this.__isWindowObj() || this.__isObj()) {
+                            if (this.__hasEvent(event, this.element)) {
+                                this.element[operation](event, callback);
+                            }
+                        } else {
+                            this.element.forEach(function (el) {
+                                if (_this2.__hasEvent(event, el)) {
+                                    el[operation](event, callback);
+                                }
+                            });
+                        }
+                    }
+                };
 
-            function off(event, callback) {
-                __manageEvent(event, 'removeEventListener', callback);
-            }
+                // Class
+                this.__proto__.__proto__.__manageClass = function (classes, operation) {
+                    var _this3 = this;
 
-            /*
-            * ---------------
-            * Class
-            * ---------------
-            */
-            function addClass(classes) {
-                __manageClass(classes, 'add');
-            }
+                    if (!classes) error('ReferenceError', 'Class arguments not founds !');
 
-            function removeClass(classes) {
-                __manageClass(classes, 'remove');
-            }
+                    var classLists = classes.trim().split(' ');
 
-            // Private Functions
+                    if (this.__isWindowObj() || this.__isObj()) {
+                        classLists.forEach(function (cl) {
+                            _this3.element.classList[operation](cl);
+                        });
+                    } else {
+                        this.element.forEach(function (el) {
+                            classLists.forEach(function (cl, index) {
+                                el.classList[operation](cl);
+                            });
+                        });
+                    }
+                };
+
+                // Attr 
+                this.__proto__.__proto__.__manageAttr = function (attr, operation) {
+                    var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
 
-            // Check where given event is exist or not
-            function __hasEvent(event, element) {
-                return typeof element['on' + event] !== "undefined";
-            }
+                    if (!value) {
+                        error("Value not provided");
+                    }
 
-            function __manageEvent(event, operation, callback) {
-
-                if (!(window[operation] || callback)) {
-                    error('Event || Event Function reference not found');
-                }
-
-                if (window[operation]) {
-                    if (element === element.window || element.NodeType === 9) {
-                        if (__hasEvent(event, element)) {
-                            element[operation](event, callback);
+                    if (this.__isWindowObj() || this.__isObj()) {
+                        if (operation === "removeAttribute") {
+                            if (this.element.hasAttribute(attr)) {
+                                this.element[operation](attr);
+                            }
+                        } else {
+                            this.element[operation](attr, value);
                         }
                     } else {
-                        element.forEach(function (el) {
-                            if (__hasEvent(event, el)) {
-                                el[operation](event, callback);
-                            }
-                        });
+                        if (operation === "removeAttribute") {
+                            this.element.forEach(function (el) {
+                                if (el.hasAttribute(attr)) el[operation](attr);
+                            });
+                        } else {
+                            this.element.forEach(function (el) {
+                                el[operation](attr, value);
+                            });
+                        }
+                    }
+                };
+            }
+
+            // Prepare selector
+
+        }, {
+            key: "init",
+            value: function init() {
+
+                if (typeof this.selector === 'string' && this.selector.length) {
+                    this.element = document.querySelectorAll(this.selector);
+                    this.length = this.element.length;
+
+                    if (this.length === 1) {
+                        this.element = this.element[0];
+                    }
+                } else if (_typeof(this.selector) === 'object') {
+                    if (this.__isWindowObj()) {
+                        this.element = this.selector;
+                        this.length = 1;
+                    } else {
+                        this.length = this.selector.length;
+                        this.element = this.selector;
+
+                        if (this.length === 1) {
+                            this.element = this.selector[0];
+                        }
+                    }
+                } else {
+                    error('ReferenceError', 'Selector not defined');
+                }
+
+                // Check Node found or not 
+                if (this.element instanceof HTMLElement || this.element instanceof Node || this.element instanceof NodeList) {
+                    if (this.element instanceof NodeList) {
+                        if (!this.element.length) return this.element = false;
                     }
                 }
             }
 
-            function __manageClass(classes, operation) {
+            /*
+             * ---------------
+             * Events
+             * ---------------
+             */
 
-                if (!classes) {
-                    error('Class arguments not founds !');
-                }
+        }, {
+            key: "on",
+            value: function on(event) {
+                var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
-                var classLists = classes.trim().split(' ');
+                this.__manageEvent(event, 'addEventListener', callback);
+            }
+        }, {
+            key: "off",
+            value: function off(event) {
+                var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
-                if (element === element.window || element.NodeType === 9) {
-                    classLists.forEach(function (cl) {
-                        element.classList[operation](cl);
-                    });
-                } else {
-                    element.forEach(function (el) {
-                        classLists.forEach(function (cl, index) {
-                            el.classList[operation](cl);
-                        });
-                    });
-                }
+                this.__manageEvent(event, 'removeEventListener', callback);
             }
 
-            // Attributes
-            function attr(name, value) {
-                if (element === element.window || element.NodeType === 9) {
-                    element.setAttribute(name, value);
-                } else {
-                    element.forEach(function (el) {
-                        el.setAttribute(name, value);
-                    });
-                }
+            /*
+             * ---------------
+             * Class
+             * ---------------
+             */
+
+        }, {
+            key: "addClass",
+            value: function addClass(classes) {
+                this.__manageClass(classes, 'add');
+            }
+        }, {
+            key: "removeClass",
+            value: function removeClass(classes) {
+                this.__manageClass(classes, 'remove');
             }
 
-            function removeAttr(name) {
-                if (element === element.window || element.NodeType === 9) {
-                    if (element.hasAttribute(name)) element.removeAttribute(name);
-                } else {
-                    element.forEach(function (el) {
-                        if (el.hasAttribute(name)) el.removeAttribute(name);
-                    });
-                }
-            }
+            /*
+             * ---------------
+             * Attributes
+             * ---------------
+             */
 
-            if (element) return {
-                on: on,
-                off: off,
-                addClass: addClass,
-                removeClass: removeClass,
-                attr: attr,
-                removeAttr: removeAttr
-            };
+        }, {
+            key: "attr",
+            value: function attr(_attr, value) {
+                this.__manageAttr(_attr, "setAttribute", value);
+            }
+        }, {
+            key: "removeAttr",
+            value: function removeAttr(attr) {
+                this.__manageAttr(attr, "removeAttribute");
+            }
+        }]);
+
+        return RB;
+    }();
+
+    if (!window.rb) {
+        window.rb = function (ref) {
+            if (!ref) error('ReferenceError', 'Reference not provided');
+            return new RB(ref);
         };
     }
 })();
-
-// Utility End
-// -------------------------------------------------
-
 
 // Load Event
 rb(window).on("load", function () {

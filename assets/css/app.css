@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,900");
 /* Font Awesome */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2373,25 +2372,50 @@ a {
 /* --------------------------- 
 * 	Profile Framework 
 ----------------------------- */
-.row {
+.row, .rb-theme1 .container .intro-text .skills-gallery {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex; }
-  .row.space-between {
+  display: flex;
+  flex-wrap: wrap; }
+  .row.space-between, .rb-theme1 .container .intro-text .space-between.skills-gallery {
     justify-content: space-between; }
-  .row.align-center {
+  .row.align-center, .rb-theme1 .container .intro-text .align-center.skills-gallery {
     -webkit-box-align: center;
     -moz-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
-  .row.flex-end {
+  .row.flex-end, .rb-theme1 .container .intro-text .flex-end.skills-gallery {
     justify-content: flex-end; }
+  .row .col, .rb-theme1 .container .intro-text .skills-gallery .col {
+    flex: 1; }
 
 body .hidden {
   display: none !important; }
+
+body .max-height-full {
+  max-height: 100%; }
+
+.icon {
+  padding: 5px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #fff;
+  height: 20px;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  box-sizing: content-box; }
+  .icon:first-of-type {
+    margin-left: 10px; }
+  .icon:hover {
+    cursor: pointer; }
+  .icon.linked-in {
+    background-color: #0077b5; }
+  .icon.google {
+    background-color: #ea4335; }
 
 /* --------------------------- 
 * 	Profile Framework : END
@@ -2482,18 +2506,20 @@ body .hidden {
       position: absolute;
       top: 30%;
       left: 5%;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s; }
-    .rb-form .input:active > label, .rb-form .input:hover > label, .rb-form .input label.top {
+      -webkit-transition: ease-out 0.2s;
+      -moz-transition: ease-out 0.2s;
+      -ms-transition: ease-out 0.2s;
+      -o-transition: ease-out 0.2s;
+      transition: ease-out 0.2s;
+      z-index: 0; }
+    .rb-form .input:hover > label, .rb-form .input label.top {
       top: -9px;
       background-color: #fff;
       padding: 0px 5px;
       font-size: 12px;
       font-weight: 500;
-      color: #2296f3; }
+      color: #2296f3;
+      z-index: 0; }
 
 /* --------------------------- 
 * 	Form :END 
@@ -2586,12 +2612,7 @@ body .hidden {
       border-bottom: 2px solid #544d55;
       height: auto;
       bottom: 0;
-      left: 0;
-      -webkit-transition: width 0.2s;
-      -moz-transition: width 0.2s;
-      -ms-transition: width 0.2s;
-      -o-transition: width 0.2s;
-      transition: width 0.2s; }
+      left: 0; }
       .rb-theme1 header .progress-bar.page-process {
         border-color: #03A9F4; }
     .rb-theme1 header .logo h1 {
@@ -2623,16 +2644,90 @@ body .hidden {
     /* Intro Text */ }
     .rb-theme1 .container .intro-text {
       position: relative;
-      text-align: center; }
-      .rb-theme1 .container .intro-text .pp img {
-        -webkit-border-radius: 3px;
-        border-radius: 3px; }
+      background-color: #fff; }
+      .rb-theme1 .container .intro-text .pp {
+        padding: 20px 0 20px 20px; }
+        .rb-theme1 .container .intro-text .pp img {
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          max-height: 100%; }
       .rb-theme1 .container .intro-text .texts {
-        height: 100%;
+        position: absolute;
         background-color: #fff;
         padding: 20px;
         text-align: left;
-        margin-left: 20px; }
+        bottom: 4px; }
+        .rb-theme1 .container .intro-text .texts .header {
+          font-size: 28px;
+          color: #5d575e; }
+        .rb-theme1 .container .intro-text .texts .title {
+          margin-top: 10px;
+          font-weight: 500;
+          color: #534240; }
+      .rb-theme1 .container .intro-text .skills-gallery {
+        flex: 2;
+        align-items: center;
+        padding: 20px; }
+        .rb-theme1 .container .intro-text .skills-gallery .image {
+          position: relative; }
+          .rb-theme1 .container .intro-text .skills-gallery .image:hover .label {
+            display: block; }
+          .rb-theme1 .container .intro-text .skills-gallery .image .label {
+            display: none;
+            position: absolute;
+            background-color: #4d464e;
+            right: 117%;
+            min-width: 410px;
+            padding: 20px;
+            color: #fff;
+            z-index: 0;
+            top: 17%; }
+            .rb-theme1 .container .intro-text .skills-gallery .image .label:after {
+              content: '';
+              width: 0px;
+              position: absolute;
+              height: 0px;
+              border-top: 7px solid transparent;
+              border-bottom: 8px solid transparent;
+              border-left: 9px solid #4d464e;
+              right: -9px;
+              top: 0%; }
+            .rb-theme1 .container .intro-text .skills-gallery .image .label .about {
+              font-weight: 600; }
+            .rb-theme1 .container .intro-text .skills-gallery .image .label .description {
+              padding-top: 15px;
+              font-size: 12px;
+              font-weight: 400; }
+        .rb-theme1 .container .intro-text .skills-gallery img {
+          max-height: 100px;
+          max-width: 100px;
+          height: auto;
+          width: auto;
+          display: inline-block;
+          flex: auto;
+          padding: 20px;
+          align-self: center;
+          border-radius: 0;
+          -webkit-transform: scale(0.9);
+          -moz-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          -o-transform: scale(0.9);
+          transform: scale(0.9);
+          -webkit-transition: background-color 0.2s, border-radius 0.2s, transform 0.2s;
+          -moz-transition: background-color 0.2s, border-radius 0.2s, transform 0.2s;
+          -ms-transition: background-color 0.2s, border-radius 0.2s, transform 0.2s;
+          -o-transition: background-color 0.2s, border-radius 0.2s, transform 0.2s;
+          transition: background-color 0.2s, border-radius 0.2s, transform 0.2s; }
+          .rb-theme1 .container .intro-text .skills-gallery img:hover {
+            cursor: pointer;
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+            background-color: #453c3726;
+            -webkit-border-radius: 50%;
+            border-radius: 50%; }
   .rb-theme1 .pages {
     display: none; }
     .rb-theme1 .pages h2.page-header {
@@ -2696,10 +2791,8 @@ body .hidden {
       text-align: right; }
       .rb-theme1 .quickChat .startChat button {
         display: inline-block;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
         background-color: #232931;
         margin-top: 20px;
         -webkit-transition: display 0.4s;
@@ -2708,7 +2801,7 @@ body .hidden {
         -o-transition: display 0.4s;
         transition: display 0.4s; }
         .rb-theme1 .quickChat .startChat button i {
-          margin: 0; }
+          margin-left: 5px; }
   .rb-theme1 footer {
     width: 100%;
     padding: 8px;

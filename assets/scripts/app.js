@@ -1,92 +1,88 @@
-/**
- *	Copyright
- *	Rabin Bhandari
- */
-
- // ------------------------------------------------
- // Utility
 (() => {
-    if(!window.rb) {
-        window.rb = function(selector) {
+
+    "use strict";
+
+    /**
+     * 
+     * A small plugin written by Rabin Bhandari
+     * 
+     *	@copyright 2018
+     *	@author Rabin Bhandari <rabin.bhandari999@gmail.com>
+     *
+     */
+
+    // -------------------------------
+    //          Helpers
+    // --------------------------------
+
+    /**
+     * @param type: string types of errors
+     * @param message: string
+     */
+    function error(type = "Error", message) {
+        if (message) {
+            if (window[type]) {
+                throw new window[type](message);
+            } else if (window.console) {
+                console.error(message);
+            }
+        }
+    }
+
+    // Helpers
+    function querySelectorAllExist() {
+        return (document.querySelector || document.querySelectorAll) ? true : false;
+    }
+
+    // Query Selector Support for IE 7
+    (function setUpQuerySelectorPolyfill() {
+        if (!querySelectorAllExist()) {
+            let d = document,
+                s = d.createStyleSheet();
+            d.querySelectorAll = function (r, c, i, j, a) {
+                a = d.all, c = [], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
+                for (i = r.length; i--;) {
+                    s.addRule(r[i], 'k:v');
+                    for (j = a.length; j--;) a[j].currentStyle.k && c.push(a[j]);
+                    s.removeRule(0);
+                }
+                return c;
+            }
+        }
+    })();
+
+    class RB {
+        constructor(selector) {
+            this.selector = selector;
+            this.length = 0;
+            this.element = false;
             
-            let element = null;
+            this.__setUpPrivateMethods();
+            this.init();
+            
+        }
 
-            // Prepare Node || Nodes
-            if(typeof selector === 'string' && selector.length) {
-                element =  document.querySelectorAll(selector);
-            } else if(typeof selector === 'object') {
-                element = selector;
-            } else {
-                error('Selector not defined');
-            }
+        // private helper
+        __setUpPrivateMethods() {
+            this.__proto__.__proto__.__isWindowObj = () => ((this.selector === this.selector.window || this.selector.NodeType === 9) ? true : false);
+            this.__proto__.__proto__.__isObj = () => ((this.element && !this.element.hasOwnProperty('lenght')) ? true : false);
 
-            // Check Node found or not 
-            if(element instanceof HTMLElement || element instanceof Node || element instanceof NodeList) {
-                if(element instanceof NodeList) {
-                    if(!element.length)
-                        return element = false;
+            // Event
+            this.__proto__.__proto__.__hasEvent = (event) => (typeof this.element['on' + event] !== "undefined");
+    
+            this.__proto__.__proto__.__manageEvent = function(event, operation, callback) {
+                if (!(window[operation] || callback)) {
+                    error('ReferenceError', 'Event || Event Function reference not found');
                 }
-            }
-
-            function error(message) {
-                if(message) {
-                    if(window.Error) {
-                        throw new Error(message);
-                    } else if(window.console) {
-                        console.error(message);
-                    }
-                }
-            }
-
-            /*
-            * ---------------
-            * Events
-            * ---------------
-            */
-            function on(event, callback) {
-                __manageEvent(event, 'addEventListener' ,callback);
-            }
-
-            function off(event, callback) {
-                __manageEvent(event, 'removeEventListener' ,callback);
-            }
-
-            /*
-            * ---------------
-            * Class
-            * ---------------
-            */
-            function addClass(classes) {
-                __manageClass(classes, 'add');
-            }
-
-            function removeClass(classes) {
-                __manageClass(classes, 'remove');
-            } 
-
-            // Private Functions
-
-
-            // Check where given event is exist or not
-            function __hasEvent(event, element) {
-                return (typeof element['on'+event] !== "undefined");
-            } 
-
-            function __manageEvent(event, operation, callback) {
-                
-
-                if(!(window[operation] || callback)) {
-                    error('Event || Event Function reference not found');
-                }
-
-                if(window[operation]) {
-                    if(element === element.window || element.NodeType === 9) {
-                        if(__hasEvent(event, element)) {
-                            element[operation](event, callback);
+    
+                if (window[operation]) {
+                    if (this.__isWindowObj() || this.__isObj()) {
+                        if (this.__hasEvent(event, this.element)) {
+                            this.element[operation](event, callback);
                         }
                     } else {
-                        element.forEach((el) => {
-                            if(__hasEvent(event, el)) {
+                        this.element.forEach((el) => {
+                            if (this.__hasEvent(event, el)) {
                                 el[operation](event, callback);
                             }
                         });
@@ -94,65 +90,146 @@
                 }
             }
 
-            function __manageClass(classes, operation) {
-
-                if(!classes) {
-                    error('Class arguments not founds !');
-                }
-
+            // Class
+            this.__proto__.__proto__.__manageClass = function(classes, operation) {
+                if (!classes)
+                    error('ReferenceError', 'Class arguments not founds !');
+    
                 let classLists = classes.trim().split(' ');
-
-                if(element === element.window || element.NodeType === 9) {
+    
+                if (this.__isWindowObj() || this.__isObj()) {
                     classLists.forEach((cl) => {
-                        element.classList[operation](cl);
+                        this.element.classList[operation](cl);
                     });
                 } else {
-                    element.forEach((el) => {
-                        classLists.forEach(function(cl, index) {
+                    this.element.forEach((el) => {
+                        classLists.forEach(function (cl, index) {
                             el.classList[operation](cl);
                         });
                     });
                 }
             }
 
-            // Attributes
-            function attr(name, value) {
-                if(element === element.window || element.NodeType === 9) {
-                    element.setAttribute(name, value);
-                } else {
-                    element.forEach((el) => {
-                        el.setAttribute(name, value);
-                    });
-                }                
-            }
+            // Attr 
+            this.__proto__.__proto__.__manageAttr = function(attr, operation, value = false) {
 
-            function removeAttr( name) {
-                 if(element === element.window || element.NodeType === 9) {
-                    if(element.hasAttribute(name))
-                        element.removeAttribute(name);
+                if (!value) {
+                    error("Value not provided");
+                }
+    
+                if (this.__isWindowObj() || this.__isObj()) {
+                    if (operation === "removeAttribute") {
+                        if (this.element.hasAttribute(attr)) {
+                            this.element[operation](attr);
+                        }
+                    } else {
+                        this.element[operation](attr, value);
+                    }
                 } else {
-                    element.forEach((el) => {
-                        if(el.hasAttribute(name))
-                            el.removeAttribute(name);
-                    });
+                    if (operation === "removeAttribute") {
+                        this.element.forEach((el) => {
+                            if (el.hasAttribute(attr))
+                                el[operation](attr);
+                        });
+    
+                    } else {
+                        this.element.forEach((el) => {
+                            el[operation](attr, value);
+                        });
+                    }
                 }
             }
+        }
 
-            if(element)
-                return {
-                    on,
-                    off,
-                    addClass,
-                    removeClass,
-                    attr,
-                    removeAttr
+        // Prepare selector
+        init() {
+
+            if (typeof this.selector === 'string' && this.selector.length) {
+                this.element = document.querySelectorAll(this.selector);
+                this.length = this.element.length;
+
+                if(this.length === 1) {
+                    this.element =  this.element[0];
+                } 
+
+            } else if (typeof this.selector === 'object') {
+                if(this.__isWindowObj()) {
+                    this.element = this.selector;
+                    this.length = 1;
+                } else {
+                    this.length = this.selector.length;
+                    this.element = this.selector;
+
+                    if(this.length === 1) {
+                        this.element =  this.selector[0];
+                    } 
                 }
-        };
-    } 
+            } else {
+                error('ReferenceError', 'Selector not defined');
+            }
+
+            // Check Node found or not 
+            if (this.element instanceof HTMLElement || this.element instanceof Node || this.element instanceof NodeList) {
+                if (this.element instanceof NodeList) {
+                    if (!this.element.length)
+                        return this.element = false;
+                }
+            }
+        }        
+
+        /*
+         * ---------------
+         * Events
+         * ---------------
+         */
+
+        on(event, callback = false) {
+            this.__manageEvent(event, 'addEventListener', callback);
+        }
+
+        off(event, callback = false) {
+            this.__manageEvent(event, 'removeEventListener', callback);
+        }
+
+        /*
+         * ---------------
+         * Class
+         * ---------------
+         */
+
+        addClass(classes) {
+            this.__manageClass(classes, 'add');
+        }
+
+        removeClass(classes) {
+            this.__manageClass(classes, 'remove');
+        }
+
+
+        /*
+         * ---------------
+         * Attributes
+         * ---------------
+         */
+        attr(attr, value) {
+            this.__manageAttr(attr, "setAttribute", value);
+        }
+
+        removeAttr(attr) {
+            this.__manageAttr(attr, "removeAttribute");
+        }
+
+    }
+
+    if (!window.rb) {
+        window.rb = function (ref) {
+            if (!ref)
+                error('ReferenceError', 'Reference not provided');
+            return new RB(ref);
+        }
+    }
+
 })();
-
-// Utility End
-// -------------------------------------------------
 
 
 // Load Event
