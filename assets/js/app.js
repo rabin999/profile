@@ -87,13 +87,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this.__proto__.__proto__.__isWindowObj = function () {
                     return _this.selector === _this.selector.window || _this.selector.NodeType === 9 ? true : false;
                 };
-                this.__proto__.__proto__.__isObj = function () {
-                    return _this.element && !_this.element.hasOwnProperty('lenght') ? true : false;
+
+                this.__proto__.__proto__.__singleObj = function () {
+                    return _this.element && !Boolean(_this.element.length) ? true : false;
                 };
 
                 // Event
                 this.__proto__.__proto__.__hasEvent = function (event) {
-                    return typeof _this.element['on' + event] !== "undefined";
+                    var element = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this.element;
+
+                    return typeof element['on' + event] !== "undefined";
                 };
 
                 this.__proto__.__proto__.__manageEvent = function (event, operation, callback) {
@@ -104,7 +107,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
 
                     if (window[operation]) {
-                        if (this.__isWindowObj() || this.__isObj()) {
+                        if (this.__isWindowObj() || this.__singleObj()) {
                             if (this.__hasEvent(event, this.element)) {
                                 this.element[operation](event, callback);
                             }
@@ -126,7 +129,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     var classLists = classes.trim().split(' ');
 
-                    if (this.__isWindowObj() || this.__isObj()) {
+                    if (this.__isWindowObj() || this.__singleObj()) {
                         classLists.forEach(function (cl) {
                             _this3.element.classList[operation](cl);
                         });
@@ -148,7 +151,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         error("Value not provided");
                     }
 
-                    if (this.__isWindowObj() || this.__isObj()) {
+                    if (this.__isWindowObj() || this.__singleObj()) {
                         if (operation === "removeAttribute") {
                             if (this.element.hasAttribute(attr)) {
                                 this.element[operation](attr);
@@ -288,8 +291,8 @@ function ready() {
 
 // Set Container Width
 function setContainerHeight() {
-    var header = document.querySelector('header').offsetHeight,
-        footer = document.querySelector('footer').offsetHeight,
+    var header = rb('header').element.offsetHeight,
+        footer = rb('footer').element.offsetHeight,
         height = window.innerHeight - header - footer - 40;
     var rule = 'height:' + height + 'px; min-height:' + height + 'px;';
 
@@ -297,20 +300,20 @@ function setContainerHeight() {
 }
 
 // Scroll Event For Percentage
-document.querySelector('main.container').addEventListener("scroll", function (e) {
-    var activePageHeight = parseInt(this.scrollHeight - this.clientHeight);
-    var totalProcess = Math.round(this.scrollTop / activePageHeight * 100);
+rb('main.container').on("scroll", function (e) {
+    var activePageHeight = parseInt(this.scrollHeight - this.clientHeight),
+        totalProcess = Math.round(this.scrollTop / activePageHeight * 100);
     rb('.progress-bar').addClass('page-process');
-    document.querySelector('.progress-bar').style.width = totalProcess + "%";
+    rb('.progress-bar').element.style.width = totalProcess + "%";
 });
 
 // Progress Bar
 function initProgress(progress) {
     var percent = 5;
-    document.querySelector('.progress-bar').style.width = 'auto';
+    rb('.progress-bar').element.style.width = 'auto';
     if (progress === undefined) {
         var p = setInterval(function () {
-            document.querySelector('.progress-bar').style.width = percent + '%';
+            rb('.progress-bar').element.style.width = percent + '%';
             percent += 5;
             if (percent > 100) {
                 clearInterval(p);
@@ -321,18 +324,19 @@ function initProgress(progress) {
 
 // Page Animation on double click
 
-// document.addEventListener("dblclick", (e) => {
-//     let page = document.querySelector('.intro-text');
+// rb(document).on("dblclick", (e) => {
+//     let page = rb('.intro-text').element;
 //     let size = parseInt((innerHeight / 100) * 80);
 //     page.style.height = size+"px";
 //     page.style.width = size+"px";
-//     page.classList.remove('open-page');
-//     page.classList.add('close-page');
+//     rb('.intro-text').removeClass('open-page');
+//     rb('.intro-text').addClass('close-page');
 // });
 
 
 // Form Elements
 rb('.input > input').on('focus', function (e) {
+    console.log("Input clicked");
     if (this.nodeName === 'INPUT') {
         if (this.previousElementSibling.nodeName === 'LABEL') {
             this.previousElementSibling.classList.add('top');
