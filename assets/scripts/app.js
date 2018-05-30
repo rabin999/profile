@@ -53,6 +53,10 @@
 
     class RB {
         constructor(selector) {
+
+            // Development Debug
+            this.development = true;
+
             this.selector = selector;
             this.length = 0;
             this.element = false;
@@ -181,7 +185,8 @@
                     } 
                 }
             } else {
-                console.warn(`Selector (${this.selector}) not found on DOM`);
+                if(this.development) 
+                    console.warn(`Selector (${this.selector}) not found on DOM`);
             }
 
             // Check Node found or not 
@@ -189,7 +194,8 @@
                 if (this.element instanceof NodeList) {
                     if (!this.element.length) {
                         this.element = false;
-                        console.warn(`Selector (${this.selector}) not found on DOM`);
+                        if(this.development) 
+                            console.warn(`Selector (${this.selector}) not found on DOM`);
                     }
                 }
             }
@@ -308,29 +314,15 @@ function scrolling(lastScrollPosition) {
     // rb('.progress-bar').element.style.width = totalProcess+"%";
 }
 
-// Progress Bar
-function initProgress(progress) {
-    let percent = 5;
-    rb('.progress-bar').element.style.width = 'auto';
-    if (progress === undefined) {
-        let p = setInterval(() => {
-            rb('.progress-bar').element.style.width = percent + '%';
-            percent += 5;
-            if (percent > 100) {
-                clearInterval(p);
-            }
-        }, 0);
-    }
-}
-
 // Top Nav bar
 rb('nav.top ul li > a').on('click', function(e){
-    if(window.scroll) {
-        
-        e.preventDefault();
-        let id = rb(this).attr('href');
-        window.location.hash = id;
+    let id = rb(this).attr('href');
+    let found = rb(id).length;
 
+    if(window.scroll && id.indexOf("#") !== -1 && found) {
+        e.preventDefault();
+
+        window.location.hash = id;
         window.scroll({
             top: rb(id).element.offsetTop - 50, 
             left: 0, 

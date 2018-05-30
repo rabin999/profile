@@ -2413,14 +2413,16 @@ body .max-height-full {
   width: 20px;
   text-align: center;
   box-sizing: content-box; }
-  .icon:first-of-type {
-    margin-left: 10px; }
   .icon:hover {
     cursor: pointer; }
+  .icon.facebook {
+    background-color: #3b5998; }
   .icon.linked-in {
     background-color: #0077b5; }
   .icon.google {
     background-color: #ea4335; }
+  .icon.instagram {
+    background-color: #c13584; }
 
 /* --------------------------- 
 * 	Profile Framework : END
@@ -2726,7 +2728,7 @@ html {
             padding: 20px;
             color: #fff;
             z-index: 1;
-            top: 110%;
+            top: 105%;
             left: -85%;
             width: 350px;
             -webkit-transform: translateY(0%);
@@ -3464,12 +3466,230 @@ html {
         .rb-theme1 .container .contact .contact-form form button {
           border-radius: 20px;
           padding: 8px 35px; }
+  .rb-theme1 .container {
+    overflow: hidden;
+    background-color: #fff; }
+  .rb-theme1 .blog-divider {
+    margin: 20px 0;
+    border: 0.5px solid rgba(40, 39, 35, 0.07843);
+    width: 100%; }
+  .rb-theme1 .blogs {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 20px; }
+    .rb-theme1 .blogs .margin-tb-20 {
+      margin: 20px 0; }
+    .rb-theme1 .blogs .blog {
+      overflow: hidden; }
+      .rb-theme1 .blogs .blog:not(:last-child) {
+        margin-bottom: 20px; }
+      .rb-theme1 .blogs .blog .blog-image {
+        position: relative;
+        overflow: hidden;
+        float: left;
+        max-width: 100%;
+        margin-right: 20px; }
+        .rb-theme1 .blogs .blog .blog-image img {
+          max-width: 100%;
+          height: auto;
+          vertical-align: middle;
+          border-style: none;
+          width: 100%;
+          -webkit-transition: ease-out 0.2s;
+          -moz-transition: ease-out 0.2s;
+          -ms-transition: ease-out 0.2s;
+          -o-transition: ease-out 0.2s;
+          transition: ease-out 0.2s; }
+        .rb-theme1 .blogs .blog .blog-image:hover img {
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1); }
+      .rb-theme1 .blogs .blog .tag {
+        color: rgba(80, 80, 80, 0.87);
+        border: 1px solid rgba(38, 41, 35, 0.3);
+        border-radius: 15px;
+        display: inline-block;
+        padding: 4px 10px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase; }
+      .rb-theme1 .blogs .blog .date {
+        font-weight: 600;
+        font-size: 12px;
+        color: #6f6d6d;
+        text-align: center; }
+      .rb-theme1 .blogs .blog .title {
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        color: #393b4a; }
+      .rb-theme1 .blogs .blog .blog-review, .rb-theme1 .blogs .blog .blog-detail {
+        margin-bottom: 20px; }
+        .rb-theme1 .blogs .blog .blog-review a, .rb-theme1 .blogs .blog .blog-detail a {
+          line-height: 21px;
+          color: #131313; }
+      .rb-theme1 .blogs .blog .view-comment {
+        color: #777;
+        text-align: center; }
+        .rb-theme1 .blogs .blog .view-comment .view, .rb-theme1 .blogs .blog .view-comment .comment {
+          font-weight: 600;
+          font-size: 12px; }
+        .rb-theme1 .blogs .blog .view-comment .comment {
+          margin-left: 10px; }
+      .rb-theme1 .blogs .blog button {
+        -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+        -moz-transition: background-color 0.2s linear, color 0.2s linear;
+        -ms-transition: background-color 0.2s linear, color 0.2s linear;
+        -o-transition: background-color 0.2s linear, color 0.2s linear;
+        transition: background-color 0.2s linear, color 0.2s linear;
+        padding: 8px 25px;
+        font-weight: 500;
+        background-color: transparent;
+        border: 1px solid #262523;
+        color: #323133; }
+        .rb-theme1 .blogs .blog button i {
+          margin-left: 5px; }
+        .rb-theme1 .blogs .blog button:hover {
+          background-color: #1d2b2b;
+          color: #fff; }
+      .rb-theme1 .blogs .blog.feature {
+        margin-bottom: 0px; }
+        .rb-theme1 .blogs .blog.feature img {
+          width: 400px; }
+      .rb-theme1 .blogs .blog.single .blog-image {
+        width: 100%;
+        float: none;
+        overflow: hidden;
+        margin-bottom: 20px;
+        display: block; }
+        .rb-theme1 .blogs .blog.single .blog-image:hover img {
+          -webkit-transform: none;
+          -moz-transform: none;
+          -ms-transform: none;
+          -o-transform: none;
+          transform: none; }
+      .rb-theme1 .blogs .blog.single .title {
+        display: block;
+        margin: 60px 0 0 0;
+        font-weight: 400;
+        font-size: 30px; }
+      .rb-theme1 .blogs .blog.single .short-detail {
+        margin-bottom: 50px;
+        width: 50%; }
+  .rb-theme1 .pagination {
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    text-align: right;
+    border-top: 1px solid #ddd; }
+    .rb-theme1 .pagination ul li {
+      list-style-type: none;
+      display: inline-block; }
+      .rb-theme1 .pagination ul li:not(:last-child) {
+        margin-right: 3px; }
+      .rb-theme1 .pagination ul li a {
+        color: #7b7b7b;
+        display: block;
+        font-weight: 500;
+        padding: 2px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        box-sizing: border-box; }
+        .rb-theme1 .pagination ul li a.active, .rb-theme1 .pagination ul li a:hover {
+          background-color: #666d6e;
+          border-color: #666d6e;
+          color: #fff; }
+  .rb-theme1 code {
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 20px 0; }
+    .rb-theme1 code .header {
+      padding: 8px;
+      background-color: #e8e8e8;
+      border-top: 1px solid #b2babb;
+      border-bottom: 1px solid #b2babb;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px; }
+      .rb-theme1 code .header p {
+        font-weight: 500;
+        font-size: 12px; }
+    .rb-theme1 code pre, .rb-theme1 code span, .rb-theme1 code div {
+      font-family: 'Source Sans Pro', sans-serif; }
+  .rb-theme1 aside {
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border-left: 1px solid #ccc;
+    overflow: auto; }
+    .rb-theme1 aside .most-viewed {
+      display: block;
+      overflow: hidden;
+      width: 100%; }
+      .rb-theme1 aside .most-viewed .blogs {
+        width: 100%;
+        padding: 0px; }
+        .rb-theme1 aside .most-viewed .blogs .blog {
+          background-color: #f7f7f7;
+          padding: 10px; }
+          .rb-theme1 aside .most-viewed .blogs .blog .blog-image img {
+            width: 160px; }
+          .rb-theme1 aside .most-viewed .blogs .blog .title {
+            font-size: 14px; }
+    .rb-theme1 aside .get-notified {
+      padding: 20px;
+      margin-top: 20px; }
+      .rb-theme1 aside .get-notified h2 {
+        font-size: 21px;
+        text-align: center;
+        color: #F44336; }
+      .rb-theme1 aside .get-notified p {
+        margin: 30px 0; }
+      .rb-theme1 aside .get-notified .subscribe-btn {
+        text-align: center;
+        margin-bottom: 20px; }
+        .rb-theme1 aside .get-notified .subscribe-btn button {
+          background-color: #096ab6;
+          padding: 6px 20px;
+          font-weight: 500; }
   .rb-theme1 footer {
     width: 100%;
     padding: 8px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 12px;
-    background-color: #dcdcda; }
+    background-color: #dcdcda;
+    color: #4e4e4e; }
+    .rb-theme1 footer .follow-me {
+      display: inline-block;
+      margin-left: 40px; }
+      .rb-theme1 footer .follow-me span {
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        color: #4e4e4e; }
+      .rb-theme1 footer .follow-me ul {
+        display: inline-block;
+        text-align: center; }
+        .rb-theme1 footer .follow-me ul li {
+          list-style-type: none;
+          display: inline-block; }
+          .rb-theme1 footer .follow-me ul li .icon {
+            font-size: 12px;
+            height: 16px;
+            width: 16px; }
 
 /*# sourceMappingURL=app.css.map */

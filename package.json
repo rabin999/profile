@@ -13,5 +13,7 @@
     "babel-preset-env": "^1.7.0",
     "font-awesome": "^4.7.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "codemirror": "^5.38.0"
+  }
 }
