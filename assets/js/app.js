@@ -71,8 +71,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.selector = selector;
             this.length = 0;
             this.element = false;
-
-            this.__setUpPrivateMethods();
             this.init();
         }
 
@@ -80,97 +78,116 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
         _createClass(RB, [{
-            key: "__setUpPrivateMethods",
-            value: function __setUpPrivateMethods() {
+            key: "__isWindowObj",
+            value: function __isWindowObj() {
+                return this.selector === this.selector.window || this.selector.NodeType === 9 ? true : false;
+            }
+        }, {
+            key: "__singleObj",
+            value: function __singleObj() {
+                return this.element && !Boolean(this.element.length) ? true : false;
+            }
+        }, {
+            key: "__hasEvent",
+            value: function __hasEvent(event) {
+                var element = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.element;
+
+                return typeof element['on' + event] !== "undefined";
+            }
+        }, {
+            key: "__manageEvent",
+            value: function __manageEvent(event, operation, callback) {
                 var _this = this;
 
-                this.__proto__.__proto__.__isWindowObj = function () {
-                    return _this.selector === _this.selector.window || _this.selector.NodeType === 9 ? true : false;
-                };
+                if (!(window[operation] || callback)) {
+                    error('ReferenceError', 'Event || Event Function reference not found');
+                }
 
-                this.__proto__.__proto__.__singleObj = function () {
-                    return _this.element && !Boolean(_this.element.length) ? true : false;
-                };
-
-                // Event
-                this.__proto__.__proto__.__hasEvent = function (event) {
-                    var element = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this.element;
-
-                    return typeof element['on' + event] !== "undefined";
-                };
-
-                this.__proto__.__proto__.__manageEvent = function (event, operation, callback) {
-                    var _this2 = this;
-
-                    if (!(window[operation] || callback)) {
-                        error('ReferenceError', 'Event || Event Function reference not found');
-                    }
-
-                    if (window[operation]) {
-                        if (this.__isWindowObj() || this.__singleObj()) {
-                            if (this.__hasEvent(event, this.element)) {
-                                this.element[operation](event, callback);
-                            }
-                        } else {
-                            this.element.forEach(function (el) {
-                                if (_this2.__hasEvent(event, el)) {
-                                    el[operation](event, callback);
-                                }
-                            });
-                        }
-                    }
-                };
-
-                // Class
-                this.__proto__.__proto__.__manageClass = function (classes, operation) {
-                    var _this3 = this;
-
-                    if (!classes) error('ReferenceError', 'Class arguments not founds !');
-
-                    var classLists = classes.trim().split(' ');
-
+                if (window[operation] && this.element) {
                     if (this.__isWindowObj() || this.__singleObj()) {
-                        classLists.forEach(function (cl) {
-                            _this3.element.classList[operation](cl);
+                        if (this.__hasEvent(event, this.element)) {
+                            this.element[operation](event, callback);
+                        }
+                    } else {
+                        this.element.forEach(function (el) {
+                            if (_this.__hasEvent(event, el)) {
+                                el[operation](event, callback);
+                            }
+                        });
+                    }
+                }
+            }
+
+            // Class
+
+        }, {
+            key: "__manageClass",
+            value: function __manageClass(classes, operation) {
+                var _this2 = this;
+
+                if (!classes) error('ReferenceError', 'Class arguments not founds !');
+
+                var classLists = classes.trim().split(' ');
+
+                if (!this.element) {
+                    return;
+                }
+                if (this.__isWindowObj() || this.__singleObj()) {
+                    classLists.forEach(function (cl) {
+                        _this2.element.classList[operation](cl);
+                    });
+                } else {
+                    this.element.forEach(function (el) {
+                        classLists.forEach(function (cl, index) {
+                            el.classList[operation](cl);
+                        });
+                    });
+                }
+            }
+
+            // Attr 
+
+        }, {
+            key: "__manageAttr",
+            value: function __manageAttr(attr, operation) {
+                var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+
+                if (!attr.length) {
+                    error("ReferenceError", "Attr not provided");
+                }
+
+                if (!this.element) {
+                    return;
+                }
+
+                if (this.__isWindowObj() || this.__singleObj()) {
+                    if (operation === "removeAttribute" || operation === "getAttribute") {
+                        if (this.element.hasAttribute(attr)) {
+                            if (operation === "getAttribute") {
+                                return this.element[operation](attr);
+                            }
+                            this.element[operation](attr);
+                        }
+                    } else {
+                        this.element[operation](attr, value);
+                    }
+                } else {
+                    if (operation === "removeAttribute" || operation === "getAttribute") {
+                        this.element.forEach(function (el) {
+                            if (el.hasAttribute(attr)) {
+                                if (operation === "getAttribute") {
+                                    return el[operation](attr);
+                                }
+                                el[operation](attr);
+                            }
                         });
                     } else {
                         this.element.forEach(function (el) {
-                            classLists.forEach(function (cl, index) {
-                                el.classList[operation](cl);
-                            });
+                            el[operation](attr, value);
                         });
                     }
-                };
-
-                // Attr 
-                this.__proto__.__proto__.__manageAttr = function (attr, operation) {
-                    var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-
-                    if (!value) {
-                        error("Value not provided");
-                    }
-
-                    if (this.__isWindowObj() || this.__singleObj()) {
-                        if (operation === "removeAttribute") {
-                            if (this.element.hasAttribute(attr)) {
-                                this.element[operation](attr);
-                            }
-                        } else {
-                            this.element[operation](attr, value);
-                        }
-                    } else {
-                        if (operation === "removeAttribute") {
-                            this.element.forEach(function (el) {
-                                if (el.hasAttribute(attr)) el[operation](attr);
-                            });
-                        } else {
-                            this.element.forEach(function (el) {
-                                el[operation](attr, value);
-                            });
-                        }
-                    }
-                };
+                }
             }
 
             // Prepare selector
@@ -199,13 +216,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }
                     }
                 } else {
-                    error('ReferenceError', 'Selector not defined');
+                    console.warn("Selector (" + this.selector + ") not found on DOM");
                 }
 
                 // Check Node found or not 
                 if (this.element instanceof HTMLElement || this.element instanceof Node || this.element instanceof NodeList) {
                     if (this.element instanceof NodeList) {
-                        if (!this.element.length) return this.element = false;
+                        if (!this.element.length) {
+                            this.element = false;
+                            console.warn("Selector (" + this.selector + ") not found on DOM");
+                        }
                     }
                 }
             }
@@ -241,11 +261,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             key: "addClass",
             value: function addClass(classes) {
                 this.__manageClass(classes, 'add');
+                return this;
             }
         }, {
             key: "removeClass",
             value: function removeClass(classes) {
                 this.__manageClass(classes, 'remove');
+                return this;
             }
 
             /*
@@ -256,13 +278,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         }, {
             key: "attr",
-            value: function attr(_attr, value) {
-                this.__manageAttr(_attr, "setAttribute", value);
+            value: function attr(_attr) {
+                var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+                if (value) {
+                    this.__manageAttr(_attr, "setAttribute", value);
+                } else {
+                    return this.__manageAttr(_attr, "getAttribute");
+                }
+                return this;
             }
         }, {
             key: "removeAttr",
             value: function removeAttr(attr) {
                 this.__manageAttr(attr, "removeAttribute");
+                return this;
+            }
+
+            /*
+             * ---------------
+             * Page
+             * ---------------
+             */
+
+        }, {
+            key: "html",
+            value: function html() {
+                // Update New Dom Element
+                if (arguments[0] && typeof arguments[0] === "string") {
+                    this.element.innerHTML = arguments[0];
+                    return this;
+                } else {
+                    // Return Outer HTMl
+                    if (arguments[0] && arguments[0] === true) return this.element.outerHTML;
+                    return this.element.innerHTML;
+                }
             }
         }]);
 
@@ -277,35 +327,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 })();
 
-// Load Event
-rb(window).on("load", function () {
-    ready();
-});
-
-// Resize Event
-rb(window).on('resize', setContainerHeight);
-
-function ready() {
-    setContainerHeight();
-};
-
-// Set Container Width
-function setContainerHeight() {
-    var header = rb('header').element.offsetHeight,
-        footer = rb('footer').element.offsetHeight,
-        height = window.innerHeight - header - footer - 40;
-    var rule = 'height:' + height + 'px; min-height:' + height + 'px;';
-
-    rb('main.container').attr("style", rule);
-}
-
 // Scroll Event For Percentage
-rb('main.container').on("scroll", function (e) {
-    var activePageHeight = parseInt(this.scrollHeight - this.clientHeight),
-        totalProcess = Math.round(this.scrollTop / activePageHeight * 100);
-    rb('.progress-bar').addClass('page-process');
-    rb('.progress-bar').element.style.width = totalProcess + "%";
+// Optimize Scroll performace
+var ticking = false;
+var lastScrollPosition = 0;
+
+rb(window).on("scroll", function (e) {
+    lastScrollPosition = window.scrollY;
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            scrolling(lastScrollPosition);
+            ticking = false;
+        });
+        ticking = true;
+    }
 });
+
+function scrolling(lastScrollPosition) {
+    if (lastScrollPosition > 100) {
+        rb('header.menu').removeClass('static').addClass('fixed');
+    } else {
+        rb('header.menu').removeClass('fixed').addClass('static');
+    }
+
+    // let activePageHeight = parseInt(window.scrollHeight - window.clientHeight),
+    //     totalProcess = Math.round(((window.scrollTop / activePageHeight ) * 100));
+    //     console.log(totalProcess);
+
+    // rb('.progress-bar').addClass('page-process');
+    // rb('.progress-bar').element.style.width = totalProcess+"%";
+}
 
 // Progress Bar
 function initProgress(progress) {
@@ -322,51 +373,18 @@ function initProgress(progress) {
     }
 }
 
-// Page Animation on double click
+// Top Nav bar
+rb('nav.top ul li > a').on('click', function (e) {
+    if (window.scroll) {
 
-// rb(document).on("dblclick", (e) => {
-//     let page = rb('.intro-text').element;
-//     let size = parseInt((innerHeight / 100) * 80);
-//     page.style.height = size+"px";
-//     page.style.width = size+"px";
-//     rb('.intro-text').removeClass('open-page');
-//     rb('.intro-text').addClass('close-page');
-// });
+        e.preventDefault();
+        var id = rb(this).attr('href');
+        window.location.hash = id;
 
-
-// Form Elements
-rb('.input > input').on('focus', function (e) {
-    console.log("Input clicked");
-    if (this.nodeName === 'INPUT') {
-        if (this.previousElementSibling.nodeName === 'LABEL') {
-            this.previousElementSibling.classList.add('top');
-        }
+        window.scroll({
+            top: rb(id).element.offsetTop - 50,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
-});
-
-rb('.input > input').on('blur', function (e) {
-    if (this.nodeName === 'INPUT') {
-        if (this.previousElementSibling.nodeName === 'LABEL') {
-            if (this.value.length) {
-                this.previousElementSibling.classList.add('top');
-            } else {
-                this.previousElementSibling.classList.remove('top');
-            }
-        }
-    }
-});
-
-// ChatBox Event
-rb('.chatBox .close').on('click', function (e) {
-    document.querySelector('.chatBox').style.transform = 'scale(0)';
-    setTimeout(function () {
-        rb('.chatBox').addClass('hidden');
-    }, 500);
-    document.querySelector('.startChat').classList.remove('hidden');
-});
-
-rb('.startChat').on('click', function (e) {
-    rb('.chatBox').removeClass('hidden');
-    document.querySelector('.chatBox').style.transform = 'scale(1)';
-    this.classList.add('hidden');
 });
