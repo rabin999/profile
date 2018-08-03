@@ -3,11 +3,11 @@
     "use strict";
 
     /**
-     * 
+     *
      * A small plugin written by Rabin Bhandari
-     * 
-     *	@copyright 2018
-     *	@author Rabin Bhandari <rabin.bhandari999@gmail.com>
+     *
+     *    @copyright 2018
+     *    @author Rabin Bhandari <rabin.bhandari999@gmail.com>
      *
      */
 
@@ -56,12 +56,11 @@
 
             // Development Debug
             this.development = true;
-
             this.selector = selector;
             this.length = 0;
             this.element = false;
             this.init();
-            
+
         }
 
         // private helper
@@ -104,7 +103,7 @@
 
             let classLists = classes.trim().split(' ');
 
-            if(!this.element) {
+            if (!this.element) {
                 return;
             }
             if (this.__isWindowObj() || this.__singleObj()) {
@@ -120,21 +119,21 @@
             }
         }
 
-         // Attr 
+        // Attr
         __manageAttr(attr, operation, value = false) {
 
-            if(!attr.length) {
+            if (!attr.length) {
                 error("ReferenceError", "Attr not provided");
-            }   
+            }
 
-            if(!this.element) {
+            if (!this.element) {
                 return;
             }
 
             if (this.__isWindowObj() || this.__singleObj()) {
                 if (operation === "removeAttribute" || operation === "getAttribute") {
                     if (this.element.hasAttribute(attr)) {
-                        if(operation === "getAttribute") {
+                        if (operation === "getAttribute") {
                             return this.element[operation](attr);
                         }
                         this.element[operation](attr);
@@ -146,7 +145,7 @@
                 if (operation === "removeAttribute" || operation === "getAttribute") {
                     this.element.forEach((el) => {
                         if (el.hasAttribute(attr)) {
-                            if(operation === "getAttribute") {
+                            if (operation === "getAttribute") {
                                 return el[operation](attr);
                             }
                             el[operation](attr);
@@ -161,6 +160,21 @@
             }
         }
 
+        // Class
+        __manageStyle(operation) {
+            if (!this.element && !operation) {
+                return;
+            }
+            if (this.__isWindowObj() || this.__singleObj()) {
+                if(this.element.style)
+                    this.element.style.display = operation;
+            } else {
+                this.element.forEach((el) => {
+                    el.style.display = operation;
+                });
+            }
+        }
+
         // Prepare selector
         init() {
 
@@ -168,24 +182,24 @@
                 this.element = document.querySelectorAll(this.selector);
                 this.length = this.element.length;
 
-                if(this.length === 1) {
-                    this.element =  this.element[0];
-                } 
+                if (this.length === 1) {
+                    this.element = this.element[0];
+                }
 
             } else if (typeof this.selector === 'object') {
-                if(this.__isWindowObj()) {
+                if (this.__isWindowObj()) {
                     this.element = this.selector;
                     this.length = 1;
                 } else {
                     this.length = this.selector.length;
                     this.element = this.selector;
 
-                    if(this.length === 1) {
-                        this.element =  this.selector[0];
-                    } 
+                    if (this.length === 1) {
+                        this.element = this.selector[0];
+                    }
                 }
             } else {
-                if(this.development) 
+                if (this.development)
                     console.warn(`Selector (${this.selector}) not found on DOM`);
             }
 
@@ -194,12 +208,12 @@
                 if (this.element instanceof NodeList) {
                     if (!this.element.length) {
                         this.element = false;
-                        if(this.development) 
+                        if (this.development)
                             console.warn(`Selector (${this.selector}) not found on DOM`);
                     }
                 }
             }
-        }        
+        }
 
         /*
          * ---------------
@@ -238,7 +252,7 @@
          * ---------------
          */
         attr(attr, value = false) {
-            if(value) {
+            if (value) {
                 this.__manageAttr(attr, "setAttribute", value);
             } else {
                 return this.__manageAttr(attr, "getAttribute");
@@ -255,20 +269,56 @@
          * ---------------
          * Page
          * ---------------
-         */ 
+         */
 
         html() {
             // Update New Dom Element
-            if(arguments[0] && typeof arguments[0] === "string") {
+            if (arguments[0] && typeof arguments[0] === "string") {
                 this.element.innerHTML = arguments[0];
                 return this;
             } else {
                 // Return Outer HTMl
-                if(arguments[0] && arguments[0] === true) 
+                if (arguments[0] && arguments[0] === true)
                     return this.element.outerHTML;
                 return this.element.innerHTML;
             }
         }
+
+        /*
+         * ---------------
+         * Effect
+         * ---------------
+         */
+        show() {
+            this.__manageStyle('block');
+            return this;
+        }
+
+        hide() {
+            this.__manageStyle('none');
+            return this;
+        }
+
+        slide(direction, callback) {
+            if(direction) {
+                let direction_class = "slide-"+direction;
+
+                if(direction === "left") {
+                    this.removeClass('slide-right slide-center').addClass(direction_class);
+                }
+                else if(direction === "right") {
+                    this.removeClass('slide-left slide-center').addClass(direction_class);
+                }
+                else if(direction === "center") {
+                    this.removeClass('slide-left slide-right').addClass(direction_class);
+                }
+
+                if(typeof callback == "function") {
+                    callback();
+                }
+            }
+        }
+
     }
 
     if (!window.rb) {
@@ -282,25 +332,26 @@
 })();
 
 
-
 // Scroll Event For Percentage
 // Optimize Scroll performace
-let ticking  = false;
+let ticking = false;
 let lastScrollPosition = 0;
 
-rb(window).on("scroll", function(e) {
-    lastScrollPosition = window.scrollY;
-    if(!ticking) {
-        window.requestAnimationFrame(function() {
-            scrolling(lastScrollPosition);
-            ticking = false;
-        });
-        ticking = true;
+rb(window).on("scroll", function (e) {
+    if (window.innerWidth && innerWidth > 450) {
+        lastScrollPosition = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                scrolling(lastScrollPosition);
+                ticking = false;
+            });
+            ticking = true;
+        }
     }
 });
 
 function scrolling(lastScrollPosition) {
-    if(lastScrollPosition > 100) {
+    if (lastScrollPosition > 100) {
         rb('header.menu').removeClass('static').addClass('fixed');
     } else {
         rb('header.menu').removeClass('fixed').addClass('static');
@@ -315,18 +366,41 @@ function scrolling(lastScrollPosition) {
 }
 
 // Top Nav bar
-rb('nav.top ul li > a').on('click', function(e){
+rb('nav.top ul li > a').on('click', function (e) {
     let id = rb(this).attr('href');
     let found = rb(id).length;
 
-    if(window.scroll && id.indexOf("#") !== -1 && found) {
+    if (window.scroll && id.indexOf("#") !== -1 && found) {
         e.preventDefault();
+
+        let top = rb(id).element.offsetTop - 50;
+
+        // Response Width
+        if (window.innerWidth && innerWidth < 650) {
+            top = rb(id).element.offsetTop + 360;
+        }
 
         window.location.hash = id;
         window.scroll({
-            top: rb(id).element.offsetTop - 50, 
-            left: 0, 
-            behavior: 'smooth' 
-          });
+            top,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
+});
+
+// Menu Toggle
+rb('.toggle-menu').on('click', function (e) {
+
+    if(rb(this).attr('data-toggled') === "on") {
+        rb(this).removeClass('active');
+        rb('nav.top').slide('left');
+        rb('nav.top').hide();
+        rb(this).removeAttr('data-toggled');
+        return;
+    }
+
+    rb(this).addClass('active');
+    rb(this).attr('data-toggled','on');
+    rb('nav.top').slide('center');
 });

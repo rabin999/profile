@@ -11,11 +11,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "use strict";
 
     /**
-     * 
+     *
      * A small plugin written by Rabin Bhandari
-     * 
-     *	@copyright 2018
-     *	@author Rabin Bhandari <rabin.bhandari999@gmail.com>
+     *
+     *    @copyright 2018
+     *    @author Rabin Bhandari <rabin.bhandari999@gmail.com>
      *
      */
 
@@ -148,7 +148,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
             }
 
-            // Attr 
+            // Attr
 
         }, {
             key: "__manageAttr",
@@ -190,6 +190,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             el[operation](attr, value);
                         });
                     }
+                }
+            }
+
+            // Class
+
+        }, {
+            key: "__manageStyle",
+            value: function __manageStyle(operation) {
+                if (!this.element && !operation) {
+                    return;
+                }
+                if (this.__isWindowObj() || this.__singleObj()) {
+                    if (this.element.style) this.element.style.display = operation;
+                } else {
+                    this.element.forEach(function (el) {
+                        el.style.display = operation;
+                    });
                 }
             }
 
@@ -317,6 +334,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return this.element.innerHTML;
                 }
             }
+
+            /*
+             * ---------------
+             * Effect
+             * ---------------
+             */
+
+        }, {
+            key: "show",
+            value: function show() {
+                this.__manageStyle('block');
+                return this;
+            }
+        }, {
+            key: "hide",
+            value: function hide() {
+                this.__manageStyle('none');
+                return this;
+            }
+        }, {
+            key: "slide",
+            value: function slide(direction, callback) {
+                if (direction) {
+                    var direction_class = "slide-" + direction;
+
+                    if (direction === "left") {
+                        this.removeClass('slide-right slide-center').addClass(direction_class);
+                    } else if (direction === "right") {
+                        this.removeClass('slide-left slide-center').addClass(direction_class);
+                    } else if (direction === "center") {
+                        this.removeClass('slide-left slide-right').addClass(direction_class);
+                    }
+
+                    if (typeof callback == "function") {
+                        callback();
+                    }
+                }
+            }
         }]);
 
         return RB;
@@ -336,13 +391,15 @@ var ticking = false;
 var lastScrollPosition = 0;
 
 rb(window).on("scroll", function (e) {
-    lastScrollPosition = window.scrollY;
-    if (!ticking) {
-        window.requestAnimationFrame(function () {
-            scrolling(lastScrollPosition);
-            ticking = false;
-        });
-        ticking = true;
+    if (window.innerWidth && innerWidth > 450) {
+        lastScrollPosition = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                scrolling(lastScrollPosition);
+                ticking = false;
+            });
+            ticking = true;
+        }
     }
 });
 
@@ -369,11 +426,34 @@ rb('nav.top ul li > a').on('click', function (e) {
     if (window.scroll && id.indexOf("#") !== -1 && found) {
         e.preventDefault();
 
+        var top = rb(id).element.offsetTop - 50;
+
+        // Response Width
+        if (window.innerWidth && innerWidth < 650) {
+            top = rb(id).element.offsetTop + 360;
+        }
+
         window.location.hash = id;
         window.scroll({
-            top: rb(id).element.offsetTop - 50,
+            top: top,
             left: 0,
             behavior: 'smooth'
         });
     }
+});
+
+// Menu Toggle
+rb('.toggle-menu').on('click', function (e) {
+
+    if (rb(this).attr('data-toggled') === "on") {
+        rb(this).removeClass('active');
+        rb('nav.top').slide('left');
+        rb('nav.top').hide();
+        rb(this).removeAttr('data-toggled');
+        return;
+    }
+
+    rb(this).addClass('active');
+    rb(this).attr('data-toggled', 'on');
+    rb('nav.top').slide('center');
 });

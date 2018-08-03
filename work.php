@@ -1,5 +1,5 @@
 <div id="work" class="work">
-    <h2>My Work</h2>
+    <h2 class="page-header">My Work</h2>
 
     <div class="work-gallery">
         <div class="item">

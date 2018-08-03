@@ -1,0 +1,13 @@
+{
+    "name": "devrabin/profile",
+    "description": "Personal Profile",
+    "authors": [
+        {
+            "name": "rabin999",
+            "email": "rabin.bhandari999@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~1.1"
+    }
+}

@@ -29,7 +29,7 @@
 							<input type="text">
 						</div>
 				
-						<div class="col">
+						<div class="col email-input">
 							<label>Email</label>
 							<input type="email">
 						</div>
