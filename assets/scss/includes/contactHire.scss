@@ -1,0 +1,48 @@
+.contact {
+  position: relative;
+  padding: $padding;
+
+  .page-header {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .contact-detail {
+    margin-top: 150px;
+
+    .detail {
+      color: $color;
+
+      h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: $color;
+        display: block;
+        line-height: 30px;
+      }
+
+      p {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  form {
+    display: block;
+
+    textarea {
+      margin-top: 40px;
+      display: block;
+      width: 100%;
+    }
+
+    button {
+      display: inline-block;
+      margin-top: 40px;
+      float: right;
+    }
+  }
+}
