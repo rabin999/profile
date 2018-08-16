@@ -1,0 +1,50 @@
+.projects {
+  position: relative;
+  padding: $padding;
+
+  .page-header {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .project-lists {
+    ul {
+      li {
+        margin-right: 40px;
+        margin-bottom: 40px;
+        min-height: 230px;
+        background-size: cover !important;
+        background-position: center !important;
+        min-width: 260px;
+        position: relative;
+        @include boxShadow(0 0 13px 0px #000000);
+
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+
+        a {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          padding: 15px;
+          background-color: #e6eaf3;
+          width: 100%;
+          @include boxShadow(0px 0px 3px #252525);
+          font-size: 13px;
+          color: #795548;
+          @include transition(all 0.3s);
+
+          &:hover {
+            height: 100%;
+            background-color: rgba(230, 234, 243, 0.64);
+            font-size: 16px;
+            padding-top: 40%;
+            text-align: center;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,10 +4,10 @@
 
     /**
      *
-     * A small plugin written by Rabin Bhandari
+     *  A small plugin written by Rabin Bhandari
      *
-     *    @copyright 2018
-     *    @author Rabin Bhandari <rabin.bhandari999@gmail.com>
+     *  @copyright 2018
+     *  @author Rabin Bhandari <rabin.bhandari999@gmail.com>
      *
      */
 
@@ -286,6 +286,16 @@
 
         /*
          * ---------------
+         * Utilities
+         * ---------------
+         */
+        remove() {
+            this.element.parentNode.removeChild(this.element);
+            return this;
+        }
+
+        /*
+         * ---------------
          * Effect
          * ---------------
          */
@@ -318,7 +328,6 @@
                 }
             }
         }
-
     }
 
     if (!window.rb) {
@@ -328,79 +337,4 @@
             return new RB(ref);
         }
     }
-
 })();
-
-
-// Scroll Event For Percentage
-// Optimize Scroll performace
-let ticking = false;
-let lastScrollPosition = 0;
-
-rb(window).on("scroll", function (e) {
-    if (window.innerWidth && innerWidth > 450) {
-        lastScrollPosition = window.scrollY;
-        if (!ticking) {
-            window.requestAnimationFrame(function () {
-                scrolling(lastScrollPosition);
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }
-});
-
-function scrolling(lastScrollPosition) {
-    if (lastScrollPosition > 100) {
-        rb('header.menu').removeClass('static').addClass('fixed');
-    } else {
-        rb('header.menu').removeClass('fixed').addClass('static');
-    }
-
-    // let activePageHeight = parseInt(window.scrollHeight - window.clientHeight),
-    //     totalProcess = Math.round(((window.scrollTop / activePageHeight ) * 100));
-    //     console.log(totalProcess);
-
-    // rb('.progress-bar').addClass('page-process');
-    // rb('.progress-bar').element.style.width = totalProcess+"%";
-}
-
-// Top Nav bar
-rb('nav.top ul li > a').on('click', function (e) {
-    let id = rb(this).attr('href');
-    let found = rb(id).length;
-
-    if (window.scroll && id.indexOf("#") !== -1 && found) {
-        e.preventDefault();
-
-        let top = rb(id).element.offsetTop - 50;
-
-        // Response Width
-        if (window.innerWidth && innerWidth < 650) {
-            top = rb(id).element.offsetTop + 360;
-        }
-
-        window.location.hash = id;
-        window.scroll({
-            top,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
-});
-
-// Menu Toggle
-rb('.toggle-menu').on('click', function (e) {
-
-    if(rb(this).attr('data-toggled') === "on") {
-        rb(this).removeClass('active');
-        rb('nav.top').slide('left');
-        rb('nav.top').hide();
-        rb(this).removeAttr('data-toggled');
-        return;
-    }
-
-    rb(this).addClass('active');
-    rb(this).attr('data-toggled','on');
-    rb('nav.top').slide('center');
-});

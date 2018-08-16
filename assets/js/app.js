@@ -1,459 +1,304 @@
 "use strict";
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-(function () {
-
-    "use strict";
-
-    /**
-     *
-     * A small plugin written by Rabin Bhandari
-     *
-     *    @copyright 2018
-     *    @author Rabin Bhandari <rabin.bhandari999@gmail.com>
-     *
-     */
-
-    // -------------------------------
-    //          Helpers
-    // --------------------------------
-
-    /**
-     * @param type: string types of errors
-     * @param message: string
-     */
-
-    function error() {
-        var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Error";
-        var message = arguments[1];
-
-        if (message) {
-            if (window[type]) {
-                throw new window[type](message);
-            } else if (window.console) {
-                console.error(message);
+var _typeof =
+        "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+            ? function(b) {
+                return typeof b;
             }
+            : function(b) {
+                return b &&
+                "function" == typeof Symbol &&
+                b.constructor === Symbol &&
+                b !== Symbol.prototype
+                    ? "symbol"
+                    : typeof b;
+            },
+    _createClass = (function() {
+        function b(e, f) {
+            for (var h, g = 0; g < f.length; g++)
+                (h = f[g]),
+                    (h.enumerable = h.enumerable || !1),
+                    (h.configurable = !0),
+                "value" in h && (h.writable = !0),
+                    Object.defineProperty(e, h.key, h);
         }
+        return function(e, f, g) {
+            return f && b(e.prototype, f), g && b(e, g), e;
+        };
+    })();
+function _classCallCheck(b, e) {
+    if (!(b instanceof e))
+        throw new TypeError("Cannot call a class as a function");
+}
+(function() {
+    "use strict";
+    function b() {
+        var g =
+                0 < arguments.length && arguments[0] !== void 0
+                    ? arguments[0]
+                    : "Error",
+            h = arguments[1];
+        if (h)
+            if (window[g]) throw new window[g](h);
+            else window.console && console.error(h);
     }
-
-    // Helpers
-    function querySelectorAllExist() {
-        return document.querySelector || document.querySelectorAll ? true : false;
+    function e() {
+        return document.querySelector || document.querySelectorAll;
     }
+    (function() {
+        if (!e()) {
+            var h = document,
+                k = h.createStyleSheet();
+            h.querySelectorAll = function(l, m, n, o, p) {
+                for (
+                    p = h.all,
+                        m = [],
+                        l = l.replace(/\[for\b/gi, "[htmlFor").split(","),
+                        n = l.length;
+                    n--;
 
-    // Query Selector Support for IE 7
-    (function setUpQuerySelectorPolyfill() {
-        if (!querySelectorAllExist()) {
-            var d = document,
-                s = d.createStyleSheet();
-            d.querySelectorAll = function (r, c, i, j, a) {
-                a = d.all, c = [], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
-                for (i = r.length; i--;) {
-                    s.addRule(r[i], 'k:v');
-                    for (j = a.length; j--;) {
-                        a[j].currentStyle.k && c.push(a[j]);
-                    }s.removeRule(0);
+                ) {
+                    for (k.addRule(l[n], "k:v"), o = p.length; o--; )
+                        p[o].currentStyle.k && m.push(p[o]);
+                    k.removeRule(0);
                 }
-                return c;
+                return m;
             };
         }
     })();
-
-    var RB = function () {
-        function RB(selector) {
-            _classCallCheck(this, RB);
-
-            // Development Debug
-            this.development = true;
-
-            this.selector = selector;
-            this.length = 0;
-            this.element = false;
-            this.init();
+    var f = (function() {
+        function g(h) {
+            _classCallCheck(this, g),
+                (this.development = !0),
+                (this.selector = h),
+                (this.length = 0),
+                (this.element = !1),
+                this.init();
         }
-
-        // private helper
-
-
-        _createClass(RB, [{
-            key: "__isWindowObj",
-            value: function __isWindowObj() {
-                return this.selector === this.selector.window || this.selector.NodeType === 9 ? true : false;
-            }
-        }, {
-            key: "__singleObj",
-            value: function __singleObj() {
-                return this.element && !Boolean(this.element.length) ? true : false;
-            }
-        }, {
-            key: "__hasEvent",
-            value: function __hasEvent(event) {
-                var element = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.element;
-
-                return typeof element['on' + event] !== "undefined";
-            }
-        }, {
-            key: "__manageEvent",
-            value: function __manageEvent(event, operation, callback) {
-                var _this = this;
-
-                if (!(window[operation] || callback)) {
-                    error('ReferenceError', 'Event || Event Function reference not found');
-                }
-
-                if (window[operation] && this.element) {
-                    if (this.__isWindowObj() || this.__singleObj()) {
-                        if (this.__hasEvent(event, this.element)) {
-                            this.element[operation](event, callback);
-                        }
-                    } else {
-                        this.element.forEach(function (el) {
-                            if (_this.__hasEvent(event, el)) {
-                                el[operation](event, callback);
+        return (
+            _createClass(g, [
+                {
+                    key: "__isWindowObj",
+                    value: function __isWindowObj() {
+                        return (
+                            this.selector === this.selector.window ||
+                            9 === this.selector.NodeType
+                        );
+                    }
+                },
+                {
+                    key: "__singleObj",
+                    value: function __singleObj() {
+                        return this.element && !!!this.element.length;
+                    }
+                },
+                {
+                    key: "__hasEvent",
+                    value: function __hasEvent(h) {
+                        var k =
+                            1 < arguments.length && void 0 !== arguments[1]
+                                ? arguments[1]
+                                : this.element;
+                        return "undefined" != typeof k["on" + h];
+                    }
+                },
+                {
+                    key: "__manageEvent",
+                    value: function __manageEvent(h, k, l) {
+                        var m = this;
+                        window[k] ||
+                        l ||
+                        b(
+                            "ReferenceError",
+                            "Event || Event Function reference not found"
+                        ),
+                        window[k] &&
+                        this.element &&
+                        (this.__isWindowObj() || this.__singleObj()
+                            ? this.__hasEvent(h, this.element) && this.element[k](h, l)
+                            : this.element.forEach(function(n) {
+                                m.__hasEvent(h, n) && n[k](h, l);
+                            }));
+                    }
+                },
+                {
+                    key: "__manageClass",
+                    value: function __manageClass(h, k) {
+                        var m = this;
+                        h || b("ReferenceError", "Class arguments not founds !");
+                        var l = h.trim().split(" ");
+                        this.element &&
+                        (this.__isWindowObj() || this.__singleObj()
+                            ? l.forEach(function(n) {
+                                m.element.classList[k](n);
+                            })
+                            : this.element.forEach(function(n) {
+                                l.forEach(function(o) {
+                                    n.classList[k](o);
+                                });
+                            }));
+                    }
+                },
+                {
+                    key: "__manageAttr",
+                    value: function __manageAttr(h, k) {
+                        var l =
+                            2 < arguments.length && void 0 !== arguments[2] && arguments[2];
+                        if (
+                            (h.length || b("ReferenceError", "Attr not provided"),
+                                !!this.element)
+                        )
+                            if (!(this.__isWindowObj() || this.__singleObj()))
+                                "removeAttribute" === k || "getAttribute" === k
+                                    ? this.element.forEach(function(m) {
+                                        if (m.hasAttribute(h)) {
+                                            if ("getAttribute" === k) return m[k](h);
+                                            m[k](h);
+                                        }
+                                    })
+                                    : this.element.forEach(function(m) {
+                                        m[k](h, l);
+                                    });
+                            else if ("removeAttribute" !== k && "getAttribute" !== k)
+                                this.element[k](h, l);
+                            else if (this.element.hasAttribute(h)) {
+                                if ("getAttribute" === k) return this.element[k](h);
+                                this.element[k](h);
                             }
-                        });
                     }
-                }
-            }
-
-            // Class
-
-        }, {
-            key: "__manageClass",
-            value: function __manageClass(classes, operation) {
-                var _this2 = this;
-
-                if (!classes) error('ReferenceError', 'Class arguments not founds !');
-
-                var classLists = classes.trim().split(' ');
-
-                if (!this.element) {
-                    return;
-                }
-                if (this.__isWindowObj() || this.__singleObj()) {
-                    classLists.forEach(function (cl) {
-                        _this2.element.classList[operation](cl);
-                    });
-                } else {
-                    this.element.forEach(function (el) {
-                        classLists.forEach(function (cl, index) {
-                            el.classList[operation](cl);
-                        });
-                    });
-                }
-            }
-
-            // Attr
-
-        }, {
-            key: "__manageAttr",
-            value: function __manageAttr(attr, operation) {
-                var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-
-                if (!attr.length) {
-                    error("ReferenceError", "Attr not provided");
-                }
-
-                if (!this.element) {
-                    return;
-                }
-
-                if (this.__isWindowObj() || this.__singleObj()) {
-                    if (operation === "removeAttribute" || operation === "getAttribute") {
-                        if (this.element.hasAttribute(attr)) {
-                            if (operation === "getAttribute") {
-                                return this.element[operation](attr);
-                            }
-                            this.element[operation](attr);
-                        }
-                    } else {
-                        this.element[operation](attr, value);
+                },
+                {
+                    key: "__manageStyle",
+                    value: function __manageStyle(h) {
+                        (this.element || h) &&
+                        (this.__isWindowObj() || this.__singleObj()
+                            ? this.element.style && (this.element.style.display = h)
+                            : this.element.forEach(function(k) {
+                                k.style.display = h;
+                            }));
                     }
-                } else {
-                    if (operation === "removeAttribute" || operation === "getAttribute") {
-                        this.element.forEach(function (el) {
-                            if (el.hasAttribute(attr)) {
-                                if (operation === "getAttribute") {
-                                    return el[operation](attr);
-                                }
-                                el[operation](attr);
-                            }
-                        });
-                    } else {
-                        this.element.forEach(function (el) {
-                            el[operation](attr, value);
-                        });
+                },
+                {
+                    key: "init",
+                    value: function init() {
+                        "string" == typeof this.selector && this.selector.length
+                            ? ((this.element = document.querySelectorAll(this.selector)),
+                                (this.length = this.element.length),
+                            1 === this.length && (this.element = this.element[0]))
+                            : "object" === _typeof(this.selector)
+                            ? this.__isWindowObj()
+                                ? ((this.element = this.selector), (this.length = 1))
+                                : ((this.length = this.selector.length),
+                                    (this.element = this.selector),
+                                1 === this.length && (this.element = this.selector[0]))
+                            : this.development &&
+                            console.warn(
+                                "Selector (" + this.selector + ") not found on DOM"
+                            ),
+                        (this.element instanceof HTMLElement ||
+                            this.element instanceof Node ||
+                            this.element instanceof NodeList) &&
+                        this.element instanceof NodeList &&
+                        !this.element.length &&
+                        ((this.element = !1),
+                        this.development &&
+                        console.warn(
+                            "Selector (" + this.selector + ") not found on DOM"
+                        ));
                     }
-                }
-            }
-
-            // Class
-
-        }, {
-            key: "__manageStyle",
-            value: function __manageStyle(operation) {
-                if (!this.element && !operation) {
-                    return;
-                }
-                if (this.__isWindowObj() || this.__singleObj()) {
-                    if (this.element.style) this.element.style.display = operation;
-                } else {
-                    this.element.forEach(function (el) {
-                        el.style.display = operation;
-                    });
-                }
-            }
-
-            // Prepare selector
-
-        }, {
-            key: "init",
-            value: function init() {
-
-                if (typeof this.selector === 'string' && this.selector.length) {
-                    this.element = document.querySelectorAll(this.selector);
-                    this.length = this.element.length;
-
-                    if (this.length === 1) {
-                        this.element = this.element[0];
+                },
+                {
+                    key: "on",
+                    value: function on(h) {
+                        var k =
+                            1 < arguments.length && void 0 !== arguments[1] && arguments[1];
+                        this.__manageEvent(h, "addEventListener", k);
                     }
-                } else if (_typeof(this.selector) === 'object') {
-                    if (this.__isWindowObj()) {
-                        this.element = this.selector;
-                        this.length = 1;
-                    } else {
-                        this.length = this.selector.length;
-                        this.element = this.selector;
-
-                        if (this.length === 1) {
-                            this.element = this.selector[0];
-                        }
+                },
+                {
+                    key: "off",
+                    value: function off(h) {
+                        var k =
+                            1 < arguments.length && void 0 !== arguments[1] && arguments[1];
+                        this.__manageEvent(h, "removeEventListener", k);
                     }
-                } else {
-                    if (this.development) console.warn("Selector (" + this.selector + ") not found on DOM");
-                }
-
-                // Check Node found or not 
-                if (this.element instanceof HTMLElement || this.element instanceof Node || this.element instanceof NodeList) {
-                    if (this.element instanceof NodeList) {
-                        if (!this.element.length) {
-                            this.element = false;
-                            if (this.development) console.warn("Selector (" + this.selector + ") not found on DOM");
+                },
+                {
+                    key: "addClass",
+                    value: function addClass(h) {
+                        return this.__manageClass(h, "add"), this;
+                    }
+                },
+                {
+                    key: "removeClass",
+                    value: function removeClass(h) {
+                        return this.__manageClass(h, "remove"), this;
+                    }
+                },
+                {
+                    key: "attr",
+                    value: function attr(h) {
+                        var k =
+                            1 < arguments.length && void 0 !== arguments[1] && arguments[1];
+                        if (k) this.__manageAttr(h, "setAttribute", k);
+                        else return this.__manageAttr(h, "getAttribute");
+                        return this;
+                    }
+                },
+                {
+                    key: "removeAttr",
+                    value: function removeAttr(h) {
+                        return this.__manageAttr(h, "removeAttribute"), this;
+                    }
+                },
+                {
+                    key: "html",
+                    value: function html() {
+                        return arguments[0] && "string" == typeof arguments[0]
+                            ? ((this.element.innerHTML = arguments[0]), this)
+                            : arguments[0] && !0 === arguments[0]
+                                ? this.element.outerHTML
+                                : this.element.innerHTML;
+                    }
+                },
+                {
+                    key: "remove",
+                    value: function remove() {
+                        return this.element.parentNode.removeChild(this.element), this;
+                    }
+                },
+                {
+                    key: "show",
+                    value: function show() {
+                        return this.__manageStyle("block"), this;
+                    }
+                },
+                {
+                    key: "hide",
+                    value: function hide() {
+                        return this.__manageStyle("none"), this;
+                    }
+                },
+                {
+                    key: "slide",
+                    value: function slide(h, k) {
+                        if (h) {
+                            var l = "slide-" + h;
+                            "left" === h
+                                ? this.removeClass("slide-right slide-center").addClass(l)
+                                : "right" === h
+                                ? this.removeClass("slide-left slide-center").addClass(l)
+                                : "center" == h &&
+                                this.removeClass("slide-left slide-right").addClass(l),
+                            "function" == typeof k && k();
                         }
                     }
                 }
-            }
-
-            /*
-             * ---------------
-             * Events
-             * ---------------
-             */
-
-        }, {
-            key: "on",
-            value: function on(event) {
-                var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-                this.__manageEvent(event, 'addEventListener', callback);
-            }
-        }, {
-            key: "off",
-            value: function off(event) {
-                var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-                this.__manageEvent(event, 'removeEventListener', callback);
-            }
-
-            /*
-             * ---------------
-             * Class
-             * ---------------
-             */
-
-        }, {
-            key: "addClass",
-            value: function addClass(classes) {
-                this.__manageClass(classes, 'add');
-                return this;
-            }
-        }, {
-            key: "removeClass",
-            value: function removeClass(classes) {
-                this.__manageClass(classes, 'remove');
-                return this;
-            }
-
-            /*
-             * ---------------
-             * Attributes
-             * ---------------
-             */
-
-        }, {
-            key: "attr",
-            value: function attr(_attr) {
-                var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-                if (value) {
-                    this.__manageAttr(_attr, "setAttribute", value);
-                } else {
-                    return this.__manageAttr(_attr, "getAttribute");
-                }
-                return this;
-            }
-        }, {
-            key: "removeAttr",
-            value: function removeAttr(attr) {
-                this.__manageAttr(attr, "removeAttribute");
-                return this;
-            }
-
-            /*
-             * ---------------
-             * Page
-             * ---------------
-             */
-
-        }, {
-            key: "html",
-            value: function html() {
-                // Update New Dom Element
-                if (arguments[0] && typeof arguments[0] === "string") {
-                    this.element.innerHTML = arguments[0];
-                    return this;
-                } else {
-                    // Return Outer HTMl
-                    if (arguments[0] && arguments[0] === true) return this.element.outerHTML;
-                    return this.element.innerHTML;
-                }
-            }
-
-            /*
-             * ---------------
-             * Effect
-             * ---------------
-             */
-
-        }, {
-            key: "show",
-            value: function show() {
-                this.__manageStyle('block');
-                return this;
-            }
-        }, {
-            key: "hide",
-            value: function hide() {
-                this.__manageStyle('none');
-                return this;
-            }
-        }, {
-            key: "slide",
-            value: function slide(direction, callback) {
-                if (direction) {
-                    var direction_class = "slide-" + direction;
-
-                    if (direction === "left") {
-                        this.removeClass('slide-right slide-center').addClass(direction_class);
-                    } else if (direction === "right") {
-                        this.removeClass('slide-left slide-center').addClass(direction_class);
-                    } else if (direction === "center") {
-                        this.removeClass('slide-left slide-right').addClass(direction_class);
-                    }
-
-                    if (typeof callback == "function") {
-                        callback();
-                    }
-                }
-            }
-        }]);
-
-        return RB;
-    }();
-
-    if (!window.rb) {
-        window.rb = function (ref) {
-            if (!ref) error('ReferenceError', 'Reference not provided');
-            return new RB(ref);
-        };
-    }
+            ]),
+                g
+        );
+    })();
+    window.rb ||
+    (window.rb = function(g) {
+        return g || b("ReferenceError", "Reference not provided"), new f(g);
+    });
 })();
-
-// Scroll Event For Percentage
-// Optimize Scroll performace
-var ticking = false;
-var lastScrollPosition = 0;
-
-rb(window).on("scroll", function (e) {
-    if (window.innerWidth && innerWidth > 450) {
-        lastScrollPosition = window.scrollY;
-        if (!ticking) {
-            window.requestAnimationFrame(function () {
-                scrolling(lastScrollPosition);
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }
-});
-
-function scrolling(lastScrollPosition) {
-    if (lastScrollPosition > 100) {
-        rb('header.menu').removeClass('static').addClass('fixed');
-    } else {
-        rb('header.menu').removeClass('fixed').addClass('static');
-    }
-
-    // let activePageHeight = parseInt(window.scrollHeight - window.clientHeight),
-    //     totalProcess = Math.round(((window.scrollTop / activePageHeight ) * 100));
-    //     console.log(totalProcess);
-
-    // rb('.progress-bar').addClass('page-process');
-    // rb('.progress-bar').element.style.width = totalProcess+"%";
-}
-
-// Top Nav bar
-rb('nav.top ul li > a').on('click', function (e) {
-    var id = rb(this).attr('href');
-    var found = rb(id).length;
-
-    if (window.scroll && id.indexOf("#") !== -1 && found) {
-        e.preventDefault();
-
-        var top = rb(id).element.offsetTop - 50;
-
-        // Response Width
-        if (window.innerWidth && innerWidth < 650) {
-            top = rb(id).element.offsetTop + 360;
-        }
-
-        window.location.hash = id;
-        window.scroll({
-            top: top,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
-});
-
-// Menu Toggle
-rb('.toggle-menu').on('click', function (e) {
-
-    if (rb(this).attr('data-toggled') === "on") {
-        rb(this).removeClass('active');
-        rb('nav.top').slide('left');
-        rb('nav.top').hide();
-        rb(this).removeAttr('data-toggled');
-        return;
-    }
-
-    rb(this).addClass('active');
-    rb(this).attr('data-toggled', 'on');
-    rb('nav.top').slide('center');
-});

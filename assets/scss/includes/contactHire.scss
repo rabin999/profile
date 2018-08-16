@@ -1,4 +1,4 @@
-.contact {
+.contact,.hire {
   position: relative;
   padding: $padding;
 
@@ -7,7 +7,7 @@
     margin-top: 40px;
   }
 
-  .contact-detail {
+  .contact-detail, .hire-detail {
     margin-top: 150px;
 
     .detail {
@@ -20,8 +20,9 @@
 
       a {
         color: $color;
-        display: block;
+        display: inline-block;
         line-height: 30px;
+        margin-right: 15px;
       }
 
       p {

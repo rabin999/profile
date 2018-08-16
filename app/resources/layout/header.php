@@ -5,42 +5,35 @@
     <meta name="author" content="Rabin Bhandari">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rabin Bhandari, Full Stack Developer">
-    <meta name="keywords" content="website designer, website developer, full stack developer">
-    <title>Rabin Bhandari - Full Stack Developer</title>
-    <link rel="stylesheet" href="./assets/css/app.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <meta name="keywords" content="Website Designer, Website Developer, Full Stack Developer, Software Engineer">
+    <title>RABIN BHANDARI</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./assets/css/includes/fonts.css">
+<!--    <link rel="stylesheet" href="./assets/css/app.css">-->
+
+    <!--  Replace to blog page  -->
+    <style>
+        /* FlatPicker */
+        .flatpickr-calendar {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+    </style>
+<!--    <link rel="stylesheet" href="./assets/css/flatpickr.min.css">-->
+
 </head>
-<body class="rb-theme1">
-
-<!-- Profile Image -->
-<!-- <div class="profile-image">
-    <img src="./assets/images/profile.jpg" alt="">
-</div> -->
-<!-- Profile Image:END-->
-
-<header class="row row space-between nav menu align-center">
-    <!-- Logo -->
-    <a class="logo" href="/profile">
-        <h1 class="hover">RB - Full Stack Developer</h1>
-    </a>
-
-    <!-- Toggle Menu -->
-    <button class="toggle-menu">
-        <i class="fa fa-align-justify" aria-hidden="true"></i>
-    </button>
-    <!-- End Menu Toggle -->
-
-    <!-- Navigation Menu -->
-    <nav class="top">
-        <ul>
-            <li><a href="#home" class="hover" title="Home">Home</a></li>
-            <li><a href="#about_me" class="hover" title="About">About Me</a></li>
-            <li><a href="#work" class="hover" title="Project">Project</a></li>
-            <li><a href="#resume" class="hover" title="Resume">Resume</a></li>
-            <li><a href="blog.php" class="hover" title="Blog">Reseach Blog</a></li>
-            <li><a href="#contact" class="hover" title="Contact">Contact</a></li>
-        </ul>
-    </nav>
-
+<body class="rb-theme-1">
+    <header class="row space-between align-center">
+        <a class="title" href="./">
+            <img src="./assets/images/logo.png" class="logo" alt="logo">
+            <h2>RB</h2>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="" class="hover">ABOUT ME</a></li>
+                <li><a href="" class="hover">PROJECTS</a></li>
+                <li><a href="blog.php" class="hover">BLOGS</a></li>
+                <li><a href="" class="hover">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="progress-bar"></div>
-</header>

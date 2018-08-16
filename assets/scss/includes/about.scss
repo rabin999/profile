@@ -1,0 +1,51 @@
+.aboutMe {
+  position: relative;
+  padding: $padding;
+  background: url(/profile/assets/images/page/about.jpg);
+  background-size: cover;
+  background-position: center;
+
+  .about-header {
+    margin-top: 40px;
+    .links {
+      display: block;
+      margin-top: 20px;
+      color: $color;
+
+      & > a {
+        display: block;
+        font: {
+          size: 14px;
+          weight: normal;
+        }
+        color: inherit;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        li {
+          display: inline-block;
+          a {
+            color: inherit;
+            font: {
+              weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Paragraph */
+  p {
+    position: absolute;
+    bottom: 100px;
+    line-height: 25px;
+    color: #ffffff;
+    text-align: left;
+    word-spacing: 1px;
+    font-weight: normal;
+    width: 60%;
+    left: 20%;
+  }
+}
