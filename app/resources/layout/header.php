@@ -29,10 +29,12 @@
         </a>
         <nav>
             <ul>
-                <li><a href="" class="hover">ABOUT ME</a></li>
-                <li><a href="" class="hover">PROJECTS</a></li>
+                <li><a href="./" class="hover navigate_page" data-page-target="homePage">HOME</a></li>
+                <li><a href="#" class="hover navigate_page" data-page-target="aboutMe">ABOUT ME</a></li>
+                <li><a href="#" class="hover navigate_page" data-page-target="projects">PROJECTS</a></li>
                 <li><a href="blog.php" class="hover">BLOGS</a></li>
-                <li><a href="" class="hover">CONTACT</a></li>
+                <li><a href="#" class="hover navigate_page" data-page-target="hireMe">HIRE ME</a></li>
+                <li><a href="#" class="hover navigate_page" data-page-target="contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>

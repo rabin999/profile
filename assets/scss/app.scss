@@ -163,7 +163,7 @@ html {
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #06121f;
+    background: #149DE1;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -398,9 +398,16 @@ html {
   @import "./includes/header";
 
   main.container {
-    margin-top: 100px;
+    margin-top: 50px;
     max-width: 100%;
   }
+
+  /*
+    /////////////////
+      Page Loader
+    ////////////////
+  */
+  @import "includes/pageloader";
 
   /*
     /////////////////
@@ -435,16 +442,15 @@ html {
      Blog Page
    ////////////////
  */
+  @import "includes/lightBox";
   @import "includes/blog";
 
-  footer {
-    padding: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: $color;
-    height: 45px;
-  }
-
+  /*
+   /////////////////
+     Blog Page
+   ////////////////
+ */
+  @import "includes/footer";
 }
 
 @supports not (flex-wrap: wrap) {

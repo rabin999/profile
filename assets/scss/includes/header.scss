@@ -1,5 +1,7 @@
 header {
   padding: $padding;
+  position: relative;
+  z-index: 99;
 
   /* Left */
   .title {

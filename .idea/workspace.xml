@@ -1,150 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/index.php" line="237" />
+    <bookmark url="file://$PROJECT_DIR$/index.php" line="257" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76b8d260-b2f2-4130-8c3a-4cee8be6ae94" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.sass-cache/02f8b840db2ed04e85efe9d3e31480dded0a337d/home.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/about.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/blog.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/contact.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/contactHire.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/fonts.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/footer.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/header.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/hireMe.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/home.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/project.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/rightSidebar.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/variables.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/about.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/about.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/blog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/blog.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/contactHire.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/fonts.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/footer.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/header.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/hireMe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/hireMe.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/home.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/project.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/project.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/rightSidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/includes/rightSidebar.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Quicksand/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Quicksand/Quicksand-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Quicksand/Quicksand-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Quicksand/Quicksand-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Quicksand/Quicksand-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto_Condensed/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto_Condensed/RobotoCondensed-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto_Condensed/RobotoCondensed-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto_Condensed/RobotoCondensed-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto_Condensed/RobotoCondensed-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/calendar-alt-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/comments-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/envelope-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/eye-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/facebook-brands.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/github-brands.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/google-plus-brands.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/linkedin-brands.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/list-ul-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/map-marker-alt-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/phone-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/search-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/skype-brands.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/th-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/youtube-brands.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/intro/Group_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/intro/Group_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/intro/Group_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/intro/Group_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/intro/Group_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/intro/Group_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/intro/Group_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/page/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/page/background-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/page/project.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/text/Compound Path_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/text/Compound Path_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/text/Group_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scss/includes/lightBox.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scss/includes/pageloader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scss/responsive.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/02f8b840db2ed04e85efe9d3e31480dded0a337d/app.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/02f8b840db2ed04e85efe9d3e31480dded0a337d/app.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_animated.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_animated.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_bordered-pulled.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_bordered-pulled.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_core.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_core.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_fixed-width.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_fixed-width.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_icons.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_icons.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_larger.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_larger.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_list.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_list.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_mixins.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_mixins.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_path.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_path.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_rotated-flipped.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_rotated-flipped.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_screen-reader.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_screen-reader.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_stacked.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_stacked.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_variables.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/_variables.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/font-awesome.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/286e01d4dceb63ad4333eb28edae35b476e06c76/font-awesome.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/layout/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/layout/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/about.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/about.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/blog.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/blog.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/footer.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/footer.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/header.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/header.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/layout/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/flatpickr.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/flatpickr.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/bg1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/bg2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cv/profile.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/project/250x250.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/project/first.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/bootstrap.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/bootstrap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/c_cpp.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/c_cpp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/css.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/css.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/html.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/html.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/java.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/java.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/javascript.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/javascript.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/laravel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/laravel.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/laravel.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/laravel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/linux.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/linux.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/mysql.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/mysql.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/node.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/node.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/php.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/php.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/phpstrom.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/phpstrom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/python.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/python.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/raspberry.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/raspberry.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/sublime.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/sublime.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/version_control.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/version_control.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/vue.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/vue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/skills/webpack.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/skills/webpack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/includes/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/includes/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/includes/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/includes/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/includes/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/includes/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/includes/footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/includes/footer.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/includes/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/includes/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/facebook-brands.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/google-plus-brands.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/linkedin-brands.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/events.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/includes/about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/about.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/includes/blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/blog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/includes/contactHire.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/contactHire.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/includes/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/fonts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/includes/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/includes/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/includes/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/includes/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/includes/rightSidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/includes/rightSidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageloader.html" beforeDir="false" afterPath="$PROJECT_DIR$/pageloader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single-blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-blog.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -159,11 +49,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/layout/footer.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="9" lean-forward="true" selection-end-line="27" selection-end-column="7" />
+            <state>
+              <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="events.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/events.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scss/app.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="400" column="17" selection-start-line="400" selection-start-column="17" selection-end-line="400" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scss/includes/about.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageloader.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scss/includes/pageloader.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageloader.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageloader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2585">
+              <caret line="222" column="34" selection-start-line="222" selection-start-column="27" selection-end-line="222" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -171,61 +106,17 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/resources/layout/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="33" column="37" selection-end-line="38" selection-end-column="36" />
+            <state relative-caret-position="725">
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16659" selection-start-column="16659" selection-end-column="16659" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3312#3318#0" expanded="true" />
-                <element signature="e#3320#3326#0" expanded="true" />
-                <element signature="e#3335#3341#0" expanded="true" />
-                <element signature="e#3382#3388#0" expanded="true" />
-                <element signature="e#3390#3396#0" expanded="true" />
-                <element signature="e#3407#3413#0" expanded="true" />
-                <element signature="e#3454#3460#0" expanded="true" />
-                <element signature="e#3462#3468#0" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="events.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/events.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single-blog.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/single-blog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21098" selection-start-column="21098" selection-end-column="21098" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32718" selection-start-column="32718" selection-end-column="32718" />
+            <state relative-caret-position="-3375">
+              <caret line="133" column="86" lean-forward="true" selection-start-line="133" selection-start-column="86" selection-end-line="133" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -233,38 +124,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single-blog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/single-blog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14326">
-              <caret line="494" column="16" selection-start-line="494" selection-start-column="16" selection-end-line="494" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23161" selection-start-column="23161" selection-end-column="23161" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidebar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="167" column="12" lean-forward="true" selection-end-line="179" selection-end-column="8" />
+            <state relative-caret-position="-426">
+              <caret line="201" column="43" lean-forward="true" selection-start-line="201" selection-start-column="43" selection-end-line="201" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -280,36 +141,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.feature</find>
-      <find>.sear</find>
-      <find>transi</find>
-      <find>/blog</find>
-      <find>:not</find>
-      <find>input</find>
-      <find>butto</find>
-      <find>.most-</find>
-      <find>button</find>
-      <find>svg</find>
-      <find>pagin</find>
-      <find>search</find>
-      <find>i cl</find>
-      <find>cale</find>
-      <find>.blog-container aside</find>
-      <find>aside</find>
-      <find>follw</find>
-      <find>faceb</find>
-      <find>blog</find>
-      <find>blog-ite</find>
-      <find>remove</find>
-      <find>blog-im</find>
-      <find>article</find>
-      <find>get-not</find>
-      <find>prev</find>
-      <find>pagination</find>
-      <find>san</find>
       <find>Resume</find>
       <find>contact</find>
       <find>opton</find>
+      <find>background</find>
+      <find>@media</find>
+      <find>.sng</find>
+      <find>faceb</find>
+      <find>blog-de</find>
+      <find>scrol</find>
+      <find>single</find>
+      <find>blog-detail</find>
+      <find>blog-deta</find>
+      <find>code</find>
+      <find>follow</find>
+      <find>class=&quot;blogs&quot;</find>
+      <find>blogs</find>
+      <find>css</find>
+      <find>pop</find>
+      <find>id=ca</find>
+      <find>box</find>
+      <find>class=&quot;projec&quot;</find>
+      <find>hide</find>
+      <find>fade</find>
+      <find>page</find>
+      <find>fp</find>
+      <find>rel</find>
+      <find>cs</find>
+      <find>about</find>
+      <find>btn_nav</find>
+      <find>attr</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -325,35 +186,39 @@
         <option value="$PROJECT_DIR$/work.php" />
         <option value="$PROJECT_DIR$/contact.php" />
         <option value="$PROJECT_DIR$/assets/scripts/jquery.js" />
-        <option value="$PROJECT_DIR$/pageloader.html" />
         <option value="$PROJECT_DIR$/assets/css/flatpickr.min.css" />
-        <option value="$PROJECT_DIR$/assets/scss/includes/footer.scss" />
         <option value="$PROJECT_DIR$/assets/scss/includes/rightSidebar.scss" />
         <option value="$PROJECT_DIR$/assets/css/bgColor.php" />
         <option value="$PROJECT_DIR$/assets/css/includes/variables.css" />
         <option value="$PROJECT_DIR$/assets/scss/includes/variables.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/includes/about.scss" />
         <option value="$PROJECT_DIR$/assets/scss/includes/project.scss" />
         <option value="$PROJECT_DIR$/assets/scss/includes/fonts.scss" />
         <option value="$PROJECT_DIR$/assets/scss/includes/contact.scss" />
         <option value="$PROJECT_DIR$/assets/scss/includes/contactHire.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/includes/header.scss" />
         <option value="$PROJECT_DIR$/app/resources/layout/footer.php" />
-        <option value="$PROJECT_DIR$/assets/scss/app.scss" />
         <option value="$PROJECT_DIR$/sidebar.php" />
-        <option value="$PROJECT_DIR$/app/resources/layout/header.php" />
-        <option value="$PROJECT_DIR$/assets/scripts/app.js" />
         <option value="$PROJECT_DIR$/blog.php" />
-        <option value="$PROJECT_DIR$/assets/scss/includes/blog.scss" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/scss/includes/home.scss" />
-        <option value="$PROJECT_DIR$/single-blog.php" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/assets/css/app.css" />
-        <option value="$PROJECT_DIR$/assets/js/events.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/blog.html" />
         <option value="$PROJECT_DIR$/single-blog.html" />
+        <option value="$PROJECT_DIR$/assets/css/includes/fonts.css" />
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
+        <option value="$PROJECT_DIR$/assets/scss/responsive.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/includes/blog.scss" />
+        <option value="$PROJECT_DIR$/single-blog.php" />
+        <option value="$PROJECT_DIR$/assets/scss/includes/lightBox.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/includes/header.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/includes/footer.scss" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/assets/scss/includes/pageloader.scss" />
+        <option value="$PROJECT_DIR$/pageloader.html" />
+        <option value="$PROJECT_DIR$/assets/scss/includes/about.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/app.scss" />
+        <option value="$PROJECT_DIR$/assets/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/resources/layout/header.php" />
+        <option value="$PROJECT_DIR$/assets/js/events.js" />
       </list>
     </option>
   </component>
@@ -410,13 +275,18 @@
             <path>
               <item name="profile" type="b2602c69:ProjectViewProjectNode" />
               <item name="profile" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name=".sass-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name=".sass-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="profile" type="b2602c69:ProjectViewProjectNode" />
               <item name="profile" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="profile" type="b2602c69:ProjectViewProjectNode" />
@@ -436,6 +306,13 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -445,10 +322,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="even&#9;FILE&#9;file:///var/www/html/profile/assets/js/events.js&#10;head&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;side&#9;FILE&#9;file:///var/www/html/profile/sidebar.php&#10;footer&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/footer.php&#10;sing&#9;FILE&#9;file:///var/www/html/profile/single-blog.php&#10;index&#9;FILE&#9;file:///var/www/html/profile/index.php&#10;home.&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/home.scss&#10;event&#9;FILE&#9;file:///var/www/html/profile/assets/js/events.js&#10;blog.sc&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/blog.scss&#10;app.js&#9;FILE&#9;file:///var/www/html/profile/assets/scripts/app.js&#10;header&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;blog&#9;FILE&#9;file:///var/www/html/profile/blog.php&#10;ho&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/home.scss&#10;contact.sc&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/contact.scss&#10;app&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;index.ph&#9;FILE&#9;file:///var/www/html/profile/index.php&#10;home&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/home.scss&#10;app.scs&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;app.sc&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;header.&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;header.scs&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/header.scss&#10;he&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;app.&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;blog.php&#9;FILE&#9;file:///var/www/html/profile/blog.php&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;ter&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/footer.php&#10;single&#9;FILE&#9;file:///var/www/html/profile/single-blog.php&#10;terma&#9;null&#9;null&#10;ap.&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;header.php&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;app.scss&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;single-blog.php&#9;FILE&#9;file:///var/www/html/profile/single-blog.php" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;abo&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/about.scss&#10;pageload&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/pageloader.scss&#10;app.js&#9;FILE&#9;file:///var/www/html/profile/assets/js/app.js&#10;app.&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;event&#9;FILE&#9;file:///var/www/html/profile/assets/js/events.js&#10;header&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;ap&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;ho&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/home.scss&#10;app.sc&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;footer.sc&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/footer.scss&#10;header.&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;head&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/header.scss&#10;header.scss&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/header.scss&#10;pagel&#9;FILE&#9;file:///var/www/html/profile/.sass-cache/f0d9b3e1da5c7aba4bc4a3d6479e0cbdc4e5e650/pageloader.scssc&#10;app.scs&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;pagelo&#9;FILE&#9;file:///var/www/html/profile/pageloader.html&#10;index.&#9;FILE&#9;file:///var/www/html/profile/index.php&#10;sing.&#9;FILE&#9;file:///var/www/html/profile/single-blog.php&#10;blog.scs&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/blog.scss&#10;app.css&#9;FILE&#9;file:///var/www/html/profile/assets/css/app.css&#10;about.css&#9;FILE&#9;file:///var/www/html/profile/assets/css/includes/about.css&#10;font.css&#9;FILE&#9;file:///var/www/html/profile/assets/css/includes/fonts.css&#10;even&#9;FILE&#9;file:///var/www/html/profile/assets/js/events.js&#10;side&#9;FILE&#9;file:///var/www/html/profile/sidebar.php&#10;footer&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/footer.php&#10;sing&#9;FILE&#9;file:///var/www/html/profile/single-blog.php&#10;index&#9;FILE&#9;file:///var/www/html/profile/index.php&#10;home.&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/home.scss&#10;blog.sc&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/blog.scss&#10;blog&#9;FILE&#9;file:///var/www/html/profile/blog.php&#10;contact.sc&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/contact.scss&#10;index.ph&#9;FILE&#9;file:///var/www/html/profile/index.php&#10;home&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/home.scss&#10;header.scs&#9;FILE&#9;file:///var/www/html/profile/assets/scss/includes/header.scss&#10;he&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;blog.php&#9;FILE&#9;file:///var/www/html/profile/blog.php&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;ter&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/footer.php&#10;single&#9;FILE&#9;file:///var/www/html/profile/single-blog.php&#10;terma&#9;null&#9;null&#10;ap.&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;header.php&#9;FILE&#9;file:///var/www/html/profile/app/resources/layout/header.php&#10;app.scss&#9;FILE&#9;file:///var/www/html/profile/assets/scss/app.scss&#10;single-blog.php&#9;FILE&#9;file:///var/www/html/profile/single-blog.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../finalprofile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../newlook" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -555,28 +432,36 @@
       <workItem from="1534346823145" duration="6234000" />
       <workItem from="1534353081580" duration="488000" />
       <workItem from="1534364492320" duration="2550000" />
-      <workItem from="1534390096386" duration="16712000" />
+      <workItem from="1534390096386" duration="16817000" />
+      <workItem from="1534408202385" duration="366000" />
+      <workItem from="1534408678667" duration="191000" />
+      <workItem from="1534408941431" duration="40000" />
+      <workItem from="1534410502098" duration="2000" />
+      <workItem from="1534413285736" duration="368000" />
+      <workItem from="1534484497505" duration="14866000" />
+      <workItem from="1534504525809" duration="8000" />
+      <workItem from="1534515168438" duration="7000" />
+      <workItem from="1534519561492" duration="6582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98007000" />
+    <option name="totallyTimeSpent" value="120542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-11" width="1873" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15392838" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.2402863" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15392838" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.2402863" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -593,6 +478,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
   </component>
@@ -603,40 +489,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="38" selection-start-line="9" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/jquery.js" />
-    <entry file="file://$PROJECT_DIR$/assets/scss/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="193" column="3" lean-forward="true" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/layout/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="35" selection-start-line="35" selection-end-line="35" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3444" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pageloader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -700,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/includes/footer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/includes/hireMe.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -719,33 +564,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/bgColor.php" />
     <entry file="file://$PROJECT_DIR$/assets/css/includes/variables.css" />
-    <entry file="file://$PROJECT_DIR$/pageloader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/about.php" />
-    <entry file="file://$PROJECT_DIR$/assets/scss/includes/about.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/images/page/about.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/page/first.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/page/first.png" />
     <entry file="file://$PROJECT_DIR$/assets/images/page/project.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/page/sublime.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/page/sublime.jpg" />
     <entry file="file://$PROJECT_DIR$/assets/scss/includes/fonts.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -767,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/includes/header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -791,41 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="378" column="26" lean-forward="true" selection-start-line="378" selection-start-column="26" selection-end-line="378" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="284" column="9" lean-forward="true" selection-start-line="284" selection-start-column="9" selection-end-line="284" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/includes/blog.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/includes/home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="30" selection-end-line="239" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -835,91 +620,204 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/resources/layout/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="9" lean-forward="true" selection-end-line="27" selection-end-column="7" />
+        <state relative-caret-position="58">
+          <caret line="2" column="9" selection-end-line="27" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="167" column="12" lean-forward="true" selection-end-line="179" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single-blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14326">
-          <caret line="494" column="16" selection-start-line="494" selection-start-column="16" selection-end-line="494" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/layout/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="37" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32718" selection-start-column="32718" selection-end-column="32718" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16659" selection-start-column="16659" selection-end-column="16659" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3312#3318#0" expanded="true" />
-            <element signature="e#3320#3326#0" expanded="true" />
-            <element signature="e#3335#3341#0" expanded="true" />
-            <element signature="e#3382#3388#0" expanded="true" />
-            <element signature="e#3390#3396#0" expanded="true" />
-            <element signature="e#3407#3413#0" expanded="true" />
-            <element signature="e#3454#3460#0" expanded="true" />
-            <element signature="e#3462#3468#0" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="4843">
+          <caret line="167" column="12" selection-end-line="179" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="667">
           <caret column="23161" selection-start-column="23161" selection-end-column="23161" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single-blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="609">
           <caret column="21098" selection-start-column="21098" selection-end-column="21098" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/includes/fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="866">
+          <caret line="9" column="76" lean-forward="true" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="84" />
+          <caret line="17" column="76" lean-forward="true" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="84" />
+          <caret line="25" column="76" lean-forward="true" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="84" />
+          <caret line="33" column="76" lean-forward="true" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="84" />
+          <caret line="41" column="76" lean-forward="true" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="84" />
+          <caret line="49" column="76" lean-forward="true" selection-start-line="49" selection-start-column="76" selection-end-line="49" selection-end-column="84" />
+          <caret line="57" column="76" lean-forward="true" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="84" />
+          <caret line="65" column="72" lean-forward="true" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="80" />
+          <caret line="73" column="72" lean-forward="true" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="80" />
+          <caret line="81" column="72" lean-forward="true" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="80" />
+          <caret line="89" column="72" lean-forward="true" selection-start-line="89" selection-start-column="72" selection-end-line="89" selection-end-column="80" />
+          <caret line="97" column="72" lean-forward="true" selection-start-line="97" selection-start-column="72" selection-end-line="97" selection-end-column="80" />
+          <caret line="105" column="72" lean-forward="true" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="80" />
+          <caret line="113" column="72" lean-forward="true" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="80" />
+          <caret line="121" column="74" lean-forward="true" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="82" />
+          <caret line="129" column="74" lean-forward="true" selection-start-line="129" selection-start-column="74" selection-end-line="129" selection-end-column="82" />
+          <caret line="137" column="74" lean-forward="true" selection-start-line="137" selection-start-column="74" selection-end-line="137" selection-end-column="82" />
+          <caret line="145" column="74" lean-forward="true" selection-start-line="145" selection-start-column="74" selection-end-line="145" selection-end-column="82" />
+          <caret line="153" column="74" lean-forward="true" selection-start-line="153" selection-start-column="74" selection-end-line="153" selection-end-column="82" />
+          <caret line="161" column="74" lean-forward="true" selection-start-line="161" selection-start-column="74" selection-end-line="161" selection-end-column="82" />
+          <caret line="169" column="74" lean-forward="true" selection-start-line="169" selection-start-column="74" selection-end-line="169" selection-end-column="82" />
+          <caret line="180" column="63" lean-forward="true" selection-start-line="180" selection-start-column="63" selection-end-line="180" selection-end-column="71" />
+          <caret line="188" column="63" lean-forward="true" selection-start-line="188" selection-start-column="63" selection-end-line="188" selection-end-column="71" />
+          <caret line="196" column="63" lean-forward="true" selection-start-line="196" selection-start-column="63" selection-end-line="196" selection-end-column="71" />
+          <caret line="204" column="67" lean-forward="true" selection-start-line="204" selection-start-column="67" selection-end-line="204" selection-end-column="75" />
+          <caret line="212" column="67" lean-forward="true" selection-start-line="212" selection-start-column="67" selection-end-line="212" selection-end-column="75" />
+          <caret line="220" column="67" lean-forward="true" selection-start-line="220" selection-start-column="67" selection-end-line="220" selection-end-column="75" />
+          <caret line="228" column="65" lean-forward="true" selection-start-line="228" selection-start-column="65" selection-end-line="228" selection-end-column="73" />
+          <caret line="236" column="65" lean-forward="true" selection-start-line="236" selection-start-column="65" selection-end-line="236" selection-end-column="73" />
+          <caret line="244" column="65" lean-forward="true" selection-start-line="244" selection-start-column="65" selection-end-line="244" selection-end-column="73" />
+          <caret line="252" column="61" lean-forward="true" selection-start-line="252" selection-start-column="61" selection-end-line="252" selection-end-column="69" />
+          <caret line="260" column="61" lean-forward="true" selection-start-line="260" selection-start-column="61" selection-end-line="260" selection-end-column="69" />
+          <caret line="268" column="61" lean-forward="true" selection-start-line="268" selection-start-column="61" selection-end-line="268" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret column="7079" selection-start-column="7072" selection-end-column="7079" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/plugin/highlight/highlight.pack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="1" column="5840" selection-start-line="1" selection-start-column="5840" selection-end-line="1" selection-end-column="5840" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret column="5114" selection-start-column="5114" selection-end-column="5114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/responsive.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="621" column="1" selection-start-line="621" selection-start-column="1" selection-end-line="621" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/includes/blog.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1736">
+          <caret line="819" column="5" selection-start-line="819" selection-start-column="5" selection-end-line="819" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="728" column="40" selection-start-line="728" selection-start-column="40" selection-end-line="728" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/includes/lightBox.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/includes/header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/includes/footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/includes/home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3248">
+          <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/includes/pageloader.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/includes/about.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/includes/about.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="400" column="17" selection-start-line="400" selection-start-column="17" selection-end-line="400" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageloader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2585">
+          <caret line="222" column="34" selection-start-line="222" selection-start-column="27" selection-end-line="222" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="201" column="43" lean-forward="true" selection-start-line="201" selection-start-column="43" selection-end-line="201" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3375">
+          <caret line="133" column="86" lean-forward="true" selection-start-line="133" selection-start-column="86" selection-end-line="133" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/layout/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
         </state>
       </provider>
     </entry>

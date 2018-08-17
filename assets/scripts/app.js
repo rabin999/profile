@@ -265,11 +265,44 @@
             return this;
         }
 
+        isChecked() {
+            if(this.element.checked === true)
+                return true;
+            else
+                return false;
+        }
+
+        css(rules) {
+            if (!this.element && !rules) {
+                return;
+            }
+            if (this.__isWindowObj() || this.__singleObj()) {
+                if(Object.keys(rules)) {
+                    for(let key in rules) {
+                        this.element.style[key] = rules[key];
+                    }
+                }
+            } else {
+                this.element.forEach((el) => {
+                    if(Object.keys(rules)) {
+                        for(let key in rules) {
+                            el.style[key] = rules[key];
+                        }
+                    }
+                });
+            }
+        }
+
         /*
          * ---------------
          * Page
          * ---------------
          */
+        ready(callback) {
+            if(this.element && this.element === document && this.element.readyState === "loading") {
+                this.element.addEventListener('DOMContentLoaded', callback);
+            }
+        }
 
         html() {
             // Update New Dom Element
@@ -292,6 +325,10 @@
         remove() {
             this.element.parentNode.removeChild(this.element);
             return this;
+        }
+
+        ucFirst(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
         }
 
         /*
