@@ -5,7 +5,7 @@ Error: Undefined variable: "$padding".
 1: .aboutMe {
 2:   position: relative;
 3:   padding: $padding;
-4:   background: url(/profile/assets/images/page/about.jpg);
+4:   background: url(/assets/images/page/about.jpg);
 5:   background-size: cover;
 6:   background-position: center;
 7:   height: 100%;
@@ -66,4 +66,4 @@ assets/scss/includes/about.scss:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$padding\".\A         on line 3 of assets/scss/includes/about.scss\A \A 1: .aboutMe {\A 2:   position: relative;\A 3:   padding: $padding;\A 4:   background: url(/profile/assets/images/page/about.jpg);\A 5:   background-size: cover;\A 6:   background-position: center;\A 7:   height: 100%;\A 8: "; }
+  content: "Error: Undefined variable: \"$padding\".\A         on line 3 of assets/scss/includes/about.scss\A \A 1: .aboutMe {\A 2:   position: relative;\A 3:   padding: $padding;\A 4:   background: url(/assets/images/page/about.jpg);\A 5:   background-size: cover;\A 6:   background-position: center;\A 7:   height: 100%;\A 8: "; }
