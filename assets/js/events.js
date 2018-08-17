@@ -49,7 +49,6 @@ rb('.navigate_page').on('click', function (e) {
 
 // on click show page after 1500ms
 rb('*[data-page-target]').on('click', function () {
-
     var targetPage = rb(this).attr("data-page-target");
     rb('div[data-page='+targetPage+']').addClass('fadeIn');
     pageheight = window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px';
