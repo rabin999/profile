@@ -35,7 +35,11 @@
 
             window.cl = function(value) {
                 return console.log(value);
-            }
+            };
+
+            window.cd = function(value) {
+                return console.dir(value);
+            };
 
             // -------------------------------
             //          Polyfill
@@ -54,7 +58,58 @@
                 };
             }
 
-            // Query Selector Support for IE 7
+            // Event Support for IE >= 7
+            if (!Element.prototype.addEventListener) {
+                var oListeners = {};
+                function runListeners(oEvent) {
+                    if (!oEvent) { oEvent = window.event; }
+                    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
+                        if (oEvtListeners.aEls[iElId] === this) {
+                            for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+                            break;
+                        }
+                    }
+                }
+                Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+                    if (oListeners.hasOwnProperty(sEventType)) {
+                        var oEvtListeners = oListeners[sEventType];
+                        for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                            if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
+                        }
+                        if (nElIdx === -1) {
+                            oEvtListeners.aEls.push(this);
+                            oEvtListeners.aEvts.push([fListener]);
+                            this["on" + sEventType] = runListeners;
+                        } else {
+                            var aElListeners = oEvtListeners.aEvts[nElIdx];
+                            if (this["on" + sEventType] !== runListeners) {
+                                aElListeners.splice(0);
+                                this["on" + sEventType] = runListeners;
+                            }
+                            for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
+                                if (aElListeners[iLstId] === fListener) { return; }
+                            }
+                            aElListeners.push(fListener);
+                        }
+                    } else {
+                        oListeners[sEventType] = { aEls: [this], aEvts: [ [fListener] ] };
+                        this["on" + sEventType] = runListeners;
+                    }
+                };
+                Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+                    if (!oListeners.hasOwnProperty(sEventType)) { return; }
+                    var oEvtListeners = oListeners[sEventType];
+                    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                        if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
+                    }
+                    if (nElIdx === -1) { return; }
+                    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
+                        if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
+                    }
+                };
+            }
+
+            // Query Selector Support for IE >= 7
             (function setUpQuerySelectorPolyfill() {
                 if (!querySelectorAllExist()) {
                     let d = document,
@@ -85,7 +140,7 @@
 
                 // private helper
                 __isWindowObj() {
-                    return (this.selector === this.selector.window || this.selector.NodeType === 9) ? true : false
+                    return (this.selector === this.selector.window || this.selector.NodeType === 9) ? true : false;
                 };
 
                 __singleObj() {
@@ -111,41 +166,80 @@
                     return (evs.length && evs.length > 1 ) ? evs : false;
                 };
 
+
+                __handler(options, e) {
+                    window.options = options;
+
+                    /*
+                    * [options]
+                    *
+                    * data
+                    * callback
+                    * */
+                    if(Object.keys(options).length) {
+
+                        // attached function on event
+                        if(options.callback.name)
+                            return options.callback(e);
+
+                        // anonymous event
+                        if(options.callback.length)
+                            return options.callback(e);
+                    }
+                }
+
                 __manageEvent(event, operation, callback) {
                     let that = this;
+                    let data = null;
+
                     if (!(window[operation] || callback)) {
                         error('ReferenceError', 'Event || Event Function reference not found');
-                    }
 
+                    }
                     let multipleEvents = that.__hasMultipleEvents(event);
+
                     event = multipleEvents ? multipleEvents : event;
 
                     if (window[operation] && that.element) {
+                        // Single Object
                         if (that.__isWindowObj() || that.__singleObj()) {
                             if(Array.isArray(event) && event.length > 1) {
                                 if (that.__hasEvent(event, that.element)) {
                                     event.forEach(function (e) {
-                                        that.element[operation](e, callback);
+                                        that.element[operation](e, that.__handler.bind(this, {
+                                            data,
+                                            callback
+                                        }));
                                     });
                                 }
                             } else {
                                 if (that.__hasEvent(event, that.element)) {
-                                    that.element[operation](event, callback);
+                                    that.element[operation](event, that.__handler.bind(this, {
+                                            data,
+                                            callback
+                                        }));
                                 }
                             }
                         } else {
+                            // Multiple Objects
                             if(Array.isArray(event) && event.length > 1) {
                                 that.element.forEach((el) => {
                                     if (that.__hasEvent(event, el)) {
                                         event.forEach(function (e) {
-                                            el[operation](e, callback);
+                                            el[operation](e, that.__handler.bind(this, {
+                                                data,
+                                                callback
+                                            }));
                                         });
                                     }
                                 });
                             } else {
                                 that.element.forEach((el) => {
                                     if (that.__hasEvent(event, el)) {
-                                        el[operation](event, callback);
+                                        el[operation](event, that.__handler.bind(this, {
+                                            data,
+                                            callback
+                                        }));
                                     }
                                 });
                             }

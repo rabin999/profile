@@ -55,6 +55,7 @@
 
     // trigger smooth transition from the actual page to the new one
     rb('[data-type="page-transition"]').on('click',function(event) {
+        console.log('test');
         event.preventDefault();
         var newPage = rb(this).attr('href');
         if(!isAnimating)
