@@ -74,9 +74,28 @@ function _classCallCheck(instance, Constructor) {
         }
     }
 
-    // Helpers
     function querySelectorAllExist() {
         return document.querySelector || document.querySelectorAll ? true : false;
+    }
+
+    window.cl = function(value) {
+        return console.log(value);
+    };
+
+    // -------------------------------
+    //          Polyfill
+    // --------------------------------
+    Array.prototype.contains = function(needle) {
+        for (var i in this) {
+            if (this[i] == needle) return true;
+        }
+        return false;
+    };
+
+    if (!Array.isArray) {
+        Array.isArray = function(arg) {
+            return Object.prototype.toString.call(arg) === "[object Array]";
+        };
     }
 
     // Query Selector Support for IE 7
@@ -138,14 +157,29 @@ function _classCallCheck(instance, Constructor) {
                             ? arguments[1]
                             : this.element;
 
-                    return typeof element["on" + event] !== "undefined";
+                    return true;
+                    // return typeof element['on' + event] !== "undefined";
+                }
+            },
+            {
+                key: "__hasMultipleEvents",
+                value: function __hasMultipleEvents(events) {
+                    var evs = [];
+                    if (events) {
+                        events = events.split(" ");
+                        if (events.length > 1) {
+                            events.forEach(function(ev) {
+                                if (ev !== "" && ev.match(/^[A-Za-z]+$/)) evs.push(ev);
+                            });
+                        }
+                    }
+                    return evs.length && evs.length > 1 ? evs : false;
                 }
             },
             {
                 key: "__manageEvent",
                 value: function __manageEvent(event, operation, callback) {
-                    var _this = this;
-
+                    var that = this;
                     if (!(window[operation] || callback)) {
                         error(
                             "ReferenceError",
@@ -153,17 +187,38 @@ function _classCallCheck(instance, Constructor) {
                         );
                     }
 
-                    if (window[operation] && this.element) {
-                        if (this.__isWindowObj() || this.__singleObj()) {
-                            if (this.__hasEvent(event, this.element)) {
-                                this.element[operation](event, callback);
+                    var multipleEvents = that.__hasMultipleEvents(event);
+                    event = multipleEvents ? multipleEvents : event;
+
+                    if (window[operation] && that.element) {
+                        if (that.__isWindowObj() || that.__singleObj()) {
+                            if (Array.isArray(event) && event.length > 1) {
+                                if (that.__hasEvent(event, that.element)) {
+                                    event.forEach(function(e) {
+                                        that.element[operation](e, callback);
+                                    });
+                                }
+                            } else {
+                                if (that.__hasEvent(event, that.element)) {
+                                    that.element[operation](event, callback);
+                                }
                             }
                         } else {
-                            this.element.forEach(function(el) {
-                                if (_this.__hasEvent(event, el)) {
-                                    el[operation](event, callback);
-                                }
-                            });
+                            if (Array.isArray(event) && event.length > 1) {
+                                that.element.forEach(function(el) {
+                                    if (that.__hasEvent(event, el)) {
+                                        event.forEach(function(e) {
+                                            el[operation](e, callback);
+                                        });
+                                    }
+                                });
+                            } else {
+                                that.element.forEach(function(el) {
+                                    if (that.__hasEvent(event, el)) {
+                                        el[operation](event, callback);
+                                    }
+                                });
+                            }
                         }
                     }
                 }
@@ -173,7 +228,7 @@ function _classCallCheck(instance, Constructor) {
             {
                 key: "__manageClass",
                 value: function __manageClass(classes, operation) {
-                    var _this2 = this;
+                    var _this = this;
 
                     if (!classes) error("ReferenceError", "Class arguments not founds !");
 
@@ -184,7 +239,7 @@ function _classCallCheck(instance, Constructor) {
                     }
                     if (this.__isWindowObj() || this.__singleObj()) {
                         classLists.forEach(function(cl) {
-                            _this2.element.classList[operation](cl);
+                            _this.element.classList[operation](cl);
                         });
                     } else {
                         this.element.forEach(function(el) {
@@ -330,6 +385,36 @@ function _classCallCheck(instance, Constructor) {
                 }
             },
             {
+                key: "one",
+                value: function one(event) {
+                    var _this2 = this;
+
+                    var callback =
+                        arguments.length > 1 && arguments[1] !== undefined
+                            ? arguments[1]
+                            : false;
+
+                    if (window["addEventListener"] && this.element) {
+                        if (this.__isWindowObj() || this.__singleObj()) {
+                            if (this.__hasEvent(event, this.element)) {
+                                this.element.addEventListener(event, handler);
+                            }
+                        } else {
+                            this.element.forEach(function(el) {
+                                if (_this2.__hasEvent(event, el)) {
+                                    el.addEventListener(event, handler);
+                                }
+                            });
+                        }
+                    }
+
+                    function handler(e) {
+                        e.target.removeEventListener(e.type, handler);
+                        return callback();
+                    }
+                }
+            },
+            {
                 key: "off",
                 value: function off(event) {
                     var callback =
@@ -345,6 +430,33 @@ function _classCallCheck(instance, Constructor) {
                      * Class
                      * ---------------
                      */
+            },
+            {
+                key: "hasClass",
+                value: function hasClass(className) {
+                    var r = false;
+                    if (!className.length)
+                        error("ReferenceError", "Class argument not founds !");
+
+                    className = className.trim();
+
+                    if (this.element.classList.length) {
+                        if (
+                            this.element.classList.length === 1 &&
+                            this.element.classList[0] === className
+                        ) {
+                            r = true;
+                        } else {
+                            this.element.classList.forEach(function(cl) {
+                                cl = cl.trim();
+                                if (className === cl) {
+                                    r = true;
+                                }
+                            });
+                        }
+                    }
+                    return r;
+                }
             },
             {
                 key: "addClass",
@@ -393,7 +505,7 @@ function _classCallCheck(instance, Constructor) {
                 key: "isChecked",
                 value: function isChecked() {
                     if (this.element.checked === true) return true;
-                    else return false;
+                    return false;
                 }
             },
             {
@@ -518,6 +630,7 @@ function _classCallCheck(instance, Constructor) {
                 }
             }
         ]);
+
         return RB;
     })();
 

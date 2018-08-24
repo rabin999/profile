@@ -1,7 +1,7 @@
 .aboutMe {
   position: relative;
   padding: 40px 40px 0 40px;
-  background: url(/assets/images/page/about.jpg);
+  background: url(/profile/assets/images/page/about.jpg);
   background-size: cover;
   background-position: center;
   height: 100%;

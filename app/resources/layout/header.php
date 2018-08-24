@@ -38,4 +38,3 @@
             </ul>
         </nav>
     </header>
-    <div class="progress-bar"></div>
