@@ -5,214 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76b8d260-b2f2-4130-8c3a-4cee8be6ae94" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/pageloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/pageloader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jstest.html" beforeDir="false" afterPath="$PROJECT_DIR$/jstest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/AUTHORS" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/AUTHORS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/CONTRIBUTING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/comment/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/comment/comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/comment/continuecomment.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/comment/continuecomment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/dialog/dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/dialog/dialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/display/autorefresh.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/display/autorefresh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/display/fullscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/display/fullscreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/display/panel.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/display/panel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/display/placeholder.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/display/placeholder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/display/rulers.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/display/rulers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/closebrackets.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/closebrackets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/closetag.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/closetag.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/continuelist.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/continuelist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/matchbrackets.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/matchbrackets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/matchtags.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/matchtags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/trailingspace.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/edit/trailingspace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/brace-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/brace-fold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/comment-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/comment-fold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/foldcode.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/foldcode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/foldgutter.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/foldgutter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/indent-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/indent-fold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/markdown-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/markdown-fold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/xml-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/fold/xml-fold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/anyword-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/css-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/css-hint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/html-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/html-hint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/javascript-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/javascript-hint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/show-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/show-hint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/sql-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/sql-hint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/xml-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/hint/xml-hint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/coffeescript-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/coffeescript-lint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/css-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/css-lint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/html-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/html-lint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/javascript-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/javascript-lint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/json-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/json-lint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/lint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/yaml-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/lint/yaml-lint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/merge/merge.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/merge/merge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/loadmode.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/loadmode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/multiplex.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/multiplex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/multiplex_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/multiplex_test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/simple.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/mode/simple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/colorize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/colorize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/runmode-standalone.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/runmode-standalone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/runmode.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/runmode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/runmode.node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/runmode/runmode.node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/scroll/annotatescrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/scroll/annotatescrollbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/scroll/scrollpastend.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/scroll/scrollpastend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/scroll/simplescrollbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/scroll/simplescrollbars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/search/jump-to-line.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/search/jump-to-line.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/search/match-highlighter.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/search/match-highlighter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/search/matchesonscrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/search/matchesonscrollbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/search/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/search/searchcursor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/search/searchcursor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/selection/active-line.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/selection/active-line.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/selection/mark-selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/selection/mark-selection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/selection/selection-pointer.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/selection/selection-pointer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/tern/tern.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/tern/tern.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/tern/worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/tern/worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/addon/wrap/hardwrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/addon/wrap/hardwrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/keymap/emacs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/keymap/emacs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/keymap/sublime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/keymap/sublime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/keymap/vim.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/keymap/vim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/lib/codemirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/lib/codemirror.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/apl/apl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/apl/apl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/asciiarmor/asciiarmor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/asciiarmor/asciiarmor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/asn.1/asn.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/asn.1/asn.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/asterisk/asterisk.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/asterisk/asterisk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/brainfuck/brainfuck.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/brainfuck/brainfuck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/clike/clike.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/clike/clike.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/clojure/clojure.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/clojure/clojure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/cmake/cmake.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/cmake/cmake.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/cobol/cobol.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/cobol/cobol.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/coffeescript/coffeescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/coffeescript/coffeescript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/commonlisp/commonlisp.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/commonlisp/commonlisp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/crystal/crystal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/crystal/crystal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/css/css.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/css/css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/cypher/cypher.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/cypher/cypher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/d/d.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/d/d.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/dart/dart.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/dart/dart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/diff/diff.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/diff/diff.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/django/django.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/django/django.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/dockerfile/dockerfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/dockerfile/dockerfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/dtd/dtd.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/dtd/dtd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/dylan/dylan.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/dylan/dylan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/ebnf/ebnf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/ebnf/ebnf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/ecl/ecl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/ecl/ecl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/eiffel/eiffel.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/eiffel/eiffel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/elm/elm.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/elm/elm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/erlang/erlang.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/erlang/erlang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/factor/factor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/factor/factor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/fcl/fcl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/fcl/fcl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/forth/forth.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/forth/forth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/fortran/fortran.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/fortran/fortran.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/gas/gas.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/gas/gas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/gfm/gfm.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/gfm/gfm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/gherkin/gherkin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/gherkin/gherkin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/go/go.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/go/go.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/groovy/groovy.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/groovy/groovy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/haml/haml.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/haml/haml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/handlebars/handlebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/handlebars/handlebars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/haskell-literate/haskell-literate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/haskell-literate/haskell-literate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/haskell/haskell.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/haskell/haskell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/haxe/haxe.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/haxe/haxe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/htmlembedded/htmlembedded.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/htmlembedded/htmlembedded.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/htmlmixed/htmlmixed.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/htmlmixed/htmlmixed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/http/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/http/http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/idl/idl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/idl/idl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/javascript/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/javascript/javascript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/jinja2/jinja2.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/jinja2/jinja2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/jsx/jsx.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/jsx/jsx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/julia/julia.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/julia/julia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/livescript/livescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/livescript/livescript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/lua/lua.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/lua/lua.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/markdown/markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/markdown/markdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/mathematica/mathematica.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/mathematica/mathematica.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/mbox/mbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/mbox/mbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/meta.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/meta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/mirc/mirc.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/mirc/mirc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/mllike/mllike.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/mllike/mllike.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/modelica/modelica.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/modelica/modelica.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/mscgen/mscgen.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/mscgen/mscgen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/mumps/mumps.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/mumps/mumps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/nginx/nginx.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/nginx/nginx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/nsis/nsis.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/nsis/nsis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/ntriples/ntriples.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/ntriples/ntriples.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/octave/octave.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/octave/octave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/oz/oz.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/oz/oz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/pascal/pascal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/pascal/pascal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/pegjs/pegjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/pegjs/pegjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/perl/perl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/perl/perl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/php/php.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/php/php.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/pig/pig.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/pig/pig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/powershell/powershell.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/powershell/powershell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/properties/properties.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/properties/properties.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/protobuf/protobuf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/protobuf/protobuf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/pug/pug.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/pug/pug.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/puppet/puppet.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/puppet/puppet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/python/python.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/python/python.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/q/q.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/q/q.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/r/r.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/r/r.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/rpm/changes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/rpm/changes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/rpm/rpm.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/rpm/rpm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/rst/rst.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/rst/rst.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/ruby/ruby.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/ruby/ruby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/rust/rust.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/rust/rust.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/sas/sas.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/sas/sas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/sass/sass.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/sass/sass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/scheme/scheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/scheme/scheme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/shell/shell.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/shell/shell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/sieve/sieve.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/sieve/sieve.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/slim/slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/slim/slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/smalltalk/smalltalk.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/smalltalk/smalltalk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/smarty/smarty.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/smarty/smarty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/solr/solr.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/solr/solr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/soy/soy.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/soy/soy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/sparql/sparql.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/sparql/sparql.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/spreadsheet/spreadsheet.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/spreadsheet/spreadsheet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/sql/sql.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/sql/sql.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/stex/stex.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/stex/stex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/stylus/stylus.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/stylus/stylus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/swift/swift.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/swift/swift.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/tcl/tcl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/tcl/tcl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/textile/textile.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/textile/textile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/tiddlywiki/tiddlywiki.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/tiddlywiki/tiddlywiki.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/tiki/tiki.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/tiki/tiki.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/toml/toml.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/toml/toml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/tornado/tornado.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/tornado/tornado.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/troff/troff.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/troff/troff.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/ttcn-cfg/ttcn-cfg.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/ttcn-cfg/ttcn-cfg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/ttcn/ttcn.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/ttcn/ttcn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/turtle/turtle.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/turtle/turtle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/twig/twig.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/twig/twig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/vb/vb.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/vb/vb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/vbscript/vbscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/vbscript/vbscript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/velocity/velocity.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/velocity/velocity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/verilog/verilog.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/verilog/verilog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/vhdl/vhdl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/vhdl/vhdl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/vue/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/vue/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/webidl/webidl.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/webidl/webidl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/xml/xml.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/xml/xml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/xquery/xquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/xquery/xquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/yacas/yacas.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/yacas/yacas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/yaml-frontmatter/yaml-frontmatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/yaml-frontmatter/yaml-frontmatter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/yaml/yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/yaml/yaml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/mode/z80/z80.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/mode/z80/z80.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/rollup.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/src/edit/CodeMirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/src/edit/CodeMirror.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/src/edit/global_events.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/src/edit/global_events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/src/edit/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/src/edit/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/src/edit/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/src/edit/methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/src/edit/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/src/edit/options.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/src/input/keymap.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/src/input/keymap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/src/model/line_widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/src/model/line_widget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/theme/darcula.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/theme/darcula.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/codemirror/theme/idea.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/codemirror/theme/idea.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -226,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="343" lean-forward="true" selection-start-line="343" selection-end-line="343" />
+            <state relative-caret-position="258">
+              <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="events.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/events.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="319">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -347,8 +140,8 @@
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/jstest.html" />
-        <option value="$PROJECT_DIR$/assets/scripts/app.js" />
         <option value="$PROJECT_DIR$/assets/js/events.js" />
+        <option value="$PROJECT_DIR$/assets/scripts/app.js" />
       </list>
     </option>
   </component>
@@ -575,12 +368,12 @@
       <workItem from="1535198486810" duration="626000" />
       <workItem from="1535263680056" duration="773000" />
       <workItem from="1535274630466" duration="832000" />
-      <workItem from="1535383512800" duration="4974000" />
+      <workItem from="1535383512800" duration="5223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161141000" />
+    <option name="totallyTimeSpent" value="161390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-11" width="1873" height="1092" extended-state="6" />
@@ -961,17 +754,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="343" lean-forward="true" selection-start-line="343" selection-end-line="343" />
+        <state relative-caret-position="319">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/events.js">
+    <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        <state relative-caret-position="258">
+          <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -167,8 +167,8 @@
         };
 
         __manageEvent(event, operation, callback, options = null) {
-            let that = this;
-            let multipleEvents = that.__hasMultipleEvents(event);
+            let that = this,
+                multipleEvents = that.__hasMultipleEvents(event);
             event = multipleEvents ? multipleEvents : event;
 
             if (!(window[operation] || callback)) {
