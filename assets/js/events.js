@@ -16,54 +16,60 @@ if (raf) raf(function () {
 else window.addEventListener('load', loadDeferredStyles);
 
 // Page Loader
-var pageheight;
-rb(document).ready(function(){
-    pageheight = window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px';
-    rb('.page__style.fadeIn').css({
-        "height": pageheight
-    });
+
+rb(window).on('load', function(e) {
+    var selectedPage = sessionStorage.getItem('page');
+    if(selectedPage) {
+        changePage('.navigate_page[data-page-target="'+selectedPage+'"]');
+    } else {
+        rb('.page__style.showing').css({
+            "height": (window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px')
+        });
+    }
 });
 
-rb('.navigate_page').on('click', function (e) {
-
-    if(window.location.href === "http://localhost/profile/")
-        e.preventDefault();
-
-    rb('header > nav').addClass('hidden');
-    rb('div.fadeIn').removeClass('fadeIn');
-    // animate content
-    rb('.page__style').addClass('animate_content');
-    //rb('.page__description').fadeOut(100).delay(2800).fadeIn();
-
-    var a  = setTimeout(function () {
-        rb('.page__style').removeClass('animate_content');
-        clearTimeout(a);
-    }, 3200);
-
-    //remove fadeIn class after 1500ms
-    var b = setTimeout(function () {
-        rb('.page__style').removeClass('fadeIn');
-        clearTimeout(b);
-    }, 1500);
-});
-
-// on click show page after 1500ms
-rb('*[data-page-target]').on('click', function () {
-    var targetPage = rb(this).attr("data-page-target");
-    rb('div[data-page='+targetPage+']').addClass('fadeIn');
-    pageheight = window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px';
-    rb('div[data-page='+targetPage+'] > .page__description').css({
-        height:pageheight
-    });
-
-    var s = setTimeout(function() {
-        rb('div[data-page='+targetPage+']').addClass('fadeIn');
-        rb('header > nav').removeClass('hidden');
-        clearTimeout(s);
-    }, 1500);
-});
+rb('.navigate_page').on('click', changePage);
 
 
+function changePage(o) {
+    var selector;
+
+    if(typeof o.target !== "undefined") {
+        o.preventDefault();
+        selector = o.target;
+    }
+
+    if(o.length) {
+        selector = o;
+    }
+
+    var loader =  null,
+        targetPage = rb(selector).attr('data-page-target');
+
+    // if in another page / blog
+    if(window.location.pathname.split('/')[2]) {
+        window.location.assign(window.location.origin+'/profile')
+        sessionStorage.setItem('page', targetPage);
+    }
+
+    if(targetPage) {
+        if(!rb(selector).hasClass('showing')) {
+            rb('.page__style[data-page]').removeClass('showing').css({
+                "height": null
+            });
+
+            rb('.spinner').addClass('active');
+            loader = setTimeout(function() {
+                rb('.spinner.active').removeClass('active');
+                rb('.page__style[data-page="'+targetPage+'"]').addClass('showing').css({
+                    "height": (window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px')
+                });
+                sessionStorage.removeItem('page');
+                clearTimeout(loader);
+            }, 500);
+        }
+    }
+}
 
 // flatpickr("#blog-from-to-range", {
 //     altInput: true,

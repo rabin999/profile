@@ -2,8 +2,7 @@
 
 <main class="container">
     <!-- Home -->
-    <div class="page__style fadeIn" data-page="homePage">
-        <div class="page__description">
+    <div class="page__style showing" data-page="homePage">
             <div rel="home" class="home">
                 <div class="row">
                     <div class="fullname col">
@@ -50,13 +49,11 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
     <!-- About Me -->
     <div class="page__style" data-page="aboutMe">
-        <div class="page__description">
-            <div class="aboutMe" id="aboutMe">
+        <div class="aboutMe" id="aboutMe">
                 <div class="about-header">
                     <h1 class="page-header">ABOUT ME</h1>
                     <div class="links">
@@ -83,14 +80,12 @@
                     very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
                     from a line in section 1.10.32.</p>
             </div>
-        </div>
     </div>
 
 
     <!-- Projects -->
     <div class="page__style" data-page="projects">
-        <div class="page__description">
-            <div class="projects">
+        <div class="projects">
                 <h1 class="page-header">PROJECTS</h1>
 
                 <div class="project-lists">
@@ -107,13 +102,11 @@
                     </ul>
                 </div>
             </div>
-        </div>
     </div>
 
     <!-- Contact -->
     <div class="page__style" data-page="contact">
-        <div class="page__description">
-            <div class="contact">
+        <div class="contact">
                 <h1 class="page-header">CONTACT</h1>
                 <div class="row contact-detail">
                     <div class="col detail">
@@ -170,18 +163,15 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
     <!-- Contact End -->
 
     <!-- Hire Me -->
     <div class="page__style" data-page="hireMe">
-        <div class="page__description">
-            <div class="hire" rel="contact" style="min-height: 1020px;max-height: 1020px;">
+        <div class="hire" rel="contact">
                 <h1 class="page-header">HIRE ME
                     <span class="page-sub-header">Let Do Some Project Together.</span>
                 </h1>
-
 
                 <div class="row hire-detail">
                     <div class="col detail">
@@ -251,7 +241,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
     <!-- Hire Me End -->
 

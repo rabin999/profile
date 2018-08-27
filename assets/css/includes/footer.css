@@ -8,10 +8,8 @@ Error: Undefined variable: "$color".
 4:   font-size: 13px;
 5:   color: $color;
 6:   height: 45px;
-7:   position: fixed;
-8:   bottom: 0;
-9:   width: 100%;
-10: }
+7:   width: 100%;
+8: }
 
 Backtrace:
 assets/scss/includes/footer.scss:5
@@ -68,4 +66,4 @@ assets/scss/includes/footer.scss:5
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color\".\A         on line 5 of assets/scss/includes/footer.scss\A \A 1: footer {\A 2:   padding: 15px;\A 3:   text-align: center;\A 4:   font-size: 13px;\A 5:   color: $color;\A 6:   height: 45px;\A 7:   position: fixed;\A 8:   bottom: 0;\A 9:   width: 100%;\A 10: }"; }
+  content: "Error: Undefined variable: \"$color\".\A         on line 5 of assets/scss/includes/footer.scss\A \A 1: footer {\A 2:   padding: 15px;\A 3:   text-align: center;\A 4:   font-size: 13px;\A 5:   color: $color;\A 6:   height: 45px;\A 7:   width: 100%;\A 8: }"; }

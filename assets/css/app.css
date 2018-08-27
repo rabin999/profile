@@ -1,4 +1,3 @@
-/* Font Awesome */
 /**
 * -----------------------
 *	Copyright @ 2018
@@ -134,9 +133,6 @@ html {
       Page Loader
     ////////////////
   */
-  /*****************************************************************
-  ~ Mobile media-queries (max-width: 767px)
-  ******************************************************************/
   /*
     /////////////////
       Home Page
@@ -338,100 +334,60 @@ html {
     margin-top: 50px;
     max-width: 100%; }
   .rb-theme-1 .page__style {
-    font-family: OpenSans-Regular, sans-serif;
+    display: none; }
+    .rb-theme-1 .page__style.showing {
+      display: block; }
+  .rb-theme-1 .spinner {
+    width: 40px;
+    height: 40px;
+    display: none;
     position: fixed;
-    right: 0;
-    left: 0;
+    left: 50%;
+    top: 40%; }
+    .rb-theme-1 .spinner.active {
+      display: inline-block; }
+  .rb-theme-1 .double-bounce1, .rb-theme-1 .double-bounce2 {
     width: 100%;
     height: 100%;
-    margin: auto auto;
-    display: none; }
-  .rb-theme-1 .page__style .navigate_page {
-    background: #002a32;
-    border-radius: 30px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    padding: 17px 30px;
-    width: 146px; }
-  .rb-theme-1 .page__style .navigate_page:focus,
-  .rb-theme-1 .page__style .navigate_page:active {
-    outline: none; }
-  .rb-theme-1 .page__style a {
-    text-decoration: none;
-    color: #fff; }
-  .rb-theme-1 .page__style a:hover {
-    color: #ccc; }
-  .rb-theme-1 .animate_content {
-    animation: animate 3s ease; }
-  .rb-theme-1 .fadeIn {
-    display: block;
-    z-index: 10 !important; }
-  @media only screen and (max-width: 767px) {
-    .rb-theme-1 .page__description h1 {
-      margin-top: 100px; } }
-@-moz-keyframes animate {
-  10% {
-    transform: scale(1, 0.002); }
-  35% {
-    transform: scale(0.2, 0.002);
-    opacity: 1; }
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #149de1;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -moz-animation: sk-bounce 2.0s infinite ease-in-out;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out; }
+  .rb-theme-1 .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s; }
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0); }
   50% {
-    transform: scale(0.2, 0.002);
-    opacity: 0; }
-  85% {
-    transform: scale(1, 0.002);
-    opacity: 1; }
-  100% {
-    transform: scale(1, 1); } }
-@-webkit-keyframes animate {
-  10% {
-    transform: scale(1, 0.002); }
-  35% {
-    transform: scale(0.2, 0.002);
-    opacity: 1; }
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+@keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0); }
   50% {
-    transform: scale(0.2, 0.002);
-    opacity: 0; }
-  85% {
-    transform: scale(1, 0.002);
-    opacity: 1; }
-  100% {
-    transform: scale(1, 1); } }
-@-o-keyframes animate {
-  10% {
-    transform: scale(1, 0.002); }
-  35% {
-    transform: scale(0.2, 0.002);
-    opacity: 1; }
-  50% {
-    transform: scale(0.2, 0.002);
-    opacity: 0; }
-  85% {
-    transform: scale(1, 0.002);
-    opacity: 1; }
-  100% {
-    transform: scale(1, 1); } }
-@keyframes animate {
-  10% {
-    transform: scale(1, 0.002); }
-  35% {
-    transform: scale(0.2, 0.002);
-    opacity: 1; }
-  50% {
-    transform: scale(0.2, 0.002);
-    opacity: 0; }
-  85% {
-    transform: scale(1, 0.002);
-    opacity: 1; }
-  100% {
-    transform: scale(1, 1); } }
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
   .rb-theme-1 .home {
     margin-bottom: 50px;
     padding: 40px 40px 0 40px;
@@ -1541,8 +1497,6 @@ html {
     font-size: 13px;
     color: #149DE1;
     height: 45px;
-    position: fixed;
-    bottom: 0;
     width: 100%; }
 
 @supports not (flex-wrap: wrap) {

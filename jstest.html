@@ -6,49 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        html, a , body{
+            padding: 0;
+            margin: 0;
+        }
+        #container {
+            /*height: 100vh;*/
+        }
+
+        .home {
+            background-color: #848484;
+            height: 100vh;
+        }
+
+        .about {
+            background-color: yellowgreen;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
+<main id="container">
+    <div class="pages">
+        <div class="home" data-page="home">Hello Home</div>
+        <div class="about" data-page="about">Hello about</div>
+    </div>
+</main>
 
-<button id="outside">click me</button>
-
-<script src="assets/js/app.js"></script>
-
-<script>
-    rb('#outside').on('click', triggerEvent);
-
-
-    // events = []
-    //
-    // var data = [1,2];
-    //
-    // var el = document.getElementById('outside');
-    // el.addEventListener('click', handleEvent);
-    //
-    // function handleEvent(e) {
-    //     console.log('test');
-    //     triggerEvent(e);
-    //     el.removeEventListener('click', handleEvent);
-    // }
-    //
-    function triggerEvent(e) {
-        cl("trigger event");
-        cd(e);
-        cd(this);
-        rb(this).off('click', triggerEvent);
-    }
-
-    // function triggerEvent(){
-    //     console.log("test");
-    //     events.forEach(function (f) {
-    //         f();
-    //     })
-    // }
-    //
-    //
-    // function addEvent(f) {
-    //
-    //     events.push(f)
-    // }
-</script>
+<script src="assets/scripts/app.js"></script>
 </body>
 </html>
