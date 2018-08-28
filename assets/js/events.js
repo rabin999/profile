@@ -145,3 +145,21 @@ rb(document).on('keyup', function (e) {
         });
     }
 });
+
+/*
+* Cookies
+* */
+
+rb(document).ready(function() {
+    if(!getCookie("cookies"))
+        rb("#cookies").removeClass('hidden');
+    else
+        rb("#cookies").addClass('hidden');
+})
+
+rb("#allowCookies").one('click', function(e) {
+    e.preventDefault();
+    if(!getCookie("cookies"))
+        document.cookie = "cookies=accepted";
+    rb(this).closest("#cookies").remove();
+})

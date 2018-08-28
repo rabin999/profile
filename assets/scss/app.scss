@@ -34,7 +34,8 @@ h5,
 main,
 footer,
 form,
-span {
+span,
+section {
   font-family: $font-family;
 }
 
@@ -392,7 +393,7 @@ html {
       Header
      ////////////////
    */
-  @import "./includes/header";
+  @import "includes/header";
 
   main.container {
     margin-top: 50px;
@@ -411,21 +412,21 @@ html {
       Home Page
     ////////////////
   */
-  @import "./includes/home";
+  @import "includes/home";
 
   /*
     /////////////////
       About Page
     ////////////////
   */
-  @import "./includes/about";
+  @import "includes/about";
 
   /*
     /////////////////
       Project Page
     ////////////////
   */
-  @import "./includes/project";
+  @import "includes/project";
 
   /*
     /////////////////

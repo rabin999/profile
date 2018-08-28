@@ -42,7 +42,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function querySelectorAllExist() {
-        return document.querySelector || document.querySelectorAll ? true : false;
+        return !!(document.querySelector || document.querySelectorAll);
     }
 
     window.cl = function (value) {
@@ -76,7 +76,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
     }
 
-    // Event Support for IE >= 7
+    /*
+    * Closest DOM API
+    * */
+    if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+
+    if (!Element.prototype.closest) Element.prototype.closest = function (s) {
+        var el = this;
+        if (!document.documentElement.contains(el)) return null;
+        do {
+            if (el.matches(s)) return el;
+            el = el.parentElement || el.parentNode;
+        } while (el !== null && el.nodeType === 1);
+        return null;
+    };
+
+    /*
+    * Event Support for IE >= 7
+    * */
     if (!Element.prototype.addEventListener) {
         var runListeners = function runListeners(oEvent) {
             if (!oEvent) {
@@ -145,7 +162,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
     }
 
-    // Query Selector Support for IE >= 7
+    /*
+    * Query Selector Support for IE >= 7
+    * */
     (function setUpQuerySelectorPolyfill() {
         if (!querySelectorAllExist()) {
             var d = document,
@@ -162,6 +181,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
         }
     })();
+
+    /*
+    * Cookies
+    * */
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
 
     var RB = function () {
         function RB(selector) {
@@ -514,6 +552,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }
                     });
                 }
+            }
+
+            /*
+             * ---------------
+             * Traversing
+             * ---------------
+             */
+
+        }, {
+            key: "closest",
+            value: function closest(value) {
+                if (this.element && !this.__isWindowObj() || this.__singleObj()) {
+                    return this.element.closest(value);
+                }
+                throw new ReferenceError(value + " not found !");
             }
 
             /*

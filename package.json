@@ -6,6 +6,10 @@
   "scripts": {
     "build": "babel assets/scripts -d assets/js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rabin999/profile"
+  },
   "author": "Rabin Bhandari",
   "license": "ISC",
   "devDependencies": {

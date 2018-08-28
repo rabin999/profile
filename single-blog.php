@@ -69,43 +69,28 @@
                                     <span>Share on : </span>
                                     <ul>
                                         <li>
-                                            <a href="#" target="_blank" title="Facebook">
-                                                <svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f"
-                                                     role="img" xmlns="http://www.w3.org/2000/svg"
-                                                     viewBox="0 0 264 512">
-                                                    <path fill="currentColor"
-                                                          d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
-                                                </svg>
+                                            <a href="#" target="_blank" title="Facebook" class="facebook">
+                                                <svg enable-background="new 0 0 48 48" id="Layer_1" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="24" cy="24" fill="#4E71A8" r="24"/><path d="M29.9,19.5h-4v-2.6c0-1,0.7-1.2,1.1-1.2c0.5,0,2.8,0,2.8,0v-4.4l-3.9,0c-4.4,0-5.3,3.3-5.3,5.3v2.9h-2.5V24  h2.5c0,5.8,0,12.7,0,12.7h5.3c0,0,0-7,0-12.7h3.6L29.9,19.5z" fill="#FFFFFF"/></svg>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" target="_blank" title="Linked In">
-                                                <svg aria-hidden="true" data-prefix="fab" data-icon="linkedin-in"
-                                                     role="img" xmlns="http://www.w3.org/2000/svg"
-                                                     viewBox="0 0 448 512">
-                                                    <path fill="currentColor"
-                                                          d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"></path>
-                                                </svg>
+                                            <a href="#" target="_blank" title="Linked In" class="linkedIn">
+                                                <svg enable-background="new 0 0 48 48" id="Layer_1" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="24" cy="24" fill="#1686B0" r="24"/><path d="M17.4,34.9h-4.6V20.1h4.6V34.9z M14.9,18.2L14.9,18.2c-1.7,0-2.8-1.1-2.8-2.6c0-1.5,1.1-2.6,2.8-2.6  c1.7,0,2.8,1.1,2.8,2.6C17.7,17.1,16.7,18.2,14.9,18.2z M35.9,34.9h-5.3v-7.7c0-2-0.8-3.4-2.6-3.4c-1.4,0-2.1,0.9-2.5,1.8  c-0.1,0.3-0.1,0.8-0.1,1.2v8h-5.2c0,0,0.1-13.6,0-14.8h5.2v2.3c0.3-1,2-2.5,4.6-2.5c3.3,0,5.9,2.1,5.9,6.7V34.9z" fill="#FFFFFF"/></svg>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" target="_blank" title="Google Plus">
-                                                <svg aria-hidden="true" data-prefix="fab" data-icon="google-plus-g"
-                                                     role="img" xmlns="http://www.w3.org/2000/svg"
-                                                     viewBox="0 0 640 512">
-                                                    <path fill="currentColor"
-                                                          d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"></path>
-                                                </svg>
+                                            <a href="#" target="_blank" title="Google Plus" class="google-plus">
+                                                <svg enable-background="new 0 0 48 48" id="Layer_1" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="24" cy="24" fill="#E3411F" r="24"/><g><path d="M24.8,25.8c-0.7-0.5-2-1.7-2-2.3c0-0.8,0.2-1.2,1.4-2.2c1.2-1,2.1-2.3,2.1-3.9c0-1.9-0.8-3.7-2.4-4.4h2.4   l1.7-1.2h-7.5c-3.4,0-6.6,2.6-6.6,5.5c0,3,2.3,5.5,5.7,5.5c0.2,0,0.5,0,0.7,0c-0.2,0.4-0.4,0.9-0.4,1.4c0,0.8,0.5,1.5,1,2.1   c-0.4,0-0.9,0-1.3,0c-4.2,0-7.4,2.7-7.4,5.4c0,2.7,3.5,4.4,7.7,4.4c4.8,0,7.4-2.7,7.4-5.4C27.4,28.6,26.8,27.2,24.8,25.8z    M20.7,22.1c-1.9-0.1-3.8-2.2-4.1-4.7c-0.3-2.6,1-4.5,2.9-4.4c1.9,0.1,3.8,2.1,4.1,4.7C24,20.1,22.7,22.1,20.7,22.1z M20,35   c-2.9,0-5-1.8-5-4c0-2.2,2.6-4,5.5-3.9c0.7,0,1.3,0.1,1.9,0.3c1.6,1.1,2.7,1.7,3,3c0.1,0.3,0.1,0.5,0.1,0.8C25.5,33.2,24,35,20,35z   " fill="#FFFFFF"/><polygon fill="#FFFFFF" points="32.8,22.3 32.8,19.4 30.4,19.4 30.4,22.3 27.5,22.3 27.5,24.6 30.4,24.6 30.4,27.6 32.8,27.6    32.8,24.6 35.7,24.6 35.7,22.3  "/></g></svg>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" target="_blank" title="Google Plus">
-                                                <svg aria-hidden="true" data-prefix="fab" data-icon="medium-m"
-                                                     role="img" xmlns="http://www.w3.org/2000/svg"
-                                                     viewBox="0 0 512 512">
-                                                    <path fill="currentColor"
-                                                          d="M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z"></path>
-                                                </svg>
+                                            <a href="#" target="_blank" title="Google Plus" class="medium">
+                                                <svg enable-background="new 0 0 100 100" height="100px" id="Layer_1" version="1.1" viewBox="0 0 100 100" width="100px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle cx="50" cy="50" fill="#00E56B" r="45"/><g id="XMLID_110_"><g id="XMLID_111_"><path d="M43.031,66.248c0,1.186-0.868,1.723-1.93,1.191l-10.849-5.424     c-0.636-0.318-1.158-1.16-1.158-1.873V33.549c0-0.949,0.696-1.379,1.546-0.955l12.316,6.158c0.046,0.025,0.074,0.07,0.074,0.123     V66.248z" fill="#FFFFFF" id="XMLID_112_"/><g><polygon fill="#FFFFFF" points="43.975,40.523 43.975,55.035 56.873,61.484     "/></g><g><path d="M70.753,38.809l-12.627-6.312c-0.638-0.318-1.463-0.082-1.837,0.523l-7.965,12.941l9.114,14.809      l13.376-21.738C70.864,38.953,70.835,38.85,70.753,38.809z" fill="#FFFFFF"/></g><g><polygon fill="#FFFFFF" points="56.969,61.291 56.969,61.436 57.099,61.502     "/><path d="M57.896,61.9l10.693,5.348c1.277,0.639,2.314,0.191,2.314-1V40.762L57.896,61.9z" fill="#FFFFFF"/></g></g></g></g></svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" title="Google Plus" class="twitter">
+                                                <svg enable-background="new 0 0 48 48" id="Layer_1" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="24" cy="24" fill="#1CB7EB" r="24"/><g><g><path d="M36.8,15.4c-0.9,0.5-2,0.8-3,0.9c1.1-0.7,1.9-1.8,2.3-3.1c-1,0.6-2.1,1.1-3.4,1.4c-1-1.1-2.3-1.8-3.8-1.8    c-2.9,0-5.3,2.5-5.3,5.7c0,0.4,0,0.9,0.1,1.3c-4.4-0.2-8.3-2.5-10.9-5.9c-0.5,0.8-0.7,1.8-0.7,2.9c0,2,0.9,3.7,2.3,4.7    c-0.9,0-1.7-0.3-2.4-0.7c0,0,0,0.1,0,0.1c0,2.7,1.8,5,4.2,5.6c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1    c0.7,2.3,2.6,3.9,4.9,3.9c-1.8,1.5-4.1,2.4-6.5,2.4c-0.4,0-0.8,0-1.3-0.1c2.3,1.6,5.1,2.6,8.1,2.6c9.7,0,15-8.6,15-16.1    c0-0.2,0-0.5,0-0.7C35.2,17.6,36.1,16.6,36.8,15.4z" fill="#FFFFFF"/></g></g></svg>
                                             </a>
                                         </li>
                                     </ul>

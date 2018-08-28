@@ -27,7 +27,8 @@ h5,
 main,
 footer,
 form,
-span {
+span,
+section {
   font-family: "Roboto Condensed", sans-serif; }
 
 body,
@@ -491,7 +492,7 @@ html {
   .rb-theme-1 .aboutMe {
     position: relative;
     padding: 40px 40px 0 40px;
-    background: url(./assets/images/page/about.jpg);
+    background: url(/profile/assets/images/page/about.jpg);
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -863,7 +864,9 @@ html {
           margin-bottom: 50px;
           font-size: 17px; }
           .rb-theme-1 .blog-container .featured-blog .blog article .blog-review a, .rb-theme-1 .blog-container .featured-blog .blog article .blog-detail a {
-            line-height: 21px; }
+            color: #616161;
+            line-height: 21px;
+            font-weight: 500; }
         .rb-theme-1 .blog-container .featured-blog .blog article .view-comment {
           margin: auto 20px; }
           .rb-theme-1 .blog-container .featured-blog .blog article .view-comment .view, .rb-theme-1 .blog-container .featured-blog .blog article .view-comment .comment {
@@ -939,7 +942,6 @@ html {
             width: 20px;
             height: 20px;
             border-radius: 20px;
-            background: blue;
             content: '';
             position: absolute;
             background: #9b59b6;
@@ -949,7 +951,6 @@ html {
             width: 20px;
             height: 20px;
             border-radius: 20px;
-            background: blue;
             content: '';
             position: absolute;
             background: #2ecc71;
@@ -1083,8 +1084,9 @@ html {
           .rb-theme-1 .blog-container .blogs .blog .blog-review img, .rb-theme-1 .blog-container .blogs .blog .blog-detail img {
             max-width: 100%; }
           .rb-theme-1 .blog-container .blogs .blog .blog-review a, .rb-theme-1 .blog-container .blogs .blog .blog-detail a {
+            color: #616161;
             line-height: 21px;
-            color: #131313; }
+            font-weight: 500; }
         .rb-theme-1 .blog-container .blogs .blog .view-comment {
           color: #777;
           text-align: center; }
@@ -1138,7 +1140,7 @@ html {
               margin-top: 20px;
               font-size: 25px; } }
         .rb-theme-1 .blog-container .blogs .blog.single .short-detail {
-          margin-bottom: 50px; }
+          margin-bottom: 40px; }
           @media screen and (max-width: 450px) and (orientation: portrait) {
             .rb-theme-1 .blog-container .blogs .blog.single .short-detail {
               margin-bottom: 20px;
@@ -1151,18 +1153,23 @@ html {
             font-weight: 600;
             font-size: 12px;
             color: #6f6d6d;
-            margin-top: 15px; }
+            margin-top: 20px; }
             @media screen and (max-width: 450px) and (orientation: portrait) {
               .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me {
                 margin-top: 30px; } }
+            .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me > span:first-child {
+              vertical-align: super; }
             .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me ul {
               display: inline-block; }
               .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me ul li {
                 display: inline-block; }
-            .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me svg {
-              width: 20px;
-              margin-left: 5px;
-              margin-right: 0; }
+                .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me ul li a {
+                  display: inline-block;
+                  text-align: center; }
+                  .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me ul li a svg {
+                    width: auto;
+                    height: 25px;
+                    margin-left: 2px; }
       .rb-theme-1 .blog-container .blogs .switch-mode p {
         font-weight: 600;
         color: #717171;
@@ -1491,6 +1498,35 @@ html {
             background-color: #096ab6;
             padding: 6px 20px;
             font-weight: 500; }
+  .rb-theme-1 section#cookies {
+    position: fixed;
+    padding: 40px;
+    bottom: 0;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    background-color: inherit; }
+    .rb-theme-1 section#cookies .text {
+      display: inline-block;
+      margin-right: 10px;
+      color: #ffffff; }
+      .rb-theme-1 section#cookies .text a {
+        color: #159de1; }
+    .rb-theme-1 section#cookies button#allowCookies {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      display: inline-block;
+      border-radius: 1.5rem;
+      padding: 3px 10px !important;
+      min-width: auto;
+      background-color: transparent;
+      color: #149de1;
+      vertical-align: top;
+      border: 1px solid #149de1; }
   .rb-theme-1 footer {
     padding: 15px;
     text-align: center;

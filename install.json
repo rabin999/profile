@@ -1,0 +1,25 @@
+{
+  "$schema": "https://devrabin.com",
+  "resources": {
+    "head": [
+      {
+        "type": "style",
+        "src": "./assets/css/app.css"
+      }
+    ],
+    "body": [
+      {
+        "type": "script",
+        "src": [
+          "./assets/js/app.js"
+        ]
+      },
+      {
+        "type": "script",
+        "src": [
+          "./assets/js/events.js"
+        ]
+      }
+    ]
+  }
+}
