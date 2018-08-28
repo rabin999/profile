@@ -185,7 +185,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*
     * Cookies
     * */
-    function getCookie(cname) {
+    window.getCookie = function (cname) {
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
         var ca = decodedCookie.split(';');
@@ -199,7 +199,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
         }
         return "";
-    }
+    };
 
     var RB = function () {
         function RB(selector) {

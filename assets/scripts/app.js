@@ -159,7 +159,7 @@
     /*
     * Cookies
     * */
-    function getCookie(cname) {
+    window.getCookie = function(cname) {
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
         var ca = decodedCookie.split(';');
