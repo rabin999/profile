@@ -22,9 +22,11 @@ rb(window).on('load', function(e) {
     if(selectedPage) {
         changePage('.navigate_page[data-page-target="'+selectedPage+'"]');
     } else {
-        rb('.page__style.showing').css({
-            "height": (window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px')
-        });
+        // if(!isMobile()) {
+        //     rb('.page__style.showing').css({
+        //         "height": (window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px')
+        //     });
+        // }
     }
 });
 
@@ -33,6 +35,14 @@ rb('.navigate_page').on('click', changePage);
 
 function changePage(o) {
     var selector;
+
+    if(rb(".mobile-menu").attr('menu')) {
+        rb(".mobile-menu").removeAttr('menu');
+        rb('#menuClose').hide();
+        rb('#menuOpen').show();
+        rb('header > nav').hide();
+        rb('body').removeClass('o-h');
+    }
 
     if(typeof o.target !== "undefined") {
         o.preventDefault();
@@ -58,25 +68,26 @@ function changePage(o) {
                 "height": null
             });
 
+            rb('footer').addClass('bottom');
             rb('.spinner').addClass('active');
+
             loader = setTimeout(function() {
                 rb('.spinner.active').removeClass('active');
-                rb('.page__style[data-page="'+targetPage+'"]').addClass('showing').css({
-                    "height": (window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px')
-                });
+                rb('footer').removeClass('bottom');
+                rb('.page__style[data-page="'+targetPage+'"]').addClass('showing');
+
+                // if(!isMobile()) {
+                //     rb('.page__style[data-page="'+targetPage+'"]').css({
+                //         "height": (window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight+'px')
+                //     });
+                // }
+
                 sessionStorage.removeItem('page');
                 clearTimeout(loader);
             }, 500);
         }
     }
 }
-
-// flatpickr("#blog-from-to-range", {
-//     altInput: true,
-//     altFormat: "F j, Y",
-//     dateFormat: "Y-m-d",
-//     mode: "range"
-// });
 
 
 // Grid Toggler
@@ -162,4 +173,63 @@ rb("#allowCookies").one('click', function(e) {
     if(!getCookie("cookies"))
         document.cookie = "cookies=accepted";
     rb(this).closest("#cookies").remove();
-})
+});
+
+/*
+* Auto Remove text : contact, hireme
+* */
+var text;
+rb('.auto-remove-text').on('focus', function(e){
+   text = rb(this).text();
+   if(text) {
+       rb(this).text('');
+   }
+});
+
+
+/*
+* Mobile Menu Event
+* */
+
+// open menu
+rb('#menuOpen').on('click', function(e) {
+    rb(rb(this).closest(".mobile-menu")).attr('menu','open');
+    rb(this).hide();
+    rb('#menuClose').show();
+
+    rb('body').addClass('o-h');
+    rb('header > nav').show();
+});
+
+// close menu
+rb('#menuClose').on('click', function(e) {
+    rb(rb(this).closest(".mobile-menu")).removeAttr('menu');
+    rb(this).hide();
+    rb('#menuOpen').show();
+
+    rb('body').removeClass('o-h');
+    rb('header > nav').hide();
+});
+
+/*
+* Form submit action
+* */
+var prevText;
+rb('[rel=send]').on('click', showSendProcess);
+
+function showSendProcess(e) {
+    e.preventDefault();
+    var t = this;
+
+    rb(t).off('click', showSendProcess);
+
+    prevText = rb(t).text();
+    rb(t).text('Sending....');
+
+    var s = setTimeout(function(){
+        cl(prevText)
+        rb(t).text(prevText);
+        rb(t).on('click', showSendProcess);
+        clearTimeout(s);
+    }, 700);
+}

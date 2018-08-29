@@ -1,4 +1,32 @@
-(() => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: app.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: app.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>(() => {
 
     "use strict";
 
@@ -7,7 +35,7 @@
      *  A small plugin written by Rabin Bhandari
      *
      *  @copyright 2018
-     *  @author Rabin Bhandari <rabin.bhandari999@gmail.com>
+     *  @author Rabin Bhandari &lt;rabin.bhandari999@gmail.com>
      *
      */
 
@@ -115,7 +143,7 @@
             do {
                 if (el.matches(s)) return el;
                 el = el.parentElement || el.parentNode;
-            } while (el !== null && el.nodeType === 1);
+            } while (el !== null &amp;&amp; el.nodeType === 1);
             return null;
         };
 
@@ -131,9 +159,9 @@
          */
         function runListeners(oEvent) {
             if (!oEvent) { oEvent = window.event; }
-            for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
+            for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId &lt; oEvtListeners.aEls.length; iElId++) {
                 if (oEvtListeners.aEls[iElId] === this) {
-                    for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+                    for (iLstId; iLstId &lt; oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
                     break;
                 }
             }
@@ -147,7 +175,7 @@
         Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
             if (oListeners.hasOwnProperty(sEventType)) {
                 var oEvtListeners = oListeners[sEventType];
-                for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
                     if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
                 }
                 if (nElIdx === -1) {
@@ -160,7 +188,7 @@
                         aElListeners.splice(0);
                         this["on" + sEventType] = runListeners;
                     }
-                    for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
+                    for (var iLstId = 0; iLstId &lt; aElListeners.length; iLstId++) {
                         if (aElListeners[iLstId] === fListener) { return; }
                     }
                     aElListeners.push(fListener);
@@ -179,11 +207,11 @@
         Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
             if (!oListeners.hasOwnProperty(sEventType)) { return; }
             var oEvtListeners = oListeners[sEventType];
-            for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+            for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
                 if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
             }
             if (nElIdx === -1) { return; }
-            for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
+            for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId &lt; aElListeners.length; iLstId++) {
                 if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
             }
         };
@@ -210,7 +238,7 @@
                 a = d.all, c = [], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
                 for (i = r.length; i--;) {
                     s.addRule(r[i], 'k:v');
-                    for (j = a.length; j--;) a[j].currentStyle.k && c.push(a[j]);
+                    for (j = a.length; j--;) a[j].currentStyle.k &amp;&amp; c.push(a[j]);
                     s.removeRule(0);
                 }
                 return c;
@@ -227,7 +255,7 @@
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
         var ca = decodedCookie.split(';');
-        for(var i = 0; i <ca.length; i++) {
+        for(var i = 0; i &lt;ca.length; i++) {
             var c = ca[i];
             while (c.charAt(0) == ' ') {
                 c = c.substring(1);
@@ -274,7 +302,7 @@
          * @private
          */
         __singleObj() {
-            return !!(this.element && !Boolean(this.element.length));
+            return !!(this.element &amp;&amp; !Boolean(this.element.length));
         };
 
         /**
@@ -301,12 +329,12 @@
                 events = events.split(' ');
                 if(events.length > 1) {
                     events.forEach(function(ev) {
-                        if(ev !== '' && ev.match(/^[A-Za-z]+$/))
+                        if(ev !== '' &amp;&amp; ev.match(/^[A-Za-z]+$/))
                             evs.push(ev);
                     });
                 }
             }
-            return (evs.length && evs.length > 1 ) ? evs : false;
+            return (evs.length &amp;&amp; evs.length > 1 ) ? evs : false;
         };
 
         /**
@@ -327,10 +355,10 @@
             }
 
 
-            if (window[operation] && that.element) {
+            if (window[operation] &amp;&amp; that.element) {
                 // Single Object
                 if (that.__isWindowObj() || that.__singleObj()) {
-                    if(Array.isArray(event) && event.length > 1) {
+                    if(Array.isArray(event) &amp;&amp; event.length > 1) {
                         if (that.__hasEvent(event, that.element)) {
                             event.forEach(function (e) {
                                 that.element[operation](e, callback, (options !== null) ? options : '');
@@ -343,7 +371,7 @@
                     }
                 } else {
                     // Multiple Objects
-                    if(Array.isArray(event) && event.length > 1) {
+                    if(Array.isArray(event) &amp;&amp; event.length > 1) {
                         that.element.forEach((el) => {
                             if (that.__hasEvent(event, el)) {
                                 event.forEach(function (e) {
@@ -443,7 +471,7 @@
          * @private
          */
         __manageStyle(operation) {
-            if (!this.element && !operation) {
+            if (!this.element &amp;&amp; !operation) {
                 return;
             }
             if (this.__isWindowObj() || this.__singleObj()) {
@@ -462,7 +490,7 @@
          */
         init() {
 
-            if (typeof this.selector === 'string' && this.selector.length) {
+            if (typeof this.selector === 'string' &amp;&amp; this.selector.length) {
                 this.element = document.querySelectorAll(this.selector);
                 this.length = this.element.length;
 
@@ -551,9 +579,9 @@
 
             className = className.trim();
 
-            // if(this.element.classList.length === 1 && this.element.classList[0] === className) {
+            // if(this.element.classList.length === 1 &amp;&amp; this.element.classList[0] === className) {
             if (this.element.classList.length) {
-                if (this.element.classList.length === 1 && this.element.classList.contains(className)) {
+                if (this.element.classList.length === 1 &amp;&amp; this.element.classList.contains(className)) {
                     r = true;
                 } else {
                     this.element.classList.forEach(function (cl) {
@@ -633,7 +661,7 @@
          * ---------------
          */
         closest(value) {
-            if (this.element && !this.__isWindowObj() || this.__singleObj()) {
+            if (this.element &amp;&amp; !this.__isWindowObj() || this.__singleObj()) {
                 return this.element.closest(value);
             }
             throw new ReferenceError(`${value} not found !`);
@@ -645,19 +673,19 @@
          * ---------------
          */
         ready(callback) {
-            if(this.element && this.element === document && this.element.readyState === "loading") {
+            if(this.element &amp;&amp; this.element === document &amp;&amp; this.element.readyState === "loading") {
                 this.element.addEventListener('DOMContentLoaded', callback);
             }
         }
 
         html() {
             // Update New Dom Element
-            if (arguments[0] && typeof arguments[0] === "string") {
+            if (arguments[0] &amp;&amp; typeof arguments[0] === "string") {
                 this.element.innerHTML = arguments[0];
                 return this;
             } else {
                 // Return Outer HTMl
-                if (arguments[0] && arguments[0] === true)
+                if (arguments[0] &amp;&amp; arguments[0] === true)
                     return this.element.outerHTML;
                 return this.element.innerHTML;
             }
@@ -732,3 +760,26 @@
         }
     }
 })();
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="RB.html">RB</a></li></ul><h3>Global</h3><ul><li><a href="global.html#querySelectorAll-SupportforIE%253E=7">querySelectorAll - Support for IE >= 7</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Aug 30 2018 00:23:59 GMT+0545 (Nepal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

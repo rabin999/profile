@@ -261,11 +261,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     error('ReferenceError', 'Event || Event Function reference not found');
                 }
 
-                if (operation === "removeEventListener") {
-                    this.element.removeEventListener(event, callback, options !== null ? options : '');
-                    return;
-                }
-
                 if (window[operation] && that.element) {
                     // Single Object
                     if (that.__isWindowObj() || that.__singleObj()) {
@@ -594,6 +589,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     if (arguments[0] && arguments[0] === true) return this.element.outerHTML;
                     return this.element.innerHTML;
                 }
+            }
+        }, {
+            key: "text",
+            value: function text() {
+                var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+                if (value === null) {
+                    return this.element.textContent;
+                }
+
+                if (this.element.nodeName === "TEXTAREA" || this.element.nodeName === "INPUT") {
+                    return this.element.value = value;
+                }
+                return this.element.textContent = this.element.innerText = value;
             }
 
             /*

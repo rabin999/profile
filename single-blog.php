@@ -2,11 +2,11 @@
     <link rel="stylesheet" href="./assets/plugin/highlight/styles/atom-one-dark.css">
     <style>
         .rb-theme-1 {
-            background-color: #272626 !important;
+            background-color: transparent !important;
         }
-
         header {
-            padding: 20px 20px 0 20px !important;
+            padding: 20px !important;
+            background-color: #18191D !important;
         }
     </style>
     <!-- Container -->

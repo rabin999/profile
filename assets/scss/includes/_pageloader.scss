@@ -1,6 +1,10 @@
 .page__style {
   display: none;
 
+  svg {
+    width: 16px;
+  }
+
   &.showing {
     display: block;
   }
