@@ -62,6 +62,8 @@ li {
 * 	Profile Framework 
 ----------------------------- */
 
+@import "responsive";
+
 .row {
   display: -webkit-box;
   display: -moz-box;
@@ -100,6 +102,12 @@ li {
 
   .col {
     flex: 1;
+
+      &.col-3 {
+        @include desktop() {
+          flex: 1.5;
+        }
+      }
 
     &-full {
       @media screen and (max-width: 450px) and (orientation: portrait) {
@@ -140,8 +148,6 @@ li {
   -o-box-shadow: $values;
   box-shadow: $values;
 }
-
-@import "responsive";
 
 body {
   .hidden {
@@ -290,11 +296,16 @@ html {
       size: 80px;
       weight: 400;
     }
+
     @include mobile() {
       font: {
         size: 30px;
         weight: bold;
       }
+    }
+
+    @include desktop() {
+      margin-top: 0 !important;
     }
   }
 
@@ -422,7 +433,7 @@ html {
   @import "includes/header";
 
   main.container {
-    margin-top: 50px;
+    margin-top: 30px;
     max-width: 100%;
 
     @include mobile() {

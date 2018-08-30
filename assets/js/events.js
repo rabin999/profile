@@ -86,10 +86,10 @@ function changePage(o) {
  * @param targetPage
  */
 function setHeight(targetPage) {
-    var selector = (typeof targetPage === "undefined") ? '.page__style.showing' : '.page__style[data-page="' + targetPage + '"]';
+    var selector = (typeof targetPage === "undefined") ? '.page__style.showing' : '.page__style[data-page="'+targetPage+'"]';
     if (!isMobile()) {
         rb(selector).css({
-            "height": (window.innerHeight - rb('header').element.offsetHeight - 50 - rb('footer').element.offsetHeight + 'px')
+            "min-height": (window.innerHeight - rb('header').element.offsetHeight - 148 - rb('footer').element.offsetHeight + 'px')
         });
     }
 }

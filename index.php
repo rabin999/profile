@@ -1,4 +1,4 @@
-<?php include('./app/resources/layout/header.php'); ?>
+<?php require './app/resources/layout/header.php'; ?>
 
 <main class="container">
     <!-- Home -->
@@ -145,7 +145,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col col-3">
                         <form class="no-overflow">
                             <div class="row">
                                 <div class="group col">
@@ -211,7 +211,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col col-3">
                         <form class="no-overflow">
                             <div class="row">
                                 <div class="group col">
@@ -248,4 +248,4 @@
 
 </main>
 
-<?php  include('./app/resources/layout/footer.php'); ?>
+<?php  require './app/resources/layout/footer.php'; ?>

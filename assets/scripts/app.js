@@ -569,11 +569,21 @@
             }
         }
 
+        /**
+         * Add class | classes to DOM
+         * @param {string} classes - Class name(s)
+         * @returns {RB} - Class Object
+         */
         addClass(classes) {
             this.__manageClass(classes, 'add');
             return this;
         }
 
+        /**
+         * Remove class | classes from DOM
+         * @param {string} classes - class name(s)
+         * @returns {RB} - Class Object
+         */
         removeClass(classes) {
             this.__manageClass(classes, 'remove');
             return this;
@@ -586,6 +596,12 @@
          * ---------------
          */
 
+        /**
+         * Fetch and Set Attribute to DOM
+         * @param {string} attr - Attribute
+         * @param {(string|boolean)} value - Attribute value
+         * @returns {RB} - Class Object
+         */
         attr(attr, value = false) {
             if (value) {
                 this.__manageAttr(attr, "setAttribute", value);
@@ -595,17 +611,30 @@
             return this;
         }
 
+        /**
+         * Remove Attribute from DOM
+         * @param {string} attr - Attribute
+         * @returns {RB} - Class Object
+         */
         removeAttr(attr) {
             this.__manageAttr(attr, "removeAttribute");
             return this;
         }
 
+        /**
+         * Check weather check box is checked or not
+         * @returns {boolean} - Status of checkbox
+         */
         isChecked() {
             if(this.element.checked === true)
                 return true;
             return false;
         }
 
+        /**
+         * Css Rules - add and remove style from DOM
+         * @param rules
+         */
         css(rules) {
             if (!this.element || !rules) {
                 return;
@@ -632,6 +661,12 @@
          * Traversing
          * ---------------
          */
+
+        /**
+         * Return closest parent of selector
+         * @param value
+         * @returns {*}
+         */
         closest(value) {
             if (this.element && !this.__isWindowObj() || this.__singleObj()) {
                 return this.element.closest(value);
@@ -644,14 +679,22 @@
          * Page
          * ---------------
          */
+        /**
+         * Document Ready - trigger callback function after DOM ready
+         * @param {function} callback
+         */
         ready(callback) {
             if(this.element && this.element === document && this.element.readyState === "loading") {
                 this.element.addEventListener('DOMContentLoaded', callback);
             }
         }
 
+        /**
+         * Fetch and update html content
+         * @arguments {string} - new html content
+         * @returns {*}
+         */
         html() {
-            // Update New Dom Element
             if (arguments[0] && typeof arguments[0] === "string") {
                 this.element.innerHTML = arguments[0];
                 return this;
@@ -663,6 +706,11 @@
             }
         }
 
+        /**
+         * Fetch and update text content or value of NODE
+         * @param {string} value - value | textContent of NODE
+         * @returns {*}
+         */
         text(value = null) {
             if(value === null){
                 return this.element.textContent;
@@ -679,11 +727,21 @@
          * Utilities
          * ---------------
          */
+
+        /**
+         * Remove DOM
+         * @returns {RB}
+         */
         remove() {
             this.element.parentNode.removeChild(this.element);
             return this;
         }
 
+        /**
+         * Uppercase first letter
+         * @param {string} string - string to be uppercase
+         * @returns {string} - uppercase letter with string
+         */
         ucFirst(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
@@ -693,16 +751,30 @@
          * Effect
          * ---------------
          */
+
+        /**
+         * Show DOM
+         * @returns {RB}
+         */
         show() {
             this.__manageStyle('block');
             return this;
         }
 
+        /**
+         * Hide DOM
+         * @returns {RB}
+         */
         hide() {
             this.__manageStyle('none');
             return this;
         }
 
+        /**
+         * Slide animation
+         * @param {string} direction - direction of slide
+         * @param {function} callback
+         */
         slide(direction, callback) {
             if(direction) {
                 let direction_class = "slide-"+direction;
@@ -717,7 +789,7 @@
                     this.removeClass('slide-left slide-right').addClass(direction_class);
                 }
 
-                if(typeof callback == "function") {
+                if(typeof callback === "function") {
                     callback();
                 }
             }
@@ -725,6 +797,11 @@
     }
 
     if (!window.rb) {
+        /**
+         * Create new instance of RB for selector
+         * @param {string} ref - selector reference
+         * @returns {RB}
+         */
         window.rb = function (ref) {
             if (!ref)
                 error('ReferenceError', 'Reference not provided');

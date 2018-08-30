@@ -24,8 +24,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     // --------------------------------
 
     /**
-     * @param type: string types of errors
-     * @param message: string
+     * Throw Error using custom message
+     *
+     * @param {string} type
+     * @param {string} message
      */
 
     function error() {
@@ -41,18 +43,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
     }
 
+    /**
+     * Check support of querySelectorAll in browser
+     * @returns {boolean}
+     */
     function querySelectorAllExist() {
         return !!(document.querySelector || document.querySelectorAll);
     }
 
+    /**
+     * Optimized version of console.log
+     * @param {string} value
+     * @return {(number|string|boolean|object|array)}
+     */
     window.cl = function (value) {
         return console.log(value);
     };
 
+    /**
+     * Optimized version of console.dir
+     * @param {(string|object)} value
+     * @return {(number|string|boolean|object|array)}
+     */
     window.cd = function (value) {
         return console.dir(value);
     };
 
+    /**
+     * Check weather user agent is mobile or desktop
+     * @returns {boolean}
+     */
     window.isMobile = function () {
         if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
             return true;
@@ -63,6 +83,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     // -------------------------------
     //          Polyfill
     // --------------------------------
+
+    /**
+     * Check weather array contain given value or not
+     * @param {string} needle
+     * @returns {boolean}
+     */
     Array.prototype.contains = function (needle) {
         for (var i in this) {
             if (this[i] == needle) return true;
@@ -71,6 +97,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     if (!Array.isArray) {
+        /**
+         * Check given argument is array or not
+         * @param {(string|boolean|number|object|array)} arg - Depend on argument
+         * @returns {boolean}
+         */
         Array.isArray = function (arg) {
             return Object.prototype.toString.call(arg) === '[object Array]';
         };
@@ -81,20 +112,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     * */
     if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 
-    if (!Element.prototype.closest) Element.prototype.closest = function (s) {
-        var el = this;
-        if (!document.documentElement.contains(el)) return null;
-        do {
-            if (el.matches(s)) return el;
-            el = el.parentElement || el.parentNode;
-        } while (el !== null && el.nodeType === 1);
-        return null;
-    };
+    if (!Element.prototype.closest)
+        /**
+         * Polyfill of closest DOM API
+         * @param {string} s
+         * @returns {*}
+         */
+        Element.prototype.closest = function (s) {
+            var el = this;
+            if (!document.documentElement.contains(el)) return null;
+            do {
+                if (el.matches(s)) return el;
+                el = el.parentElement || el.parentNode;
+            } while (el !== null && el.nodeType === 1);
+            return null;
+        };
 
     /*
     * Event Support for IE >= 7
     * */
     if (!Element.prototype.addEventListener) {
+
+        /**
+         * Runlistener - Provide environment for addEvent and removeEvent listener
+         * @param {*} oEvent
+         */
         var runListeners = function runListeners(oEvent) {
             if (!oEvent) {
                 oEvent = window.event;
@@ -109,9 +151,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
         };
 
-        var oListeners = {};
+        /**
+         * Support of addEventListener for old browser
+         * @param {string} sEventType - Event Type
+         * @callback fListener
+         */
 
-        Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+
+        var oListeners = {};Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
             if (oListeners.hasOwnProperty(sEventType)) {
                 var oEvtListeners = oListeners[sEventType];
                 for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
@@ -141,6 +188,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this["on" + sEventType] = runListeners;
             }
         };
+
+        /**
+         * Support of removeEventListener for old browser
+         * @param sEventType
+         * @param fListener
+         */
         Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
             if (!oListeners.hasOwnProperty(sEventType)) {
                 return;
@@ -169,6 +222,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (!querySelectorAllExist()) {
             var d = document,
                 s = d.createStyleSheet();
+
+            /**
+             * @function querySelectorAll - Support for IE >= 7
+             * @param r
+             * @param c
+             * @param i
+             * @param j
+             * @param a
+             * @returns {Array}
+             */
             d.querySelectorAll = function (r, c, i, j, a) {
                 a = d.all, c = [], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
                 for (i = r.length; i--;) {
@@ -182,9 +245,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
     })();
 
-    /*
-    * Cookies
-    * */
+    /**
+     * getCookie - Return cookie key-value detail
+     * @param {string} cname - Cookie name
+     * @returns {string} - If cookie exist return key[value]
+     */
     window.getCookie = function (cname) {
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
@@ -201,7 +266,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return "";
     };
 
+    /**
+     * @class - RB
+     */
+
     var RB = function () {
+
+        /**
+         * @constructs RB
+         * @param {(string|object)} selector - DOM Selector, Node Object
+         */
         function RB(selector) {
             _classCallCheck(this, RB);
 
@@ -215,19 +289,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         // private helper
 
+        /**
+         * Check weather selector is Window Object or not
+         * @returns {boolean}
+         * @private
+         */
+
 
         _createClass(RB, [{
             key: "__isWindowObj",
             value: function __isWindowObj() {
-                return this.selector === this.selector.window || this.selector.NodeType === 9 ? true : false;
+                return this.selector === this.selector.window || this.selector.NodeType === 9;
             }
         }, {
             key: "__singleObj",
+
+
+            /**
+             * Check weather selector is single DOM Object or not
+             * @returns {boolean}
+             * @private
+             */
             value: function __singleObj() {
-                return this.element && !Boolean(this.element.length) ? true : false;
+                return !!(this.element && !Boolean(this.element.length));
             }
         }, {
             key: "__hasEvent",
+
+
+            /**
+             * Check NODE has an Event or not
+             * @param {string} event - type of event
+             * @param {string} element - selector
+             * @returns {boolean}
+             * @private
+             */
             value: function __hasEvent(event) {
                 var element = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.element;
 
@@ -236,6 +332,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
         }, {
             key: "__hasMultipleEvents",
+
+
+            /**
+             * Check weather event with multiple types
+             * @param {string} events
+             * @returns {(array|boolean)}
+             * @private
+             */
             value: function __hasMultipleEvents(events) {
                 var evs = [];
                 if (events) {
@@ -250,6 +354,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
         }, {
             key: "__manageEvent",
+
+
+            /**
+             * Manage Event of on, one and off
+             * @param {string} event - type of event
+             * @param {string } operation - type of event operation like addEventListener
+             * @callback {function} callback - callback function for event
+             * @param {object} options - capture and bubbling phase
+             * @private
+             */
             value: function __manageEvent(event, operation, callback) {
                 var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
@@ -296,7 +410,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
             }
 
-            // Class
+            /**
+             * Manage class attributes
+             * @param {string} classes
+             * @param {string} operation - type of operation like add or remove
+             * @private
+             */
 
         }, {
             key: "__manageClass",
@@ -323,7 +442,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
             }
 
-            // Attr
+            /**
+             * Manage Attribute of Node | Nodes
+             * @param {string} attr - attribute of node
+             * @param {string} operation - type of Operation
+             * @param {string} value - Attribute value
+             * @returns {*}
+             * @private
+             */
 
         }, {
             key: "__manageAttr",
@@ -367,7 +493,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
             }
 
-            // Class
+            /**
+             * Manage Style Attribute
+             * @param {string} operation - typeof Operation
+             * @private
+             */
 
         }, {
             key: "__manageStyle",
@@ -384,7 +514,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
             }
 
-            // Prepare selector
+            /**
+             * Prepare node selector
+             * Filter type of node selector of string and object
+             */
 
         }, {
             key: "init",
@@ -419,7 +552,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         if (!this.element.length || !this.element) {
                             this.element = false;
                             if (this.development) console.warn("Selector (" + this.selector + ") not found on DOM");
-                            return;
+                            // return;
                         }
                     }
                 }
@@ -431,6 +564,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
              * ---------------
              */
 
+            /**
+             * On Click - add event to object
+             * @param {string} event - type of event
+             * @param {function} callback - Event callback
+             */
+
         }, {
             key: "on",
             value: function on(event) {
@@ -438,6 +577,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 this.__manageEvent(event, 'addEventListener', callback);
             }
+
+            /**
+             * One Click - add event only once to object
+             * @param {string} event - type of event
+             * @param {function} callback - Event callback
+             */
+
         }, {
             key: "one",
             value: function one(event) {
@@ -445,6 +591,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 this.__manageEvent(event, 'addEventListener', callback, { once: true });
             }
+
+            /**
+             * Off Click - remove event from object
+             * @param {string} event - type of event
+             * @param {function} callback - Event callback
+             */
+
         }, {
             key: "off",
             value: function off(event) {
@@ -457,6 +610,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
              * ---------------
              * Class
              * ---------------
+             */
+
+            /**
+             * Check weather dom has given class or not
+             * @param {string} className
+             * @returns {boolean}
              */
 
         }, {
@@ -483,12 +642,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return r;
                 }
             }
+
+            /**
+             * Add class | classes to DOM
+             * @param {string} classes - Class name(s)
+             * @returns {RB} - Class Object
+             */
+
         }, {
             key: "addClass",
             value: function addClass(classes) {
                 this.__manageClass(classes, 'add');
                 return this;
             }
+
+            /**
+             * Remove class | classes from DOM
+             * @param {string} classes - class name(s)
+             * @returns {RB} - Class Object
+             */
+
         }, {
             key: "removeClass",
             value: function removeClass(classes) {
@@ -500,6 +673,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
              * ---------------
              * Attributes
              * ---------------
+             */
+
+            /**
+             * Fetch and Set Attribute to DOM
+             * @param {string} attr - Attribute
+             * @param {(string|boolean)} value - Attribute value
+             * @returns {RB} - Class Object
              */
 
         }, {
@@ -514,18 +694,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
                 return this;
             }
+
+            /**
+             * Remove Attribute from DOM
+             * @param {string} attr - Attribute
+             * @returns {RB} - Class Object
+             */
+
         }, {
             key: "removeAttr",
             value: function removeAttr(attr) {
                 this.__manageAttr(attr, "removeAttribute");
                 return this;
             }
+
+            /**
+             * Check weather check box is checked or not
+             * @returns {boolean} - Status of checkbox
+             */
+
         }, {
             key: "isChecked",
             value: function isChecked() {
                 if (this.element.checked === true) return true;
                 return false;
             }
+
+            /**
+             * Css Rules - add and remove style from DOM
+             * @param rules
+             */
+
         }, {
             key: "css",
             value: function css(rules) {
@@ -555,6 +754,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
              * ---------------
              */
 
+            /**
+             * Return closest parent of selector
+             * @param value
+             * @returns {*|HTMLElementTagNameMap[keyof HTMLElementTagNameMap]|Element|SVGElementTagNameMap[keyof SVGElementTagNameMap]|Exception}
+             */
+
         }, {
             key: "closest",
             value: function closest(value) {
@@ -569,6 +774,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
              * Page
              * ---------------
              */
+            /**
+             * Document Ready - trigger callback function after DOM ready
+             * @param {function} callback
+             */
 
         }, {
             key: "ready",
@@ -577,10 +786,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.element.addEventListener('DOMContentLoaded', callback);
                 }
             }
+
+            /**
+             * Fetch and update html content
+             * @arguments {string} - new html content
+             * @returns {*}
+             */
+
         }, {
             key: "html",
             value: function html() {
-                // Update New Dom Element
                 if (arguments[0] && typeof arguments[0] === "string") {
                     this.element.innerHTML = arguments[0];
                     return this;
@@ -590,6 +805,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return this.element.innerHTML;
                 }
             }
+
+            /**
+             * Fetch and update text content or value of NODE
+             * @param {string} value - value | textContent of NODE
+             * @returns {*}
+             */
+
         }, {
             key: "text",
             value: function text() {
@@ -611,12 +833,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
              * ---------------
              */
 
+            /**
+             * Remove DOM
+             * @returns {RB}
+             */
+
         }, {
             key: "remove",
             value: function remove() {
                 this.element.parentNode.removeChild(this.element);
                 return this;
             }
+
+            /**
+             * Uppercase first letter
+             * @param {string} string - string to be uppercase
+             * @returns {string} - uppercase letter with string
+             */
+
         }, {
             key: "ucFirst",
             value: function ucFirst(string) {
@@ -629,18 +863,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
              * ---------------
              */
 
+            /**
+             * Show DOM
+             * @returns {RB}
+             */
+
         }, {
             key: "show",
             value: function show() {
                 this.__manageStyle('block');
                 return this;
             }
+
+            /**
+             * Hide DOM
+             * @returns {RB}
+             */
+
         }, {
             key: "hide",
             value: function hide() {
                 this.__manageStyle('none');
                 return this;
             }
+
+            /**
+             * Slide animation
+             * @param {string} direction - direction of slide
+             * @param {function} callback
+             */
+
         }, {
             key: "slide",
             value: function slide(direction, callback) {
@@ -655,7 +907,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         this.removeClass('slide-left slide-right').addClass(direction_class);
                     }
 
-                    if (typeof callback == "function") {
+                    if (typeof callback === "function") {
                         callback();
                     }
                 }
@@ -666,6 +918,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     if (!window.rb) {
+        /**
+         * Create new instance of RB for selector
+         * @param {string} ref - selector reference
+         * @returns {RB}
+         */
         window.rb = function (ref) {
             if (!ref) error('ReferenceError', 'Reference not provided');
             return new RB(ref);
