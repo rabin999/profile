@@ -19,7 +19,7 @@
 
 <!-- Async Stylesheet  -->
 <noscript id="deferred-styles">
-    <link rel="stylesheet" href="./assets/css/app.css">
+<!--    <link rel="stylesheet" href="./assets/css/app.css">-->
 </noscript>
 <script>
     // Stylesheet loader

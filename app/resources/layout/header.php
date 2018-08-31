@@ -9,6 +9,7 @@
     <title>RABIN BHANDARI</title>
     <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
     <link rel="stylesheet" href="./assets/css/includes/fonts.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
 
 <!--    <link rel="stylesheet" href="./assets/css/flatpickr.min.css">-->
 

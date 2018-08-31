@@ -50,53 +50,24 @@ li {
 * 	Profile Framework 
 ----------------------------- */
 /* ----------- Mobile ----------- */
-/* ----------- iPad 1, 2, Mini and Air ----------- */
-/* Portrait */
-/* Landscape */
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Landscape */
-/* ----------- iPad Pro 10.5" ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-/* ----------- iPad Pro 12.9" ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-/* ----------- Galaxy Tab 2 ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Landscape */
-/* ----------- Galaxy Tab S ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Landscape */
-/* ----------- Nexus 7 ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Landscape */
-/* ----------- Nexus 9 ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Landscape */
-/* ----------- Kindle Fire HD 7" ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Landscape */
-/* ----------- Kindle Fire HD 8.9" ----------- */
-/* Portrait and Landscape */
-/* Portrait */
-/* Landscape */
+/*
+!* Portrait *!
+@media only screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1.5)
+and (orientation: portrait) {
+}
+
+!* Landscape *!
+@media only screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1.5)
+and (orientation: landscape) {
+
+}
+*/
 /* ----------- Non-Retina Screens ----------- */
 .row, .rb-theme-1 .blog-container .featured-blog .blog article {
   display: -webkit-box;
@@ -291,6 +262,17 @@ html {
     font-size: 14px;
     font-weight: normal;
     color: #149DE1; }
+  .rb-theme-1 .error-text {
+    display: none; }
+  .rb-theme-1 .error > input {
+    border-color: #e82517 !important; }
+  .rb-theme-1 .error > label {
+    color: #e82517 !important; }
+  .rb-theme-1 .error .error-text {
+    display: block;
+    color: #e82517;
+    font-size: 13px;
+    margin-top: 10px; }
   .rb-theme-1 input:not(.blog-input), .rb-theme-1 textarea:not(.blog-textarea) {
     border: 1px solid #149DE1;
     padding: 15px;
@@ -471,12 +453,10 @@ html {
         margin-top: 20px;
         overflow-x: hidden;
         overflow-y: auto; } }
-  .rb-theme-1 .page__style {
-    display: none; }
-    .rb-theme-1 .page__style svg {
-      width: 16px; }
-    .rb-theme-1 .page__style.showing {
-      display: block; }
+  .rb-theme-1 .page__style svg {
+    width: 16px; }
+  .rb-theme-1 .page__style.showing {
+    display: block; }
   .rb-theme-1 .spinner {
     width: 40px;
     height: 40px;
@@ -548,44 +528,56 @@ html {
       .rb-theme-1 .home {
         padding: 20px 20px 0 20px;
         margin-bottom: 10px; } }
-    .rb-theme-1 .home .fullname h1 {
-      display: inline-block;
-      color: #4961FF;
-      font-size: 17em;
-      font-weight: bold;
-      line-height: 225px; }
-      .rb-theme-1 .home .fullname h1:last-child {
-        display: block; }
-      .rb-theme-1 .home .fullname h1 span {
-        display: inline-block;
-        -webkit-transition: transform 0.3s;
-        -moz-transition: transform 0.3s;
-        -ms-transition: transform 0.3s;
-        -o-transition: transform 0.3s;
-        transition: transform 0.3s;
-        -webkit-transform: translateY(0px);
-        -moz-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        -o-transform: translateY(0px);
-        transform: translateY(0px); }
-        .rb-theme-1 .home .fullname h1 span:hover {
-          -webkit-transform: rotateX(180deg);
-          -moz-transform: rotateX(180deg);
-          -ms-transform: rotateX(180deg);
-          -o-transform: rotateX(180deg);
-          transform: rotateX(180deg); }
+    .rb-theme-1 .home .fullname {
+      min-height: 420px; }
       @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
-        .rb-theme-1 .home .fullname h1 {
-          font-size: 62px;
-          line-height: 60px; } }
+        .rb-theme-1 .home .fullname {
+          min-height: 75px; } }
       @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
-        .rb-theme-1 .home .fullname h1 {
-          font-size: 62px;
-          line-height: 60px; } }
+        .rb-theme-1 .home .fullname {
+          min-height: 75px; } }
       @media screen and (min-width: 1200px) and (max-width: 1600px) {
-        .rb-theme-1 .home .fullname h1 {
-          font-size: 170px;
-          line-height: 160px; } }
+        .rb-theme-1 .home .fullname {
+          min-height: 150px; } }
+      .rb-theme-1 .home .fullname h1 {
+        display: inline-block;
+        color: #4961FF;
+        font-size: 17em;
+        font-weight: bold;
+        line-height: 225px;
+        text-transform: uppercase; }
+        .rb-theme-1 .home .fullname h1:last-child {
+          display: block; }
+        .rb-theme-1 .home .fullname h1 span {
+          display: inline-block;
+          -webkit-transition: transform 0.3s;
+          -moz-transition: transform 0.3s;
+          -ms-transition: transform 0.3s;
+          -o-transition: transform 0.3s;
+          transition: transform 0.3s;
+          -webkit-transform: translateY(0px);
+          -moz-transform: translateY(0px);
+          -ms-transform: translateY(0px);
+          -o-transform: translateY(0px);
+          transform: translateY(0px); }
+          .rb-theme-1 .home .fullname h1 span:hover {
+            -webkit-transform: rotateX(180deg);
+            -moz-transform: rotateX(180deg);
+            -ms-transform: rotateX(180deg);
+            -o-transform: rotateX(180deg);
+            transform: rotateX(180deg); }
+        @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+          .rb-theme-1 .home .fullname h1 {
+            font-size: 62px;
+            line-height: 60px; } }
+        @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+          .rb-theme-1 .home .fullname h1 {
+            font-size: 62px;
+            line-height: 60px; } }
+        @media screen and (min-width: 1200px) and (max-width: 1600px) {
+          .rb-theme-1 .home .fullname h1 {
+            font-size: 170px;
+            line-height: 160px; } }
     .rb-theme-1 .home .image-tools {
       position: relative;
       margin-left: 40px; }
@@ -1068,6 +1060,12 @@ html {
     overflow: auto;
     background-color: black;
     background-color: rgba(41, 41, 41, 0.9); }
+    @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+      .rb-theme-1 .modal {
+        padding-top: 85px; } }
+    @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+      .rb-theme-1 .modal {
+        padding-top: 85px; } }
   .rb-theme-1 .modal-content {
     margin: auto;
     display: block;
@@ -1108,12 +1106,12 @@ html {
     position: absolute;
     top: 25px;
     right: 35px;
-    color: #f1f1f1;
+    color: #F44336;
     font-size: 30px;
     transition: 0.3s;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 50%;
-    width: 37px;
+    width: 39px;
     height: 35px;
     display: inline-table;
     text-align: center; }
@@ -1147,7 +1145,7 @@ html {
     .rb-theme-1 .blog-container .rb-form label {
       margin-bottom: 10px;
       display: inline-block; }
-    @media screen and (max-width: 450px) and (orientation: portrait) {
+    @media screen and (max-width: 450px) {
       .rb-theme-1 .blog-container .rb-form .col {
         padding: 0 !important;
         margin-bottom: 15px; } }
@@ -1229,7 +1227,7 @@ html {
       width: 100%; }
     .rb-theme-1 .blog-container .search .rb-form {
       position: relative; }
-    @media screen and (max-width: 450px) and (orientation: portrait) {
+    @media screen and (max-width: 450px) {
       .rb-theme-1 .blog-container .search {
         width: 100%;
         margin-bottom: 20px; }
@@ -1256,10 +1254,10 @@ html {
       position: relative; }
       .rb-theme-1 .blog-container .featured-blog .blog .margin-tb-20 {
         margin: 20px 0; }
-        @media screen and (max-width: 450px) and (orientation: portrait) {
+        @media screen and (max-width: 450px) {
           .rb-theme-1 .blog-container .featured-blog .blog .margin-tb-20-res {
             margin: 20px 0; } }
-      @media screen and (max-width: 450px) and (orientation: portrait) {
+      @media screen and (max-width: 450px) {
         .rb-theme-1 .blog-container .featured-blog .blog .margin-b-20-res {
           margin-bottom: 20px; } }
       .rb-theme-1 .blog-container .featured-blog .blog a > .image {
@@ -1290,7 +1288,7 @@ html {
           font-weight: 400;
           color: #fff;
           line-height: 30px; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .featured-blog .blog article .title {
               font-size: 25px;
               font-weight: 500; } }
@@ -1334,7 +1332,7 @@ html {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       display: block; }
-      @media screen and (max-width: 450px) and (orientation: portrait) {
+      @media screen and (max-width: 450px) {
         .rb-theme-1 .blog-container .blog-filter-tools {
           margin: 0;
           padding: 20px;
@@ -1343,7 +1341,7 @@ html {
       .rb-theme-1 .blog-container .blog-filter-tools .rb-date-range-picker {
         margin-left: 10px;
         margin-right: 10px; }
-        @media screen and (max-width: 450px) and (orientation: portrait) {
+        @media screen and (max-width: 450px) {
           .rb-theme-1 .blog-container .blog-filter-tools .rb-date-range-picker {
             margin: 0;
             width: 100%; }
@@ -1352,7 +1350,7 @@ html {
         .rb-theme-1 .blog-container .blog-filter-tools .rb-date-range-picker > input {
           padding: 8px 10px;
           min-width: 210px; }
-      @media screen and (max-width: 450px) and (orientation: portrait) {
+      @media screen and (max-width: 450px) {
         .rb-theme-1 .blog-container .blog-filter-tools .rb-toggle-view {
           display: none; } }
       .rb-theme-1 .blog-container .blog-filter-tools .rb-toggle-view ul li {
@@ -1429,7 +1427,7 @@ html {
     border-radius: 0px; }
   100% {
     transform: translateX(0px); } }
-      @media screen and (max-width: 450px) and (orientation: portrait) {
+      @media screen and (max-width: 450px) {
         .rb-theme-1 .blog-container .blogs {
           float: none;
           width: 100%; } }
@@ -1466,7 +1464,7 @@ html {
             text-align: left; }
       .rb-theme-1 .blog-container .blogs .blog-item {
         margin-bottom: 20px; }
-        @media screen and (max-width: 450px) and (orientation: portrait) {
+        @media screen and (max-width: 450px) {
           .rb-theme-1 .blog-container .blogs .blog-item {
             border-bottom: 1px solid #ddd;
             padding-bottom: 20px; } }
@@ -1482,7 +1480,7 @@ html {
           float: left;
           max-width: 100%;
           margin-right: 20px; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .blogs .blog .blog-image {
               margin: 0;
               float: none; } }
@@ -1530,7 +1528,7 @@ html {
           margin-bottom: 20px;
           font-weight: 500;
           color: #393b4a; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .blogs .blog .title {
               font-size: 20px;
               margin-top: 15px;
@@ -1539,6 +1537,12 @@ html {
         .rb-theme-1 .blog-container .blogs .blog .blog-review, .rb-theme-1 .blog-container .blogs .blog .blog-detail {
           margin-bottom: 30px;
           font-size: 17px; }
+          @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+            .rb-theme-1 .blog-container .blogs .blog .blog-review, .rb-theme-1 .blog-container .blogs .blog .blog-detail {
+              line-height: 26px; } }
+          @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+            .rb-theme-1 .blog-container .blogs .blog .blog-review, .rb-theme-1 .blog-container .blogs .blog .blog-detail {
+              line-height: 26px; } }
           .rb-theme-1 .blog-container .blogs .blog .blog-review img, .rb-theme-1 .blog-container .blogs .blog .blog-detail img {
             max-width: 100%; }
           .rb-theme-1 .blog-container .blogs .blog .blog-review a, .rb-theme-1 .blog-container .blogs .blog .blog-detail a {
@@ -1565,7 +1569,7 @@ html {
           background-color: transparent;
           border: 1px solid #adadad;
           color: #525152; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .blogs .blog button {
               float: right; } }
           .rb-theme-1 .blog-container .blogs .blog button i {
@@ -1597,7 +1601,7 @@ html {
           margin: 35px 0 0 0;
           font-weight: 400;
           font-size: 40px; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .blogs .blog.single .title {
               margin-top: 20px;
               font-size: 25px; } }
@@ -1606,7 +1610,7 @@ html {
               font-size: 30px; } }
         .rb-theme-1 .blog-container .blogs .blog.single .short-detail {
           margin-bottom: 40px; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .blogs .blog.single .short-detail {
               margin-bottom: 20px;
               padding: 20px 0;
@@ -1619,7 +1623,7 @@ html {
             font-size: 12px;
             color: #6f6d6d;
             margin-top: 20px; }
-            @media screen and (max-width: 450px) and (orientation: portrait) {
+            @media screen and (max-width: 450px) {
               .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me {
                 margin-top: 30px; } }
             .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me > span:first-child {
@@ -1634,13 +1638,25 @@ html {
                   .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me ul li a svg {
                     width: auto;
                     height: 25px;
-                    margin-left: 2px; }
+                    margin-left: 6px; }
+                    @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+                      .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me ul li a svg {
+                        height: 35px; } }
+                    @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+                      .rb-theme-1 .blog-container .blogs .blog.single .short-detail .follow-me ul li a svg {
+                        height: 35px; } }
       .rb-theme-1 .blog-container .blogs .switch-mode p {
         font-weight: 600;
         color: #717171;
         font-size: 12px;
         display: inline-block;
         margin-right: 8px; }
+      @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+        .rb-theme-1 .blog-container .blogs .switch-mode {
+          display: none; } }
+      @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+        .rb-theme-1 .blog-container .blogs .switch-mode {
+          display: none; } }
       .rb-theme-1 .blog-container .blogs .tgl {
         display: none; }
         .rb-theme-1 .blog-container .blogs .tgl, .rb-theme-1 .blog-container .blogs .tgl:after, .rb-theme-1 .blog-container .blogs .tgl:before, .rb-theme-1 .blog-container .blogs .tgl *, .rb-theme-1 .blog-container .blogs .tgl *:after, .rb-theme-1 .blog-container .blogs .tgl *:before, .rb-theme-1 .blog-container .blogs .tgl + .tgl-btn {
@@ -1693,22 +1709,37 @@ html {
             margin-left: -.8em; }
       .rb-theme-1 .blog-container .blogs .prev-next-post {
         margin-bottom: 20px; }
+        .rb-theme-1 .blog-container .blogs .prev-next-post .arrow {
+          font-size: 22px;
+          display: inline-block;
+          line-height: 0;
+          vertical-align: sub; }
+          @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+            .rb-theme-1 .blog-container .blogs .prev-next-post .arrow {
+              font-size: 16px; } }
+          @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+            .rb-theme-1 .blog-container .blogs .prev-next-post .arrow {
+              font-size: 16px; } }
         .rb-theme-1 .blog-container .blogs .prev-next-post .prev-post button i {
           margin-right: 5px; }
+        .rb-theme-1 .blog-container .blogs .prev-next-post .prev-post button {
+          padding-left: 12px; }
         .rb-theme-1 .blog-container .blogs .prev-next-post .next-post {
           text-align: right; }
           .rb-theme-1 .blog-container .blogs .prev-next-post .next-post button i {
             margin-left: 5px; }
+          .rb-theme-1 .blog-container .blogs .prev-next-post .next-post button {
+            padding-right: 12px; }
         .rb-theme-1 .blog-container .blogs .prev-next-post button {
           border: 1px solid #ddd;
           color: #232321;
-          padding: 10px 25px;
+          padding: 10px 20px;
           background-color: transparent;
           border-radius: 0;
           text-transform: uppercase;
           font-weight: 500;
           position: relative; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .blogs .prev-next-post button {
               padding: 10px 10px; } }
           .rb-theme-1 .blog-container .blogs .prev-next-post button:hover .tooltip {
@@ -1742,7 +1773,7 @@ html {
             -webkit-animation: showTooltip 0.5s;
             animation: showTooltip 0.5s;
             display: none; }
-            @media screen and (max-width: 450px) and (orientation: portrait) {
+            @media screen and (max-width: 450px) {
               .rb-theme-1 .blog-container .blogs .prev-next-post button .tooltip {
                 display: none !important; } }
             .rb-theme-1 .blog-container .blogs .prev-next-post button .tooltip.left {
@@ -1796,14 +1827,14 @@ html {
           background-color: #f1f2f6;
           margin-bottom: 20px;
           margin-right: 20px; }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .related-post .grid .blog, .rb-theme-1 .blog-container .post-result .grid .blog {
               max-width: 100%;
               width: 100%; } }
           @media screen and (min-width: 1200px) and (max-width: 1600px) {
             .rb-theme-1 .blog-container .related-post .grid .blog, .rb-theme-1 .blog-container .post-result .grid .blog {
               width: 270px; } }
-          @media screen and (max-width: 450px) and (orientation: portrait) {
+          @media screen and (max-width: 450px) {
             .rb-theme-1 .blog-container .related-post .grid .blog .title, .rb-theme-1 .blog-container .post-result .grid .blog .title {
               margin-top: 0 !important;
               margin-bottom: 15px;
@@ -1816,7 +1847,7 @@ html {
       border-top: 1px solid #ddd; }
       .rb-theme-1 .blog-container .pagination.margin-t-20 {
         margin-top: 20px; }
-      @media screen and (max-width: 450px) and (orientation: portrait) {
+      @media screen and (max-width: 450px) {
         .rb-theme-1 .blog-container .pagination {
           padding: 0;
           border: none; }
@@ -1852,7 +1883,7 @@ html {
           .rb-theme-1 .blog-container .pagination ul li a:not(.prev):not(.next) {
             width: 25px;
             height: 25px; }
-            @media screen and (max-width: 450px) and (orientation: portrait) {
+            @media screen and (max-width: 450px) {
               .rb-theme-1 .blog-container .pagination ul li a:not(.prev):not(.next) {
                 width: 30px;
                 height: 30px;
@@ -1880,7 +1911,7 @@ html {
       position: absolute;
       right: 0;
       overflow: auto; }
-      @media screen and (max-width: 450px) and (orientation: portrait) {
+      @media screen and (max-width: 450px) {
         .rb-theme-1 .blog-container aside {
           float: none;
           width: 100%;
@@ -1888,9 +1919,9 @@ html {
       .rb-theme-1 .blog-container aside .header {
         font-size: 11px;
         text-align: left;
-        color: #607d8bdb;
+        color: #F44336;
         margin-bottom: 20px;
-        font-weight: 500;
+        font-weight: bold;
         text-transform: uppercase; }
       .rb-theme-1 .blog-container aside .most-viewed {
         display: block;
@@ -1905,7 +1936,7 @@ html {
             padding: 10px; }
             .rb-theme-1 .blog-container aside .most-viewed .blogs .blog .blog-image img {
               width: 160px; }
-              @media screen and (max-width: 450px) and (orientation: portrait) {
+              @media screen and (max-width: 450px) {
                 .rb-theme-1 .blog-container aside .most-viewed .blogs .blog .blog-image img {
                   width: 100%; } }
             .rb-theme-1 .blog-container aside .most-viewed .blogs .blog .title {
@@ -1949,6 +1980,16 @@ html {
           border-radius: 15px;
           display: inline-block;
           margin-bottom: 10px; }
+          @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+            .rb-theme-1 .blog-container aside .tags ul li {
+              margin-right: 5px; }
+              .rb-theme-1 .blog-container aside .tags ul li:last-of-type {
+                margin-right: 0; } }
+          @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+            .rb-theme-1 .blog-container aside .tags ul li {
+              margin-right: 5px; }
+              .rb-theme-1 .blog-container aside .tags ul li:last-of-type {
+                margin-right: 0; } }
           .rb-theme-1 .blog-container aside .tags ul li a {
             color: rgba(80, 80, 80, 0.87);
             padding: 4px 10px;
@@ -1957,6 +1998,12 @@ html {
             letter-spacing: 0.5px;
             text-transform: uppercase;
             display: block; }
+            @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+              .rb-theme-1 .blog-container aside .tags ul li a {
+                padding: 7px 10px; } }
+            @media only screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+              .rb-theme-1 .blog-container aside .tags ul li a {
+                padding: 7px 10px; } }
             .rb-theme-1 .blog-container aside .tags ul li a:hover {
               color: #2196F3; }
       .rb-theme-1 .blog-container aside .get-notified {

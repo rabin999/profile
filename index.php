@@ -6,8 +6,7 @@
             <div rel="home" class="home">
                 <div class="row">
                     <div class="fullname col">
-                        <h1>RABIN</h1>
-                        <H1>BHANDARI</H1>
+                        <h1 id="fullName">RABIN<br>BHANDARI</h1>
                     </div>
                     <div class="image-tools col">
                         <img src="./assets/images/intro/Group_1.png" class="group-1" alt="Pen drive">
@@ -146,15 +145,15 @@
                     </div>
 
                     <div class="col col-3">
-                        <form class="no-overflow">
+                        <form class="no-overflow" id="contactForm" data-validation="on">
                             <div class="row">
                                 <div class="group col">
-                                    <input type="text" name="fullname" required>
+                                    <input type="text" name="fullname" data-error="Input field is required" required>
                                     <label>Full Name</label>
                                 </div>
 
                                 <div class="group col">
-                                    <input type="email" name="email" required>
+                                    <input type="email" name="email" data-error="Email field is required" required>
                                     <label>Email</label>
                                 </div>
                             </div>
@@ -212,7 +211,7 @@
                     </div>
 
                     <div class="col col-3">
-                        <form class="no-overflow">
+                        <form class="no-overflow" id="hireMeForm">
                             <div class="row">
                                 <div class="group col">
                                     <input type="text" name="name" required>
@@ -242,7 +241,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+
     </div>
     <!-- Hire Me End -->
 

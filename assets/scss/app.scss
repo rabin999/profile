@@ -321,6 +321,28 @@ html {
    Form elements
  */
 
+
+  .error-text {
+    display: none;
+  }
+
+  .error {
+    & > input{
+      border-color: #e82517 !important;
+    }
+
+    & > label  {
+      color: #e82517 !important;
+    }
+
+    .error-text {
+      display: block;
+      color: #e82517;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  }
+
   input:not(.blog-input), textarea:not(.blog-textarea) {
     border: 1px solid $color;
     padding: 15px;

@@ -4,7 +4,7 @@ var loadDeferredStyles = function () {
     if (addStylesNode) {
         var replacement = document.createElement("div");
         replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
+        document.body.appendChild(replacement);
         addStylesNode.parentElement.removeChild(addStylesNode);
     }
 };
@@ -54,7 +54,7 @@ function changePage(o) {
 
     // if in another page / blog
     if (window.location.pathname.split('/')[2]) {
-        window.location.assign(window.location.origin + '/profile')
+        window.location.assign(window.location.origin + '/profile');
         sessionStorage.setItem('page', targetPage);
     }
 
@@ -86,7 +86,7 @@ function changePage(o) {
  * @param targetPage
  */
 function setHeight(targetPage) {
-    var selector = (typeof targetPage === "undefined") ? '.page__style.showing' : '.page__style[data-page="'+targetPage+'"]';
+    var selector = (typeof targetPage === "undefined") ? '.page__style.showing' : '.page__style[data-page="' + targetPage + '"]';
     if (!isMobile()) {
         rb(selector).css({
             "min-height": (window.innerHeight - rb('header').element.offsetHeight - 148 - rb('footer').element.offsetHeight + 'px')
@@ -170,7 +170,7 @@ rb(document).ready(function () {
         rb("#cookies").removeClass('hidden');
     else
         rb("#cookies").addClass('hidden');
-})
+});
 
 rb("#allowCookies").one('click', function (e) {
     e.preventDefault();
@@ -225,15 +225,62 @@ function showSendProcess(e) {
     e.preventDefault();
     var t = this;
 
+    // Start validation
+    rb(t.form).validateForm();
+
     rb(t).off('click', showSendProcess);
 
     prevText = rb(t).text();
     rb(t).text('Sending....');
 
     var s = setTimeout(function () {
-        cl(prevText)
         rb(t).text(prevText);
         rb(t).on('click', showSendProcess);
         clearTimeout(s);
     }, 700);
 }
+
+/*
+* FullName Animation
+* */
+
+var aText = ["Rabin", "Bhandari"];
+var iSpeed = 110; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+var destination = document.getElementById("fullName");
+
+
+function typewriter() {
+    sContents = ' ';
+    iRow = Math.max(0, iIndex - iScrollAt);
+
+    while (iRow < iIndex) {
+        sContents += aText[iRow++] + '<br />';
+    }
+
+    if (iTextPos == 8) {
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos)
+    } else {
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    }
+
+    if (iTextPos++ == iArrLength) {
+        iTextPos = 0;
+        iIndex++;
+        if (iIndex != aText.length) {
+            iArrLength = aText[iIndex].length;
+            setTimeout("typewriter()", 500);
+        }
+    } else {
+        setTimeout("typewriter()", iSpeed);
+    }
+}
+
+if (destination)
+    typewriter();

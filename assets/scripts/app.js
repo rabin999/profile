@@ -45,7 +45,7 @@
      * @return {(number|string|boolean|object|array)}
      */
     window.cl = function(value) {
-        return console.log(value);
+        console.log(value);
     };
 
     /**
@@ -54,7 +54,7 @@
      * @return {(number|string|boolean|object|array)}
      */
     window.cd = function(value) {
-        return console.dir(value);
+        console.dir(value);
     }
 
     /**
@@ -103,13 +103,13 @@
         Element.prototype.matches = Element.prototype.msMatchesSelector ||
             Element.prototype.webkitMatchesSelector;
 
-    if (!Element.prototype.closest)
+    if (!Element.prototype.closest) {
         /**
          * Polyfill of closest DOM API
          * @param {string} s
          * @returns {*}
          */
-        Element.prototype.closest = function(s) {
+        Element.prototype.closest = function (s) {
             var el = this;
             if (!document.documentElement.contains(el)) return null;
             do {
@@ -118,6 +118,35 @@
             } while (el !== null && el.nodeType === 1);
             return null;
         };
+    }
+
+    /**
+     * After
+     * @param {array} arr
+     */
+    (function (arr) {
+        arr.forEach(function (item) {
+            if (item.hasOwnProperty('after')) {
+                return;
+            }
+            Object.defineProperty(item, 'after', {
+                configurable: true,
+                enumerable: true,
+                writable: true,
+                value: function after() {
+                    var argArr = Array.prototype.slice.call(arguments),
+                        docFrag = document.createDocumentFragment();
+
+                    argArr.forEach(function (argItem) {
+                        var isNode = argItem instanceof Node;
+                        docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+                    });
+
+                    this.parentNode.insertBefore(docFrag, this.nextSibling);
+                }
+            });
+        });
+    })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
 
     /*
     * Event Support for IE >= 7
@@ -274,7 +303,7 @@
          * @private
          */
         __singleObj() {
-            return !!(this.element && !Boolean(this.element.length));
+            return (this.element && this.length === 1) ? true : false;
         };
 
         /**
@@ -318,6 +347,7 @@
          * @private
          */
         __manageEvent(event, operation, callback, options = null) {
+
             let that = this,
                 multipleEvents = that.__hasMultipleEvents(event);
             event = multipleEvents ? multipleEvents : event;
@@ -326,8 +356,7 @@
                 error('ReferenceError', 'Event || Event Function reference not found');
             }
 
-
-            if (window[operation] && that.element) {
+            if (window[operation] && this.element) {
                 // Single Object
                 if (that.__isWindowObj() || that.__singleObj()) {
                     if(Array.isArray(event) && event.length > 1) {
@@ -459,10 +488,12 @@
         /**
          * Prepare node selector
          * Filter type of node selector of string and object
+         * @constructor
          */
         init() {
 
-            if (typeof this.selector === 'string' && this.selector.length) {
+            if (this.selector.length && (typeof this.selector === 'string')) {
+
                 this.element = document.querySelectorAll(this.selector);
                 this.length = this.element.length;
 
@@ -470,16 +501,22 @@
                     this.element = this.element[0];
                 }
 
-            } else if (typeof this.selector === 'object') {
+            } else if (typeof this.selector === 'object'  || [1,3,9].includes(this.selector.nodeType)) {
+                // Check weather HTML Object or else
+                // if(this.selector.nodeType === 1) {
+                //     this.selector = this.selector.id ? `#${this.selector.id}` : this.selector.classList.length ? `.${Array.from(this.selector.classList).join(' ')}` : this.selector.nodeName;
+                // }
+
                 if (this.__isWindowObj()) {
                     this.element = this.selector;
                     this.length = 1;
+
                 } else {
-                    this.length = this.selector.length;
+                    this.length = (this.selector instanceof HTMLDocument || this.selector instanceof HTMLElement) ? 1 : 0;
                     this.element = this.selector;
 
                     if (this.length === 1) {
-                        this.element = this.selector[0];
+                        this.element = this.selector;
                     }
                 }
             } else {
@@ -488,6 +525,8 @@
             }
 
             // Check Node found or not
+            // Need to be improve
+
             if (this.element instanceof HTMLElement || this.element instanceof Node || this.element instanceof NodeList) {
                 if (this.element instanceof NodeList) {
                     if (!this.element.length || !this.element) {
@@ -707,6 +746,43 @@
         }
 
         /**
+         * Next Dom Element
+         * @returns {Element}
+         */
+        next() {
+            if(this.length) {
+                return new RB(this.element.nextElementSibling);
+            }
+        }
+
+        /**
+         * Append New Document after selected element
+         * @param {array} html - new html
+         */
+        after(html) {
+            if(this.length && Object.keys((html)).length) {
+                for (let tag in html) {
+                    if(tag && html[tag]) {
+                        let newElement = document.createElement(tag);
+                        if(Object.keys(html[tag]).length) {
+                            for(let attr in html[tag]) {
+                                switch (attr) {
+                                    case 'text':
+                                        newElement.textContent = html[tag][attr];
+                                    break;
+                                    case 'class':
+                                        newElement.classList.add(html[tag][attr].split(' ').join(' '))
+                                }
+                            }
+                        }
+                        this.element.after(newElement);
+                        break;
+                    }
+                }
+            }
+        }
+
+        /**
          * Fetch and update text content or value of NODE
          * @param {string} value - value | textContent of NODE
          * @returns {*}
@@ -744,6 +820,48 @@
          */
         ucFirst(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        /**
+         * Validate form
+         * @param form
+         */
+        validateForm() {
+
+            let customRule = "This Field is required";
+            let form = rb(this.element);
+
+            if (form.attr('data-validation') === "on") {
+                let elems = form.element.elements;
+                if (elems.length) {
+
+                    Array.from(elems).forEach(function(element) {
+                        // Check element is required or not
+                        if (element.required !== undefined && element.required && element.value.trim() === "") {
+                            // check element has own custom error or not
+                            if (element.getAttribute('data-error') && rb(element).next().text() !== element.getAttribute('data-error')) {
+
+                                rb(rb(element).closest('.group.col')).addClass('error');
+                                rb(element).after({
+                                    "P": {
+                                        "class": "error-text",
+                                        "text": element.getAttribute('data-error')
+                                    }
+                                });
+                            } else {
+                                if(rb(element).next().text() !== customRule) {
+                                    rb(element).after({
+                                        "P": {
+                                            "class": "error-text",
+                                            "text": customRule
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            }
         }
 
         /*
