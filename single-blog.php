@@ -53,7 +53,7 @@
                             <label class="tgl-btn" for="mode-switcher"></label>
                         </div>
                         <div class="col published-date">
-                            <a href="" title="Published Date">
+                            <a href="#" title="Published Date">
                                 <div class="date">
                                     <svg aria-hidden="true" data-prefix="far" data-icon="calendar-alt"
                                          class="has-margin" role="img" xmlns="http://www.w3.org/2000/svg"

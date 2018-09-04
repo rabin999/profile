@@ -91,7 +91,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
     Array.prototype.contains = function (needle) {
         for (var i in this) {
-            if (this[i] == needle) return true;
+            if (this[i] === needle) return true;
         }
         return false;
     };
@@ -162,6 +162,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     * */
     if (!Element.prototype.addEventListener) {
 
+        // noinspection JSAnnotator
         /**
          * Runlistener - Provide environment for addEvent and removeEvent listener
          * @param {*} oEvent
@@ -190,9 +191,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var oListeners = {};Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
             if (oListeners.hasOwnProperty(sEventType)) {
                 var oEvtListeners = oListeners[sEventType];
-                for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                for (var _nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
                     if (oEvtListeners.aEls[iElId] === this) {
-                        nElIdx = iElId;break;
+                        _nElIdx = iElId;break;
                     }
                 }
                 if (nElIdx === -1) {
@@ -228,9 +229,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return;
             }
             var oEvtListeners = oListeners[sEventType];
-            for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+            for (var _nElIdx2 = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
                 if (oEvtListeners.aEls[iElId] === this) {
-                    nElIdx = iElId;break;
+                    _nElIdx2 = iElId;break;
                 }
             }
             if (nElIdx === -1) {
@@ -285,10 +286,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var ca = decodedCookie.split(';');
         for (var i = 0; i < ca.length; i++) {
             var c = ca[i];
-            while (c.charAt(0) == ' ') {
+            while (c.charAt(0) === ' ') {
                 c = c.substring(1);
             }
-            if (c.indexOf(name) == 0) {
+            if (c.indexOf(name) === 0) {
                 return c.substring(name.length, c.length);
             }
         }
@@ -308,15 +309,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         function RB(selector) {
             _classCallCheck(this, RB);
 
-            // Development Debug
+            // Development Mode
             this.development = false;
             this.selector = selector;
             this.length = 0;
             this.element = false;
             this.init();
         }
-
-        // private helper
 
         /**
          * Check weather selector is Window Object or not
@@ -532,9 +531,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
             key: "__manageStyle",
             value: function __manageStyle(operation) {
-                if (!this.element && !operation) {
+                if (!this.length || !operation) {
                     return;
                 }
+
                 if (this.__isWindowObj() || this.__singleObj()) {
                     if (this.element.style) this.element.style.display = operation;
                 } else {
@@ -555,7 +555,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             value: function init() {
 
                 if (this.selector.length && typeof this.selector === 'string') {
-
                     this.element = document.querySelectorAll(this.selector);
                     this.length = this.element.length;
 
@@ -563,16 +562,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         this.element = this.element[0];
                     }
                 } else if (_typeof(this.selector) === 'object' || [1, 3, 9].includes(this.selector.nodeType)) {
-                    // Check weather HTML Object or else
-                    // if(this.selector.nodeType === 1) {
-                    //     this.selector = this.selector.id ? `#${this.selector.id}` : this.selector.classList.length ? `.${Array.from(this.selector.classList).join(' ')}` : this.selector.nodeName;
-                    // }
 
                     if (this.__isWindowObj()) {
                         this.element = this.selector;
                         this.length = 1;
                     } else {
-                        this.length = this.selector instanceof HTMLDocument || this.selector instanceof HTMLElement ? 1 : 0;
+                        this.length = this.selector && [1, 3, 9].includes(this.selector.nodeType) ? 1 : 0;
                         this.element = this.selector;
 
                         if (this.length === 1) {
@@ -755,8 +750,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
             key: "isChecked",
             value: function isChecked() {
-                if (this.element.checked === true) return true;
-                return false;
+                return this.element.checked;
             }
 
             /**
@@ -805,7 +799,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 if (this.element && !this.__isWindowObj() || this.__singleObj()) {
                     return this.element.closest(value);
                 }
-                throw new ReferenceError(value + " not found !");
+                error('ReferenceError', value + " not found !");
             }
 
             /*
@@ -839,7 +833,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.element.innerHTML = arguments[0];
                     return this;
                 } else {
-                    // Return Outer HTMl
+                    // Return Outer HTML
                     if (arguments[0] && arguments[0] === true) return this.element.outerHTML;
                     return this.element.innerHTML;
                 }
@@ -947,7 +941,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
             key: "validateForm",
             value: function validateForm() {
-
+                var errorElementNode = 'p';
+                var errorElementNodeClass = 'error-text';
                 var customRule = "This Field is required";
                 var form = rb(this.element);
 
@@ -960,19 +955,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             if (element.required !== undefined && element.required && element.value.trim() === "") {
                                 // check element has own custom error or not
                                 if (element.getAttribute('data-error') && rb(element).next().text() !== element.getAttribute('data-error')) {
-
                                     rb(rb(element).closest('.group.col')).addClass('error');
                                     rb(element).after({
-                                        "P": {
-                                            "class": "error-text",
+                                        errorElementNode: {
+                                            "class": errorElementNodeClass,
                                             "text": element.getAttribute('data-error')
                                         }
                                     });
                                 } else {
                                     if (rb(element).next().text() !== customRule) {
                                         rb(element).after({
-                                            "P": {
-                                                "class": "error-text",
+                                            errorElementNode: {
+                                                "class": errorElementNodeClass,
                                                 "text": customRule
                                             }
                                         });

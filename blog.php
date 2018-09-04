@@ -13,7 +13,7 @@
         <div class="featured-blog">
             <!-- Feature Blog -->
             <div class="blog">
-                <a href="" class="blog-image">
+                <a href="#" class="blog-image">
                     <span class="image" style="background: url('./assets/images/blog/mr_robot.jpg')"></span>
                 </a>
                 <article>
@@ -89,14 +89,14 @@
         <div class="blog-container">
             <!-- Blog -->
             <div class="blogs">
-<!--                <div class="loader" id="loaderDemo">-->
-<!--                    <div class="preloader"></div>-->
-<!--                </div>-->
+            <!--                <div class="loader" id="loaderDemo">-->
+            <!--                    <div class="preloader"></div>-->
+            <!--                </div>-->
                 <div class="row">
                     <!-- Blog Item -->
                     <div class="blog-item">
                         <div class="blog">
-                            <a href="" class="blog-image">
+                            <a href="/single-blog.php" class="blog-image">
                                 <img src="./assets/images/blog/first.jpg" alt="">
                             </a>
                             <article>

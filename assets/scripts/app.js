@@ -80,7 +80,7 @@
      */
     Array.prototype.contains = function ( needle ) {
         for (let i in this) {
-            if (this[i] == needle) return true;
+            if (this[i] === needle) return true;
         }
         return false;
     };
@@ -100,8 +100,7 @@
     * Closest DOM API
     * */
     if (!Element.prototype.matches)
-        Element.prototype.matches = Element.prototype.msMatchesSelector ||
-            Element.prototype.webkitMatchesSelector;
+        Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 
     if (!Element.prototype.closest) {
         /**
@@ -110,7 +109,7 @@
          * @returns {*}
          */
         Element.prototype.closest = function (s) {
-            var el = this;
+            let el = this;
             if (!document.documentElement.contains(el)) return null;
             do {
                 if (el.matches(s)) return el;
@@ -134,11 +133,11 @@
                 enumerable: true,
                 writable: true,
                 value: function after() {
-                    var argArr = Array.prototype.slice.call(arguments),
+                    let argArr = Array.prototype.slice.call(arguments),
                         docFrag = document.createDocumentFragment();
 
                     argArr.forEach(function (argItem) {
-                        var isNode = argItem instanceof Node;
+                        let isNode = argItem instanceof Node;
                         docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
                     });
 
@@ -152,15 +151,16 @@
     * Event Support for IE >= 7
     * */
     if (!Element.prototype.addEventListener) {
-        var oListeners = {};
+        let oListeners = {};
 
+        // noinspection JSAnnotator
         /**
          * Runlistener - Provide environment for addEvent and removeEvent listener
          * @param {*} oEvent
          */
         function runListeners(oEvent) {
             if (!oEvent) { oEvent = window.event; }
-            for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
+            for (let iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
                 if (oEvtListeners.aEls[iElId] === this) {
                     for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
                     break;
@@ -175,8 +175,8 @@
          */
         Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
             if (oListeners.hasOwnProperty(sEventType)) {
-                var oEvtListeners = oListeners[sEventType];
-                for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                let oEvtListeners = oListeners[sEventType];
+                for (let nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
                     if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
                 }
                 if (nElIdx === -1) {
@@ -184,12 +184,12 @@
                     oEvtListeners.aEvts.push([fListener]);
                     this["on" + sEventType] = runListeners;
                 } else {
-                    var aElListeners = oEvtListeners.aEvts[nElIdx];
+                    let aElListeners = oEvtListeners.aEvts[nElIdx];
                     if (this["on" + sEventType] !== runListeners) {
                         aElListeners.splice(0);
                         this["on" + sEventType] = runListeners;
                     }
-                    for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
+                    for (let iLstId = 0; iLstId < aElListeners.length; iLstId++) {
                         if (aElListeners[iLstId] === fListener) { return; }
                     }
                     aElListeners.push(fListener);
@@ -207,12 +207,12 @@
          */
         Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
             if (!oListeners.hasOwnProperty(sEventType)) { return; }
-            var oEvtListeners = oListeners[sEventType];
-            for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+            let oEvtListeners = oListeners[sEventType];
+            for (let nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
                 if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
             }
             if (nElIdx === -1) { return; }
-            for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
+            for (let iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
                 if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
             }
         };
@@ -253,15 +253,15 @@
      * @returns {string} - If cookie exist return key[value]
      */
     window.getCookie = function(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i <ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
                 c = c.substring(1);
             }
-            if (c.indexOf(name) == 0) {
+            if (c.indexOf(name) === 0) {
                 return c.substring(name.length, c.length);
             }
         }
@@ -278,15 +278,13 @@
          * @param {(string|object)} selector - DOM Selector, Node Object
          */
         constructor(selector) {
-            // Development Debug
+            // Development Mode
             this.development = false;
             this.selector = selector;
             this.length = 0;
             this.element = false;
             this.init();
         }
-
-        // private helper
 
         /**
          * Check weather selector is Window Object or not
@@ -472,9 +470,10 @@
          * @private
          */
         __manageStyle(operation) {
-            if (!this.element && !operation) {
+            if (!this.length || !operation) {
                 return;
             }
+
             if (this.__isWindowObj() || this.__singleObj()) {
                 if(this.element.style)
                     this.element.style.display = operation;
@@ -493,7 +492,6 @@
         init() {
 
             if (this.selector.length && (typeof this.selector === 'string')) {
-
                 this.element = document.querySelectorAll(this.selector);
                 this.length = this.element.length;
 
@@ -502,17 +500,12 @@
                 }
 
             } else if (typeof this.selector === 'object'  || [1,3,9].includes(this.selector.nodeType)) {
-                // Check weather HTML Object or else
-                // if(this.selector.nodeType === 1) {
-                //     this.selector = this.selector.id ? `#${this.selector.id}` : this.selector.classList.length ? `.${Array.from(this.selector.classList).join(' ')}` : this.selector.nodeName;
-                // }
 
                 if (this.__isWindowObj()) {
                     this.element = this.selector;
                     this.length = 1;
-
                 } else {
-                    this.length = (this.selector instanceof HTMLDocument || this.selector instanceof HTMLElement) ? 1 : 0;
+                    this.length = (this.selector && [1,3,9].includes(this.selector.nodeType)) ? 1 : 0;
                     this.element = this.selector;
 
                     if (this.length === 1) {
@@ -665,9 +658,7 @@
          * @returns {boolean} - Status of checkbox
          */
         isChecked() {
-            if(this.element.checked === true)
-                return true;
-            return false;
+            return this.element.checked
         }
 
         /**
@@ -710,7 +701,7 @@
             if (this.element && !this.__isWindowObj() || this.__singleObj()) {
                 return this.element.closest(value);
             }
-            throw new ReferenceError(`${value} not found !`);
+            error('ReferenceError', `${value} not found !`);
         }
 
         /*
@@ -738,7 +729,7 @@
                 this.element.innerHTML = arguments[0];
                 return this;
             } else {
-                // Return Outer HTMl
+                // Return Outer HTML
                 if (arguments[0] && arguments[0] === true)
                     return this.element.outerHTML;
                 return this.element.innerHTML;
@@ -827,7 +818,8 @@
          * @param form
          */
         validateForm() {
-
+            let errorElementNode = 'p';
+            let errorElementNodeClass = 'error-text';
             let customRule = "This Field is required";
             let form = rb(this.element);
 
@@ -840,19 +832,18 @@
                         if (element.required !== undefined && element.required && element.value.trim() === "") {
                             // check element has own custom error or not
                             if (element.getAttribute('data-error') && rb(element).next().text() !== element.getAttribute('data-error')) {
-
                                 rb(rb(element).closest('.group.col')).addClass('error');
                                 rb(element).after({
-                                    "P": {
-                                        "class": "error-text",
+                                    errorElementNode: {
+                                        "class": errorElementNodeClass,
                                         "text": element.getAttribute('data-error')
                                     }
                                 });
                             } else {
                                 if(rb(element).next().text() !== customRule) {
                                     rb(element).after({
-                                        "P": {
-                                            "class": "error-text",
+                                        errorElementNode: {
+                                            "class": errorElementNodeClass,
                                             "text": customRule
                                         }
                                     });

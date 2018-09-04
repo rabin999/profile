@@ -1,0 +1,15 @@
+{
+  "name": "DevRabin",
+  "short_name": "DevRabin",
+  "start_url": "/",
+  "display": "standalone",
+  "lang": "en-US",
+  "theme_color": "#4961FF;",
+  "background_color": "#fff",
+  "description": "Portfolio website of Rabin Bhandari",
+  "icons": [{
+    "src": "./assets/images/logo.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }]
+}

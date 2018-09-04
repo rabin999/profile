@@ -38,10 +38,10 @@
                 <!-- Option Buttons-->
                 <div class="row option-buttons">
                     <div class="col">
-                        <a href="#">HIRE ME</a>
+                        <a href="#" class="navigate_page" data-page-target="hireMe">HIRE ME</a>
                     </div>
                     <div class="col text-center">
-                        <a href="#">CONTACT</a>
+                        <a href="#" class="navigate_page" data-page-target="contact">CONTACT</a>
                     </div>
                     <div class="col text-center">
                         <a href="https://www.visualcv.com/rabin-bhandari" target="_blank">RESUME</a>

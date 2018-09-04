@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Rabin Bhandari">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="Rabin Bhandari, Full Stack Developer">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,shrink-to-fit=no,user-scalable=no">
+    <meta name="description" content="Portfolio of Rabin Bhandari, Full Stack Developer, Software Engineer. A Swede with a past in the advertising industry of Amsterdam.">
     <meta name="keywords" content="Website Designer, Website Developer, Full Stack Developer, Software Engineer">
     <title>RABIN BHANDARI</title>
-    <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
-    <link rel="stylesheet" href="./assets/css/includes/fonts.css">
-    <link rel="stylesheet" href="./assets/css/app.css">
-
-<!--    <link rel="stylesheet" href="./assets/css/flatpickr.min.css">-->
-
+    <link rel="canonical" href="https://www.devrabin.com">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#149DE1">
+    <link rel="stylesheet" href="/assets/css/includes/fonts.css">
 </head>
+
 <body class="rb-theme-1">
     <header class="row space-between align-center">
         <div class="mobile-menu">
