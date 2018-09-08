@@ -771,7 +771,6 @@
         </div>
         <!-- Get Notified:END -->
     </aside>
-
 </main>
 
 <!-- Image Modal -->

@@ -4,6 +4,8 @@
 * 	Rabin Bhandari
 * -----------------------
  */
+  
+  @import "includes/fonts";
 
 /* 
   * --------------------------
@@ -438,7 +440,7 @@ html {
   }
 
   svg {
-    //width: 16px;
+    width: 16px;
     display: inline-block;
     vertical-align: text-bottom;
 
@@ -516,6 +518,6 @@ html {
   @import "includes/footer";
 }
 
-@supports not (flex-wrap: wrap) {
+/* @supports not (flex-wrap: wrap) {
   display: inline-block;
-}
+} */

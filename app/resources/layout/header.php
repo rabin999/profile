@@ -13,7 +13,9 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#149DE1">
-    <link rel="stylesheet" href="/assets/css/includes/fonts.css">
+    <style>
+            *{box-sizing:border-box}a,footer,form,h1,h2,h3,h4,h5,li,main,p,section,span,table,td,th,ul{font-family:monospace,sans-serif}body,h1,h2,h3,p,ul{margin:0;padding:0}a{text-decoration:none}li{list-style-type:none}svg{width:16px}
+        </style>
 </head>
 
 <body class="rb-theme-1">

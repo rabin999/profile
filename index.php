@@ -9,28 +9,28 @@
                         <h1 id="fullName">RABIN<br>BHANDARI</h1>
                     </div>
                     <div class="image-tools col">
-                        <img src="./assets/images/intro/Group_1.png" class="group-1" alt="Pen drive">
-                        <img src="./assets/images/intro/Group_2.png" class="group-2" alt="Laptop">
-                        <img src="./assets/images/intro/Group_3.png" class="group-3" alt="Keyboard">
-                        <img src="./assets/images/intro/Group_4.png" class="group-4" alt="Mobile">
-                        <img src="./assets/images/intro/Group_5.png" class="group-5" alt="Mouse">
-                        <img src="./assets/images/intro/Group_6.png" class="group-6" alt="Pen">
-                        <img src="./assets/images/intro/Group_7.png" class="group-7" alt="Tablet">
+                        <img data-src="./assets/images/intro/Group_1.png" class="lazy group-1" alt="Pen drive">
+                        <img data-src="./assets/images/intro/Group_2.png" class="lazy group-2" alt="Laptop">
+                        <img data-src="./assets/images/intro/Group_3.png" class="lazy group-3" alt="Keyboard">
+                        <img data-src="./assets/images/intro/Group_4.png" class="lazy group-4" alt="Mobile">
+                        <img data-src="./assets/images/intro/Group_5.png" class="lazy group-5" alt="Mouse">
+                        <img data-src="./assets/images/intro/Group_6.png" class="lazy group-6" alt="Pen">
+                        <img data-src="./assets/images/intro/Group_7.png" class="lazy group-7" alt="Tablet">
                     </div>
                 </div>
 
                 <!-- Who Am I -->
                 <div class="row who-am-i">
                     <div class="col">
-                        <img src="./assets/images/text/Group_1.png" alt="">
+                        <img class="lazy" data-src="./assets/images/text/Group_1.png" alt="">
                         <p>SOFTWARE ENGINEER</p>
                     </div>
                     <div class="col text-center">
-                        <img src="./assets/images/text/Compound%20Path_1.png" alt="">
+                        <img class="lazy" data-src="./assets/images/text/Compound%20Path_1.png" alt="">
                         <p>WEB DEVELOPER</p>
                     </div>
                     <div class="col text-center">
-                        <img src="./assets/images/text/Compound%20Path_2.png" alt="">
+                        <img class="lazy" data-src="./assets/images/text/Compound%20Path_2.png" alt="">
                         <p>DESIGNER</p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
     <div class="page__style" data-page="aboutMe" style="background-image : url(./assets/images/page/about.jpg)">
         <div class="aboutMe" id="aboutMe">
                 <div class="about-header">
-                    <h1 class="page-header">ABOUT ME</h1>
+                    <h2 class="page-header">ABOUT ME</h2>
                     <div class="links">
                         <a href="mailto:rabin.bhandari999@gmail.com" class="mail-link">
                             <svg aria-hidden="true" data-prefix="far" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -85,7 +85,7 @@
     <!-- Projects -->
     <div class="page__style" data-page="projects">
         <div class="projects">
-                <h1 class="page-header">PROJECTS</h1>
+                <h2 class="page-header">PROJECTS</h2>
 
                 <div class="project-lists">
                     <ul class="row flex-start">
@@ -106,7 +106,7 @@
     <!-- Contact -->
     <div class="page__style" data-page="contact">
         <div class="contact">
-                <h1 class="page-header">CONTACT</h1>
+                <h2 class="page-header">CONTACT</h2>
                 <div class="row contact-detail">
                     <div class="col detail">
                         <h2>Rabin Bhandari</h2>
@@ -169,9 +169,9 @@
     <!-- Hire Me -->
     <div class="page__style" data-page="hireMe">
         <div class="hire" rel="contact">
-                <h1 class="page-header">HIRE ME
+                <h2 class="page-header">HIRE ME
                     <span class="page-sub-header">Let Do Some Project Together.</span>
-                </h1>
+                </h2>
 
                 <div class="row hire-detail">
                     <div class="col detail">
